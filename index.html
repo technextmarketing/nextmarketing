@@ -1,0 +1,894 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextMarketing — 36 Case Studies | TechNext Asia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0A2540;--cyan:#00B4D8;--bg:#F1F5F9;--card:#fff;
+      --text:#1E293B;--muted:#64748B;--border:#E2E8F0;
+      --easy:#16A34A;--easy-bg:#F0FDF4;--easy-bd:#BBF7D0;
+      --amber:#D97706;--amber-bg:#FFFBEB;--amber-bd:#FDE68A;
+      --red:#DC2626;--red-bg:#FEF2F2;--red-bd:#FECACA;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
+
+    nav{background:var(--navy);padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;}
+    .logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;}
+    .logo span{color:var(--cyan);}
+    .nav-tag{background:rgba(0,180,216,.15);color:var(--cyan);border:1px solid rgba(0,180,216,.3);padding:.25rem .75rem;border-radius:9999px;font-size:.75rem;font-weight:600;}
+
+    .hero{background:linear-gradient(135deg,#0A2540 0%,#0f3460 60%,#1a5276 100%);padding:4.5rem 2.5rem 3.5rem;text-align:center;color:#fff;}
+    .hero-eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:1rem;}
+    .hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;margin-bottom:1rem;line-height:1.2;}
+    .hero h1 span{color:var(--cyan);}
+    .hero p{font-size:1rem;color:#94A3B8;max-width:540px;margin:0 auto 2.5rem;line-height:1.7;}
+    .hero-stats{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;}
+    .stat-number{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:700;}
+    .stat-label{font-size:.8rem;color:#94A3B8;margin-top:.2rem;}
+
+    .filters{background:#fff;border-bottom:2px solid var(--border);padding:.875rem 2rem;position:sticky;top:0;z-index:100;display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+    .filter-label{font-size:.7rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
+    .diff-btns{display:flex;gap:.3rem;}
+    .diff-btn{padding:.3rem .8rem;border:2px solid var(--border);background:#fff;border-radius:9999px;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .18s;color:var(--muted);}
+    .diff-btn.active[data-diff="all"]{background:var(--navy);border-color:var(--navy);color:#fff;}
+    .diff-btn.active[data-diff="easy"]{background:var(--easy);border-color:var(--easy);color:#fff;}
+    .diff-btn.active[data-diff="achievable"]{background:var(--amber);border-color:var(--amber);color:#fff;}
+    .diff-btn.active[data-diff="hard"]{background:var(--red);border-color:var(--red);color:#fff;}
+    .cat-select{padding:.35rem 2.2rem .35rem .75rem;border:2px solid var(--border);border-radius:9999px;font-size:.78rem;font-weight:600;color:var(--text);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748B' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right .7rem center;appearance:none;cursor:pointer;}
+    .result-count{margin-left:auto;font-size:.78rem;font-weight:600;color:var(--muted);}
+
+    .main{max-width:1400px;margin:0 auto;padding:1.75rem 2rem 4rem;}
+    .legend{display:flex;gap:1.25rem;flex-wrap:wrap;margin-bottom:1.5rem;align-items:center;}
+    .legend-item{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:var(--muted);}
+    .legend-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+    .owned-note{margin-left:auto;font-size:.75rem;color:var(--muted);display:flex;align-items:center;gap:.4rem;}
+    .pill-owned-demo{background:var(--easy-bg);border:1px solid var(--easy-bd);color:var(--easy);padding:.12rem .45rem;border-radius:4px;font-size:.68rem;font-weight:600;}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.25rem;}
+
+    /* CARD */
+    .card{background:var(--card);border-radius:14px;padding:1.4rem;display:flex;flex-direction:column;gap:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid var(--border);transition:transform .2s,box-shadow .2s;position:relative;}
+    .card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.12);}
+    .card[data-difficulty="easy"]{border-top:3px solid var(--easy);}
+    .card[data-difficulty="achievable"]{border-top:3px solid var(--amber);}
+    .card[data-difficulty="hard"]{border-top:3px solid var(--red);}
+
+    .card-top{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;}
+    .cat-badge{padding:.18rem .55rem;border-radius:6px;font-size:.68rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.03em;}
+    .diff-badge{margin-left:auto;padding:.18rem .55rem;border-radius:6px;font-size:.68rem;font-weight:700;}
+    .diff-badge.easy{background:var(--easy-bg);color:var(--easy);border:1px solid var(--easy-bd);}
+    .diff-badge.achievable{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-bd);}
+    .diff-badge.hard{background:var(--red-bg);color:var(--red);border:1px solid var(--red-bd);}
+    .card-num{font-size:.68rem;font-weight:700;color:#CBD5E1;position:absolute;top:1rem;right:1.2rem;}
+
+    .card h3{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.3;padding-right:2rem;}
+
+    /* INDUSTRIES */
+    .industries-row{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;}
+    .ind-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-right:.1rem;flex-shrink:0;}
+    .ind-pill{padding:.15rem .5rem;border-radius:5px;font-size:.7rem;font-weight:600;background:#EFF6FF;border:1px solid #BFDBFE;color:#1D4ED8;}
+
+    /* MIDDLE: TASKS + GOALS */
+    .mid-section{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+    .mid-half{padding:.6rem .75rem;}
+    .mid-half:first-child{border-right:1px solid var(--border);background:#FAFBFC;}
+    .mid-half:last-child{background:#F8FAFC;}
+    .mid-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:.4rem;display:flex;align-items:center;gap:.25rem;}
+    .task-list,.goal-list{display:flex;flex-direction:column;gap:.28rem;}
+    .task-item,.goal-item{display:flex;gap:.4rem;align-items:flex-start;font-size:.775rem;color:var(--text);line-height:1.35;}
+    .task-icon{color:var(--navy);font-weight:700;flex-shrink:0;font-size:.75rem;line-height:1.4;margin-top:.03rem;}
+    .goal-icon{color:var(--amber);font-weight:700;flex-shrink:0;font-size:.72rem;line-height:1.4;margin-top:.05rem;}
+    .card[data-difficulty="easy"] .goal-icon{color:var(--easy);}
+    .card[data-difficulty="hard"] .goal-icon{color:var(--red);}
+
+    /* STEPS */
+    .steps-section{border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+    .steps-header{background:#F8FAFC;padding:.45rem .75rem;border-bottom:1px solid var(--border);}
+    .steps-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);}
+    .steps-body{padding:.6rem .75rem;display:flex;flex-direction:column;gap:.4rem;}
+    .step-item{display:flex;gap:.55rem;align-items:flex-start;}
+    .step-num{background:var(--navy);color:#fff;font-size:.62rem;font-weight:700;min-width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.12rem;}
+    .step-text{font-size:.775rem;color:var(--text);line-height:1.45;}
+    .step-text code{background:#EEF2FF;color:#4338CA;padding:.03rem .28rem;border-radius:4px;font-size:.72rem;font-family:monospace;}
+    .steps-more{display:none;}
+    .show-more-btn{width:100%;background:none;border:none;border-top:1px solid var(--border);padding:.45rem;font-size:.73rem;font-weight:600;color:var(--navy);cursor:pointer;transition:background .15s;}
+    .show-more-btn:hover{background:#F1F5F9;}
+
+    /* TOOLS */
+    .tools-row{display:flex;flex-wrap:wrap;gap:.28rem;align-items:center;}
+    .tools-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-right:.15rem;flex-shrink:0;}
+    .tool-pill{padding:.15rem .5rem;border-radius:5px;font-size:.7rem;font-weight:600;border:1px solid #CBD5E1;color:var(--navy);background:#fff;}
+    .tool-pill.owned{background:var(--easy-bg);border-color:var(--easy-bd);color:var(--easy);}
+
+    .deliverables-line{font-size:.73rem;color:var(--muted);border-top:1px solid var(--border);padding-top:.65rem;line-height:1.5;}
+    .deliverables-line strong{color:var(--text);font-weight:600;}
+
+    .no-results{grid-column:1/-1;text-align:center;padding:4rem 2rem;color:var(--muted);}
+
+    footer{background:var(--navy);color:#94A3B8;text-align:center;padding:2.5rem 2rem;font-size:.85rem;margin-top:2rem;}
+    footer a{color:var(--cyan);text-decoration:none;}
+    footer strong{color:#fff;}
+
+    @media(max-width:768px){
+      nav{padding:.875rem 1.25rem;}
+      .hero{padding:3rem 1.25rem 2.5rem;}
+      .filters{padding:.75rem 1rem;}
+      .main{padding:1.25rem 1rem 3rem;}
+      .result-count{display:none;}
+      .mid-section{grid-template-columns:1fr;}
+      .mid-half:first-child{border-right:none;border-bottom:1px solid var(--border);}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span>Tech</span>Next <span style="color:#fff;font-weight:400;font-size:.9rem">|</span> <span>NextMarketing</span></div>
+  <span class="nav-tag">36 Case Studies</span>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">TechNext Asia · Marketing Services</div>
+  <h1>36 Services. Every Step.<br><span>Built Around Your Tools.</span></h1>
+  <p>Each card shows recommended industries, what to do, your targets, and a step-by-step process using your current skill set.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-number" style="color:#4ade80">10</div><div class="stat-label">🟢 Easy — Deliver Now</div></div>
+    <div class="stat"><div class="stat-number" style="color:#fbbf24">10</div><div class="stat-label">🟡 Achievable — Learn &amp; Scale</div></div>
+    <div class="stat"><div class="stat-number" style="color:#f87171">16</div><div class="stat-label">🔴 Hard — Advanced Services</div></div>
+  </div>
+</div>
+
+<div class="filters">
+  <span class="filter-label">Difficulty</span>
+  <div class="diff-btns">
+    <button class="diff-btn active" data-diff="all">All 36</button>
+    <button class="diff-btn" data-diff="easy">🟢 Easy (10)</button>
+    <button class="diff-btn" data-diff="achievable">🟡 Achievable (10)</button>
+    <button class="diff-btn" data-diff="hard">🔴 Hard (16)</button>
+  </div>
+  <span class="filter-label" style="margin-left:.5rem">Category</span>
+  <select class="cat-select" id="catSelect">
+    <option value="all">All Categories</option>
+    <option value="SEO">SEO</option>
+    <option value="Social Media">Social Media</option>
+    <option value="Ads">Ads</option>
+    <option value="Email">Email</option>
+    <option value="Content">Content</option>
+    <option value="CRO & Reporting">CRO &amp; Reporting</option>
+    <option value="Automation">Automation</option>
+    <option value="AI">AI</option>
+    <option value="Influencer & PR">Influencer &amp; PR</option>
+    <option value="Messaging">Messaging</option>
+    <option value="Sales">Sales</option>
+    <option value="Staff">Staff</option>
+    <option value="Odoo CRM">Odoo CRM</option>
+  </select>
+  <span class="result-count" id="resultCount">Showing 36 services</span>
+</div>
+
+<div class="main">
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--easy)"></div>Easy — deliver now</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--amber)"></div>Achievable — learn first</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div>Hard — specialist needed</div>
+    <div class="owned-note"><span class="pill-owned-demo">Green tool</span>&nbsp;= you already own it</div>
+  </div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<footer>
+  <strong>TechNext Asia</strong> · NextMarketing Services Directory<br>
+  <span style="margin-top:.5rem;display:block">Odoo ERP &amp; AI Automations · <a href="https://skytechnext.github.io/nextmarketing/v2.html">View Full Services</a></span>
+</footer>
+
+<script>
+const CC={
+  "SEO":"#4F46E5","Social Media":"#DB2777","Ads":"#EA580C","Email":"#0284C7",
+  "Content":"#7C3AED","CRO & Reporting":"#0D9488","Automation":"#4338CA","AI":"#9333EA",
+  "Influencer & PR":"#E11D48","Messaging":"#16A34A","Sales":"#0F766E","Staff":"#78716C","Odoo CRM":"#1D4ED8"
+};
+const DL={easy:"🟢 Easy",achievable:"🟡 Achievable",hard:"🔴 Hard"};
+
+const S=[
+  {id:1,name:"SEO Starter",cat:"SEO",diff:"achievable",
+   industries:["Professional Services","Healthcare","Retail","F&B","Real Estate"],
+   tasks:["Keyword research & rank tracking","On-page title & meta optimization","Monthly site audit & error fixes","Search Console monitoring"],
+   goals:["20 keywords tracked in Top 20","Organic traffic +15%/month","5 pages ranking on Page 1 by month 3"],
+   deliverables:"Monthly audit, on-page optimization, 20-keyword tracking",
+   steps:[
+     "Go to <code>search.google.com/search-console</code> → Add property → verify ownership via HTML tag",
+     "Open <code>Claude AI</code> → prompt: <em>'List the top 20 SEO keywords for [industry] in Malaysia with buyer intent. Group by topic cluster.'</em>",
+     "Paste keyword list into <code>Google Sheets</code> → add columns: Keyword / Volume / Difficulty / Current Rank / Target Page",
+     "Open each target page → update page title (55 chars), meta description (155 chars), and H1 tag to include keyword",
+     "Open <code>Claude AI</code> → prompt: <em>'Rewrite this page title and meta description for keyword [X]: [paste current version]'</em>",
+     "In Search Console → URL Inspection → Request Indexing for every updated page",
+     "Every Friday: Search Console → Performance → check keyword movement → update Google Sheets",
+     "Month-end: paste all data into <code>Claude AI</code> → prompt: <em>'Summarize this SEO data and give 3 improvements for next month.'</em>"
+   ],
+   tools:[{n:"Google Search Console",o:false},{n:"Claude AI",o:true},{n:"Google Sheets",o:true},{n:"Ubersuggest (free)",o:false}]
+  },
+  {id:2,name:"SEO Growth",cat:"SEO",diff:"hard",
+   industries:["E-Commerce","SaaS","Manufacturing","Education","Media"],
+   tasks:["Backlink outreach campaign","Technical SEO & Core Web Vitals fixes","4 SEO blog posts/month","Competitor keyword gap analysis"],
+   goals:["10+ quality backlinks earned/month","50 keywords in Top 5 positions","Domain Authority +10 within 6 months"],
+   deliverables:"On-page + backlinks + 4 SEO blog posts/month (50+ keywords)",
+   steps:[
+     "Sign up for <code>Ahrefs Webmaster Tools (free)</code> → connect website → run full site audit",
+     "In Ahrefs → Competitor Analysis → enter 3 competitor URLs → export backlink list to CSV",
+     "Open CSV in <code>Google Sheets</code> → filter Domain Rating > 30 → build outreach prospect list",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a backlink outreach email to a [niche] editor asking to feature our article on [topic]. Under 120 words, personal tone.'</em>",
+     "Send outreach via <code>Brevo</code> → track open rates → follow up after 4 days",
+     "Write 4 SEO blog posts/month with <code>Claude AI</code> using pillar + cluster strategy",
+     "Submit each new URL to <code>Google Search Console</code> → Request Indexing",
+     "Track backlinks gained in <code>Google Sheets</code> weekly → compare DA month over month"
+   ],
+   tools:[{n:"Ahrefs Free",o:false},{n:"Brevo",o:true},{n:"Claude AI",o:true},{n:"Google Sheets",o:true}]
+  },
+  {id:3,name:"Social Media — 2 Platforms",cat:"Social Media",diff:"easy",
+   industries:["F&B","Retail","Hospitality","Beauty & Wellness","Events"],
+   tasks:["Monthly content calendar (8 posts)","Branded graphic design per post","Scheduled publishing & community reply","Monthly performance review"],
+   goals:["8 posts published on time/month","Engagement rate above 5%","+200 followers/month per platform"],
+   deliverables:"8 posts/month, content calendar, branded graphics",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Create a 30-day social media content calendar for a [brand type] on Facebook and Instagram. 8 posts total. Mix: 3 educational, 2 promotional, 2 behind-the-scenes, 1 testimonial.'</em>",
+     "Paste calendar into <code>Google Sheets</code> → columns: Date / Platform / Topic / Caption / Image Theme / Status",
+     "Open <code>Canva</code> → Brand Kit → set colors (navy #0A2540, cyan #00B4D8), fonts (Montserrat Bold) → save as brand kit",
+     "Create 8 post designs: <code>Canva</code> → 1080×1080 (IG) / 1200×630 (FB) → apply brand kit for every design",
+     "Open <code>Claude AI</code> → prompt: <em>'Write Instagram and Facebook captions for this post topic: [X]. Include a question to drive comments and 5 relevant hashtags.'</em>",
+     "Open <code>Buffer</code> → upload image + paste caption → set schedule: Tue & Thu at 10am and 7pm",
+     "Every morning: check FB & IG notifications → reply to all comments within 1 hour using <code>Claude AI</code>-drafted responses",
+     "End of month: open <code>Buffer Analytics</code> → screenshot top 3 posts → note format → replicate next month"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Buffer",o:true},{n:"Google Sheets",o:true}]
+  },
+  {id:4,name:"Social Media — 4 Platforms",cat:"Social Media",diff:"easy",
+   industries:["Tech Startups","B2B Services","Education","Consulting","SaaS"],
+   tasks:["16-post calendar across 4 platforms","Platform-specific content formats","Scheduled multi-platform publishing","Weekly analytics tracking"],
+   goals:["16 posts live/month across all platforms","+500 total followers/month","3%+ average engagement rate"],
+   deliverables:"16 posts/month across LinkedIn, Facebook, Instagram, TikTok",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Create a 30-day calendar for LinkedIn, Facebook, Instagram, and TikTok for a B2B tech company. 16 posts total — 4 per platform. LinkedIn: professional insights. IG/FB: visual tips. TikTok: quick how-tos.'</em>",
+     "Paste into <code>Google Sheets</code> → add column for platform format (text post / carousel / short video / story)",
+     "Open <code>Canva</code> → create platform sizes: LinkedIn 1200×627, IG 1080×1080, FB 1200×630, TikTok cover 1080×1920",
+     "LinkedIn copy: <code>Claude AI</code> → formal, insight-led, max 700 chars, no hashtag spam",
+     "TikTok script: <code>Claude AI</code> → 30-second Hook / Problem / Solution / CTA → record on phone → edit in <code>Canva Video</code>",
+     "Connect all 4 platforms in <code>Buffer</code> → schedule: LinkedIn Tue/Thu 8am, IG/FB Tue/Thu 12pm, TikTok Wed/Fri 6pm",
+     "Track follower count weekly per platform in <code>Google Sheets</code>",
+     "Month-end: paste Buffer stats into <code>Claude AI</code> → prompt: <em>'Analyze this performance and suggest 3 content changes for next month.'</em>"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Buffer",o:true},{n:"Google Sheets",o:true}]
+  },
+  {id:5,name:"Google Ads Management",cat:"Ads",diff:"hard",
+   industries:["SaaS","E-Commerce","Healthcare","Legal","Real Estate"],
+   tasks:["Campaign & ad group structure setup","Keyword research & negative keyword list","A/B ad copy testing (3+ variants)","Weekly bid optimization & reporting"],
+   goals:["CTR above 3%","Cost per lead 30% below current","ROAS above 3×"],
+   deliverables:"Campaign setup, bid optimization, A/B testing, weekly review",
+   steps:[
+     "Complete <code>Google Ads Search Certification</code> at <code>skillshop.google.com</code> (free, ~6 hrs)",
+     "Create Google Ads account → link to <code>GA4</code> property → enable auto-tagging",
+     "Use <code>Google Keyword Planner</code> → research 50 keywords by volume + CPC → export to <code>Google Sheets</code>",
+     "Open <code>Claude AI</code> → prompt: <em>'Write 3 Google Search ad variants for keyword [X]. Each: Headline 1 (30 chars), Headline 2 (30 chars), Description (90 chars). B2B pain-point angle.'</em>",
+     "Build campaign: Search → 3 ad groups → upload copy → Phrase + Exact match only",
+     "Add 20 negative keywords → use <code>Claude AI</code> to generate the negative keyword list: <em>'List 20 irrelevant search terms to exclude for a [product/service] Google Ads campaign.'</em>",
+     "Set conversion tracking: GA4 → import conversions to Google Ads",
+     "Every Monday: Search Term Report → add new negatives → pause CTR < 2% ads → scale winners"
+   ],
+   tools:[{n:"Google Ads",o:false},{n:"GA4",o:false},{n:"Claude AI",o:true},{n:"Google Sheets",o:true}]
+  },
+  {id:6,name:"Meta Ads Management",cat:"Ads",diff:"hard",
+   industries:["E-Commerce","F&B","Beauty & Wellness","Retail","Fashion"],
+   tasks:["Meta Pixel install & event tracking","Custom + Lookalike audience creation","Ad creative production (3 variants)","Retargeting campaign setup"],
+   goals:["ROAS above 4×","CPA 30% below current","Retargeting CTR above 2%"],
+   deliverables:"Facebook + Instagram campaigns, audience targeting, retargeting",
+   steps:[
+     "Complete <code>Meta Blueprint Certification</code> at <code>facebook.com/business/learn</code> (free, ~4 hrs)",
+     "Install Meta Pixel on website → go to Events Manager → verify PageView, Lead, Purchase events fire",
+     "Upload email list CSV from <code>Brevo</code> to Meta → Create Custom Audience → build 1% Lookalike",
+     "Design 3 creative variants in <code>Canva</code>: 1080×1080, 1080×1920 Stories, 1200×628 Link → export PNG",
+     "Build Advantage+ campaign in <code>Meta Ads Manager</code> → set daily budget → upload 3 creatives",
+     "Create retargeting campaign: target website visitors from last 7 days → urgency-focused creative",
+     "Review every 3 days: kill creatives with CTR < 1% after RM50 spend → scale winners by 20%",
+     "Export weekly stats → paste into <code>Claude AI</code> → prompt: <em>'Analyze these Meta Ads results and recommend 3 optimizations.'</em>"
+   ],
+   tools:[{n:"Meta Ads Manager",o:false},{n:"Meta Pixel",o:false},{n:"Canva",o:true},{n:"Brevo (list export)",o:true}]
+  },
+  {id:7,name:"LinkedIn Ads Management",cat:"Ads",diff:"hard",
+   industries:["B2B Tech","Consulting","HR & Recruitment","Finance","Legal"],
+   tasks:["ICP audience targeting by job title & seniority","Sponsored content production","3-message InMail sequence","Lead Gen Form configuration"],
+   goals:["CPL below RM150","20+ qualified leads/month","Lead-to-demo rate above 30%"],
+   deliverables:"B2B lead gen, sponsored content, InMail campaigns",
+   steps:[
+     "Complete <code>LinkedIn Marketing Labs</code> certification (free at <code>linkedin.com/learning</code>)",
+     "Set up <code>LinkedIn Campaign Manager</code> → link company page → install Insight Tag on website",
+     "Open <code>Claude AI</code> → prompt: <em>'List the exact job titles, seniority levels, and industries to target for selling [service] to SMEs in Malaysia.'</em>",
+     "Open <code>Canva</code> → sponsored content creative: 1200×627 → professional design with stat as headline",
+     "Open <code>Claude AI</code> → prompt: <em>'Write LinkedIn ad copy for [service]. Format: Problem statement → 2-sentence body → CTA. Executive tone, no fluff.'</em>",
+     "Build Sponsored Content campaign → single image ad → Lead Gen Form enabled (auto-fills from LinkedIn profile)",
+     "Build InMail sequence → <code>Claude AI</code>: <em>'Write a 3-message InMail sequence: Message 1 value insight, Message 2 case study, Message 3 meeting request.'</em>",
+     "Review weekly: pause audiences with CPL > 2× target → test new job title combinations"
+   ],
+   tools:[{n:"LinkedIn Campaign Manager",o:false},{n:"Canva",o:true},{n:"Claude AI",o:true},{n:"Google Sheets",o:true}]
+  },
+  {id:8,name:"Email Marketing — Starter",cat:"Email",diff:"easy",
+   industries:["Training & Education","Professional Services","Retail","Healthcare","Finance"],
+   tasks:["Email template design (branded)","Campaign copywriting — 4/month","Contact list import & segmentation","Open & click rate monitoring"],
+   goals:["Open rate above 25%","Click rate above 3%","4 campaigns sent on schedule every month"],
+   deliverables:"5,000 contacts, 4 campaigns/month, template design",
+   steps:[
+     "Open <code>Brevo</code> → Contacts → Import → upload CSV → map columns: First Name, Email, Company → assign to list 'Newsletter'",
+     "Open <code>Canva</code> → search 'Email Header' → design branded header (600×200px) using brand colors → export PNG",
+     "Open <code>Brevo</code> → Email Campaigns → New Campaign → Drag & Drop Editor → upload header → build: Header / Body / CTA button",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a re-engagement email for [business type]. 3 subject line options. Body: warm, remind of value, soft CTA. Under 200 words.'</em>",
+     "Paste copy into <code>Brevo</code> → set From Name & Subject → enable A/B test on 2 subject lines (50/50 split)",
+     "Schedule send: Tue or Thu at 10am → click 'Send Test' to yourself first → check on mobile",
+     "After send: monitor open rate in <code>Brevo Reports</code> every 2 hours → record in <code>Google Sheets</code> campaign log",
+     "Month-end: paste all stats into <code>Claude AI</code> → prompt: <em>'What do these email stats tell me and what should I improve?'</em>"
+   ],
+   tools:[{n:"Brevo",o:true},{n:"Canva",o:true},{n:"Claude AI",o:true},{n:"Google Sheets",o:true}]
+  },
+  {id:9,name:"Email Marketing — Pro",cat:"Email",diff:"achievable",
+   industries:["E-Commerce","SaaS","Healthcare","Finance","Online Education"],
+   tasks:["Behavioral audience segmentation","Automated trigger flows (abandoned, nurture)","8 personalized campaigns/month","A/B subject line testing program"],
+   goals:["Open rate above 30%","List growth +10%/month","Email-attributed revenue tracked monthly"],
+   deliverables:"25,000 contacts, 8 campaigns/month, segmentation, triggers",
+   steps:[
+     "In <code>Brevo</code> → Contacts → create 4 segments: Hot Leads, Customers, Cold (no opens 90 days), Newsletter Only",
+     "Set lead scoring in <code>Brevo</code> Automations: +5 pts email open, +10 pts click, +20 pts form fill",
+     "Open <code>Claude AI</code> → prompt: <em>'Write 5 subject line variants for [offer] to [segment]. Test angles: curiosity / urgency / benefit / social proof / personalization.'</em>",
+     "Build abandoned interest sequence: trigger = contact clicks link but doesn't convert → follow-up email after 24 hours",
+     "Add opt-in form to website → <code>Brevo</code> → double opt-in → new subscribers enter 3-email welcome sequence automatically",
+     "Write all 8 monthly campaigns with <code>Claude AI</code> → personalize with <code>Brevo</code> dynamic fields: {{contact.FIRSTNAME}}",
+     "A/B test subject lines on 2 campaigns/month → record winner pattern in <code>Google Sheets</code>",
+     "Monthly: export Brevo stats → paste into <code>Claude AI</code> → prompt: <em>'Which segment and content type performs best and why?'</em>"
+   ],
+   tools:[{n:"Brevo",o:true},{n:"Claude AI",o:true},{n:"Google Sheets",o:true},{n:"GA4",o:false}]
+  },
+  {id:10,name:"Content Writing — Starter",cat:"Content",diff:"easy",
+   industries:["IT & Tech Services","Consulting","Healthcare","Manufacturing","Professional Services"],
+   tasks:["1 keyword researched per blog post","SEO brief & outline creation","Full blog draft with Claude AI","On-page SEO: meta title, meta desc, internal links"],
+   goals:["4 posts published on schedule/month","3 keywords ranking by month 3","Blog organic traffic +50%/quarter"],
+   deliverables:"4 SEO blog posts/month (800–1,200 words)",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Give me 10 blog post ideas for [industry/brand] targeting buyer-intent keywords. For each: title, target keyword, search intent.'</em>",
+     "Pick 4 topics → <code>Google Sheets</code> content tracker: Title / Keyword / Word Count / Due Date / Status / URL",
+     "For each post: <code>Claude AI</code> → prompt: <em>'Write a 1,000-word SEO blog post targeting \"[keyword]\" for [audience]. Structure: hook intro, 3 H2 sections with tips, conclusion with CTA to [goal].'</em>",
+     "Paste draft into <code>Google Docs</code> → edit for brand voice → add 1 real example → remove generic filler phrases",
+     "Open <code>Claude AI</code> → prompt: <em>'Write an SEO meta title (55 chars) and meta description (155 chars) for a blog post about [topic] targeting keyword [X].'</em>",
+     "Add 2 internal links within the post to other site pages",
+     "Publish → <code>Google Search Console</code> → URL Inspection → Request Indexing",
+     "Track ranking in <code>Google Sheets</code> at 30 / 60 / 90 days using Search Console data"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Google Docs",o:true},{n:"Google Sheets",o:true},{n:"Google Search Console",o:false}]
+  },
+  {id:11,name:"Content Writing — Pro",cat:"Content",diff:"achievable",
+   industries:["SaaS","Fintech","Healthcare","Consulting","B2B Tech"],
+   tasks:["Topic cluster & pillar page mapping","Pillar page creation (2,500+ words)","8 supporting posts/month with internal links","Monthly content performance audit"],
+   goals:["1 pillar page per quarter","8 posts published/month on schedule","Organic traffic +20%/month by month 4"],
+   deliverables:"8 SEO blog posts/month, pillar strategy, internal linking",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Build a 6-month content pillar strategy for [brand]. 3 topic clusters. Each: 1 pillar page title + 6 supporting post titles with target keywords.'</em>",
+     "Map full cluster in <code>Google Sheets</code>: Pillar Topic / Supporting Post / Keyword / Month / Status / URL",
+     "Write pillar page first (2,500–3,000 words) using <code>Claude AI</code> → publish → this is the cornerstone all cluster posts link back to",
+     "Write 8 supporting posts/month → each links back to pillar page using anchor text matching the pillar keyword",
+     "Build internal linking map in <code>Google Sheets</code>: every URL → what it links TO and what links TO it",
+     "Submit all URLs via <code>Google Search Console</code> → Request Indexing after each publish",
+     "At month 3: update top-traffic posts → <code>Claude AI</code>: <em>'Update this post with 2025 stats and 2 new tips: [paste post]'</em>",
+     "Monthly: paste Search Console data into <code>Claude AI</code> → prompt: <em>'Which posts are close to Page 1? What optimizations would push them over?'</em>"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Google Docs",o:true},{n:"Google Sheets",o:true},{n:"Google Search Console",o:false}]
+  },
+  {id:12,name:"Graphic Design",cat:"Content",diff:"easy",
+   industries:["Any Industry","Marketing Agencies","Events","Retail","Finance"],
+   tasks:["Brand kit setup (colors, fonts, logo)","Reusable social media template set","10 branded assets produced/month","Platform-specific export & file organisation"],
+   goals:["10 assets delivered on time/month","100% brand consistency across channels","Engagement rate +30% vs. unbranded content"],
+   deliverables:"10 branded assets/month for social, ads, email",
+   steps:[
+     "Open <code>Canva</code> → Brand Kit → add brand colors (#0A2540, #00B4D8, #FFFFFF), fonts (Montserrat Bold / Inter), upload logo",
+     "Create master template set: 1080×1080 (IG Feed) → design once → duplicate for 1080×1920 (Stories) and 1200×627 (LinkedIn)",
+     "Save as <code>Canva</code> templates ('TechNext — Feed Template', etc.) for fast reuse every month",
+     "Each month: duplicate template → swap background (use <code>Unsplash.com</code> free photos) → update text → colors apply automatically via Brand Kit",
+     "For ad creatives: large high-contrast headline → one strong visual → one CTA → export at 2× resolution",
+     "For email headers: <code>Canva</code> → custom size 600×200px → export PNG → use directly in <code>Brevo</code> campaign templates",
+     "Export all 10 assets as PNG → organize in <code>Google Drive</code>: /Assets/[Month]/Social / Ads / Email",
+     "Month-end: check which design style got most engagement in <code>Buffer</code> → note format in <code>Google Docs</code> design log → repeat winner"
+   ],
+   tools:[{n:"Canva",o:true},{n:"Google Drive",o:true},{n:"Brevo",o:true},{n:"Buffer",o:true}]
+  },
+  {id:13,name:"Short-Form Video",cat:"Content",diff:"achievable",
+   industries:["Property","F&B","Fitness & Wellness","Beauty","Retail","Education"],
+   tasks:["30-second video script writing","Phone recording & CapCut editing","Auto-captions, music & text overlays","Publishing with optimized caption & hashtags"],
+   goals:["4 videos published/month","Average view rate above 50%","+300 followers/month from video content"],
+   deliverables:"4 reels/shorts monthly, scripted and edited",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Write a 30-second Reel script about [topic]. Format: Hook 3s → Problem 5s → Solution 15s (3 quick tips) → CTA 7s (\"Follow for more\" or \"Link in bio\").'</em>",
+     "Record on phone in portrait mode (1080×1920) → use natural light, clean background",
+     "Install <code>CapCut</code> (free) → import footage → trim clips → arrange in script order",
+     "In <code>CapCut</code>: tap 'Captions' → Auto-captions → edit errors → white text, black outline, center screen",
+     "Add background music: <code>CapCut</code> → Sounds → trending track → volume at 20% (voice must be audible)",
+     "Open <code>Canva Video</code> (desktop) → add brand text overlays → Montserrat font, brand colors → export 1080p MP4",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a Reel caption for a video about [topic]. Hook line + value summary + question to drive comments + 5 hashtags.'</em>",
+     "Post on TikTok & Instagram Reels → reply to every comment in the first hour → boosts algorithm reach → track views in <code>Google Sheets</code>"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"CapCut (free)",o:false},{n:"Canva Video",o:true},{n:"Google Sheets",o:true}]
+  },
+  {id:14,name:"Landing Page CRO Audit",cat:"CRO & Reporting",diff:"achievable",
+   industries:["Online Education","E-Commerce","SaaS","Real Estate","Insurance"],
+   tasks:["Heatmap & session recording setup","Scroll depth & click pattern analysis","UX audit report with screenshots","A/B test plan for headline & CTA"],
+   goals:["5 UX fixes identified per audit","Conversion rate +50% within 60 days","Bounce rate reduced by 20%"],
+   deliverables:"Heatmap review, UX analysis, A/B test plan",
+   steps:[
+     "Go to <code>clarity.microsoft.com</code> → create free account → add Clarity tracking script to website header",
+     "Wait 7–14 days → open Clarity → Heatmaps → check Scroll Depth: note what % of users reach the CTA button",
+     "Watch 10 Session Recordings in Clarity → look for: rage clicks, scroll stops, areas of confusion",
+     "Open <code>Google Docs</code> → create audit report: paste Clarity screenshots → note each issue with priority (High/Med/Low)",
+     "Open <code>Claude AI</code> → prompt: <em>'I ran a CRO audit. Issues found: [paste list]. For each issue, suggest a specific fix to improve conversions on a landing page.'</em>",
+     "Add recommendations to report → prioritize top 5 → create fix checklist with owner and deadline",
+     "Design A/B test plan: choose 1 element first (headline is highest impact) → write 2 headline variants using <code>Claude AI</code>",
+     "Set up manual A/B test: alternate landing page URL weekly → track conversions in GA4 → document results in <code>Google Sheets</code>"
+   ],
+   tools:[{n:"Microsoft Clarity (free)",o:false},{n:"Claude AI",o:true},{n:"Google Docs",o:true},{n:"GA4",o:false}]
+  },
+  {id:15,name:"Monthly Analytics Report",cat:"CRO & Reporting",diff:"easy",
+   industries:["Any Industry","Marketing Agencies","SaaS","Retail","B2B Services"],
+   tasks:["Weekly KPI data collection (Buffer, Brevo, GA4)","Google Sheets KPI dashboard maintenance","Monthly insights summary with Claude AI","Report delivery via Google Slides PDF"],
+   goals:["Report delivered by 5th of each month","All key channels covered in one view","3 actionable insights per monthly report"],
+   deliverables:"GA4, ads, social dashboards, KPI tracking",
+   steps:[
+     "Open <code>Google Sheets</code> → create Monthly KPI Tracker: Metric / Target / W1 / W2 / W3 / W4 / Total",
+     "Every Friday: <code>Buffer Analytics</code> → screenshot top & bottom 3 posts → note reach, likes, clicks per platform → paste into Sheets",
+     "Every Friday: <code>Brevo Reports</code> → copy open rate, click rate, unsubscribes → paste into Sheets",
+     "Every Friday: <code>GA4</code> → Reports → Acquisition → copy Sessions, New Users, top traffic source → paste into Sheets",
+     "Month-end: open <code>Claude AI</code> → prompt: <em>'Here are my monthly marketing KPIs: [paste all numbers]. Write a 1-page summary: what worked, what didn't, and 3 recommendations.'</em>",
+     "Open <code>Google Slides</code> → report template: cover page, KPI summary table, channel highlights, recommendations",
+     "Add screenshots of top posts, email campaigns, and GA4 traffic chart to slides",
+     "Export as PDF → share via <code>Google Drive</code> link → send to management using <code>Brevo</code>"
+   ],
+   tools:[{n:"Google Sheets",o:true},{n:"Buffer Analytics",o:true},{n:"Brevo Reports",o:true},{n:"Claude AI",o:true}]
+  },
+  {id:16,name:"Marketing Automation — Starter",cat:"Automation",diff:"achievable",
+   industries:["Real Estate","Healthcare","B2B Services","Education","Insurance"],
+   tasks:["3-email welcome sequence setup in Brevo","5-email lead nurture drip workflow","CRM sync via Zapier (Brevo → Odoo)","Full automation testing & QA"],
+   goals:["3 active automations running by month 1","Welcome email open rate above 50%","Lead response time under 5 minutes"],
+   deliverables:"Welcome sequences, lead nurture, CRM sync",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Write a 3-email welcome sequence for [business type]. Day 0: instant thank you + what to expect. Day 2: value tip or case study. Day 5: soft CTA to book a call. Friendly, not salesy.'</em>",
+     "Open <code>Brevo</code> → Automations → Create Workflow → trigger: 'Contact added to list [Leads]' → Email 1 sends immediately",
+     "Add Wait 2 days → Email 2 → Wait 3 days → Email 3 → save and activate",
+     "Write 5-email nurture sequence with <code>Claude AI</code> → build second workflow: trigger = contact clicks link in Email 3",
+     "Add opt-in form to website → <code>Brevo</code> → Forms → create embedded form → copy HTML → paste into website contact page",
+     "Set up <code>Zapier</code> (free) → Zap: 'New contact in Brevo list → Create contact in Odoo CRM' → test with dummy contact",
+     "Test full flow: fill out the form yourself → verify all 3 emails arrive at correct intervals → check Odoo CRM for new contact",
+     "Weekly: check <code>Brevo</code> automation stats → look for drop-offs (low open rate on Email 2 = rewrite subject line)"
+   ],
+   tools:[{n:"Brevo",o:true},{n:"Claude AI",o:true},{n:"Zapier (free)",o:false},{n:"Google Forms",o:true}]
+  },
+  {id:17,name:"Marketing Automation — Pro",cat:"Automation",diff:"hard",
+   industries:["SaaS","E-Commerce","Finance","Healthcare","B2B Tech"],
+   tasks:["Full buyer journey trigger map","Lead scoring model (10 behavior signals)","Multi-channel sequences (email + SMS + retargeting)","Sales alert & CRM handoff automation"],
+   goals:["Lead scoring model live and active","MQL volume +100% within one quarter","Sales handoff time under 1 hour"],
+   deliverables:"Multi-channel workflows, behavioral triggers, lead scoring",
+   steps:[
+     "Map full buyer journey in <code>Google Sheets</code>: Stage / Trigger Event / Action / Channel → all paths from awareness to close",
+     "Open <code>Claude AI</code> → prompt: <em>'Create a lead scoring model for a B2B SaaS company. List 10 behavioral signals with points: email opens, page visits, form fills, demo requests.'</em>",
+     "Set up lead scoring in <code>Brevo</code> (basic) or upgrade to <code>ActiveCampaign</code> for full behavioral scoring",
+     "Build multi-step workflow: email sequence + SMS follow-up via <code>Brevo</code> + LinkedIn retargeting trigger",
+     "Set sales alert: when lead score > 80 → <code>Brevo</code> automation → internal notification email to sales rep",
+     "Configure CRM sync: <code>Brevo</code> → <code>Zapier</code> → Odoo CRM: auto-create task when hot lead threshold hit",
+     "Build behavior-based abandoned flow: contact visits pricing page 2× without converting → auto-enroll in 3-email urgency sequence",
+     "QA test all workflow paths → document each in <code>Google Docs</code> → review results weekly"
+   ],
+   tools:[{n:"Brevo",o:true},{n:"Claude AI",o:true},{n:"Zapier",o:false},{n:"ActiveCampaign",o:false}]
+  },
+  {id:18,name:"AI Content Generation",cat:"AI",diff:"easy",
+   industries:["Marketing Agencies","SaaS","E-Commerce","Media","Any Industry"],
+   tasks:["Prompt library creation per content type","Content brief template system","Batch AI content production (20+ pieces)","Quality editing & brand voice layer"],
+   goals:["20+ pieces produced/month","Content cost per piece -60%","Consistent brand voice maintained across all output"],
+   deliverables:"20+ AI-assisted pieces monthly (blogs, captions, copy)",
+   steps:[
+     "Open <code>Google Docs</code> → create 'Prompt Library' → sections: Blog Post / Social Caption / Email / Ad Copy / Case Study",
+     "For each type, write a master prompt → example Blog: <em>'Write a [wordcount]-word post for [brand]. Keyword: [X]. Audience: [Y]. Tone: [Z]. Include: hook intro, 3 H2 sections, conclusion with CTA.'</em>",
+     "Create content brief template in <code>Google Sheets</code>: Topic / Keyword / Audience / Tone / CTA / Word Count / Due Date → fill one row per piece",
+     "Block 2 hours every Tuesday → open <code>Claude AI</code> → work through brief list → generate all 20+ pieces in one session",
+     "Paste each draft into <code>Google Docs</code> → edit for brand voice: add 1 real example, adjust tone, remove generic phrases (10–15 min each)",
+     "Organize in <code>Google Drive</code>: /Content/[Month]/Blogs / Social / Email / Ads → name files clearly",
+     "Schedule social via <code>Buffer</code> and email via <code>Brevo</code> directly from Drive",
+     "Track best-performing content in <code>Google Sheets</code> → refine prompt library monthly based on top results"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Google Docs",o:true},{n:"Google Sheets",o:true},{n:"Buffer",o:true}]
+  },
+  {id:19,name:"AI Ad Optimization",cat:"AI",diff:"hard",
+   industries:["E-Commerce","Retail","Travel","Finance","Consumer Brands"],
+   tasks:["Smart bidding & Performance Max enablement","Lookalike audience creation from pixel data","Automated budget reallocation rules","AI performance monitoring (14-day cycles)"],
+   goals:["ROAS above 4× with AI bidding","CPA 30% below manual campaigns","Learning phase completed without disruption"],
+   deliverables:"Bid management, audience lookalikes, budget allocation",
+   steps:[
+     "In <code>Google Ads</code>: switch bidding from Manual CPC to Target ROAS → set target (e.g., 4.0) → let AI optimize for 2 weeks without touching",
+     "Enable <code>Performance Max</code> campaign → upload: 5 headlines, 5 descriptions, 3 images (from <code>Canva</code>), 1 logo, 1 short video",
+     "In <code>Meta Ads Manager</code>: enable Advantage+ Shopping Campaign → set budget → let Meta AI manage audience and placements",
+     "Do NOT change settings in the first 7 days — AI campaigns need a learning period",
+     "At day 14: export performance data to <code>Google Sheets</code> → compare AI vs manual on ROAS and CPA",
+     "Open <code>Claude AI</code> → prompt: <em>'These are my Google Ads and Meta Ads stats for last 14 days: [paste]. Which campaigns should I scale and which should I pause?'</em>",
+     "Scale winning AI campaigns: increase budget by 20% every 3 days (no more than 20% at once or AI resets)",
+     "Upload fresh creative assets from <code>Canva</code> monthly → add to Performance Max to prevent ad fatigue"
+   ],
+   tools:[{n:"Google Ads",o:false},{n:"Meta Ads Manager",o:false},{n:"Canva",o:true},{n:"Claude AI",o:true}]
+  },
+  {id:20,name:"AI Marketing Chatbot",cat:"AI",diff:"achievable",
+   industries:["Healthcare","Insurance","Real Estate","Education","E-Commerce"],
+   tasks:["Top 10 FAQ database creation","No-code chatbot flow design (Tidio)","Lead capture form & CRM handoff","Weekly transcript review & FAQ update"],
+   goals:["10 FAQ flows live on website","Response time under 5 minutes","50% of leads captured via chatbot monthly"],
+   deliverables:"Website lead capture, FAQ automation, 24/7 support",
+   steps:[
+     "List top 10 questions customers ask in WhatsApp, email, or DMs → write them in <code>Google Docs</code> with your best answers",
+     "Open <code>Claude AI</code> → prompt: <em>'Rewrite these 10 FAQ answers for a chatbot. Friendly, professional, max 2 sentences each. End each with a CTA button label.'</em>",
+     "Go to <code>tidio.com</code> → sign up free → install on website (copy-paste script into website header)",
+     "In Tidio → Chatbots → Create Bot → Flows: Welcome message → main menu (Learn More / Get a Quote / Talk to a Human)",
+     "Build FAQ flows: each option → chatbot response → end with lead capture: 'What's your name and email so we can follow up?'",
+     "Connect Tidio to <code>Google Sheets</code> via Tidio integration → all captured leads auto-populate with name, email, question, timestamp",
+     "Every morning: open <code>Google Sheets</code> → new chatbot leads → add to <code>Brevo</code> → trigger lead nurture automation (service #16)",
+     "Weekly: review chatbot transcripts in Tidio → add new FAQs that appeared → update flows"
+   ],
+   tools:[{n:"Tidio (free)",o:false},{n:"Claude AI",o:true},{n:"Google Sheets",o:true},{n:"Brevo",o:true}]
+  },
+  {id:21,name:"Full AI Marketing Suite",cat:"AI",diff:"hard",
+   industries:["Retail Chains","E-Commerce","SaaS","Multi-Branch F&B","Healthcare Groups"],
+   tasks:["AI tool audit & integration map","Sentiment & brand mention monitoring","Unified funnel dashboard build","Monthly AI strategy review session"],
+   goals:["3 AI tools fully integrated","Full funnel automated end-to-end","Monthly AI strategy session held every month"],
+   deliverables:"All 3 AI services + sentiment monitoring + strategy session",
+   steps:[
+     "Audit all 6 existing marketing tools → <code>Google Sheets</code>: Tool / Purpose / Data it holds / What it connects to",
+     "Identify gaps: where do leads fall through? Which tools don't talk to each other? → document in <code>Google Docs</code>",
+     "Set up <code>Google Alerts</code> (free) → alert for brand name + competitor names → daily digest to Gmail",
+     "Deploy in sequence: AI Content pipeline (service #18) → AI Ad Optimization (#19) → AI Chatbot (#20)",
+     "Connect all via <code>Zapier</code>: Tidio chatbot lead → Brevo list → Brevo automation → Odoo CRM task → sales rep notification",
+     "Build master dashboard in <code>Google Sheets</code>: weekly data from all channels → single full-funnel view",
+     "Open <code>Claude AI</code> monthly → paste full funnel data → prompt: <em>'Analyze this month's funnel data. Where are the biggest drop-offs? What to prioritize next month?'</em>",
+     "Convert Claude analysis into <code>Google Slides</code> deck → present monthly AI strategy session to management"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Zapier",o:false},{n:"Google Sheets",o:true},{n:"Google Alerts (free)",o:false}]
+  },
+  {id:22,name:"Influencer Outreach",cat:"Influencer & PR",diff:"achievable",
+   industries:["FMCG","Beauty & Skincare","F&B","Fitness","Fashion","Lifestyle"],
+   tasks:["Research & vet 30 micro-influencers","Personalized outreach DMs & emails","Campaign brief creation & delivery","Results tracking & ROI calculation"],
+   goals:["5 influencers contracted/month","1M+ total impressions/month","Influencer ROI above 5×"],
+   deliverables:"Identify and manage up to 5 micro-influencers/month",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'List 20 Instagram and TikTok content niches where [product type] micro-influencers are most effective in Malaysia.'</em>",
+     "Search Instagram/TikTok using niche hashtags → find 30 influencers → check: 10K–100K followers, ER above 3%, authentic comments",
+     "Open <code>Google Sheets</code> tracker: Name / Handle / Platform / Followers / ER% / Contact / Status / Rate / Post Date / Results",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a personalized outreach DM for influencer [name] who posts about [topic]. Offer: [free product + RM X]. Under 100 words, genuine tone.'</em>",
+     "Send 20 DMs/emails → track in <code>Google Sheets</code>: Sent / Replied / Negotiating / Agreed / Declined",
+     "For agreed influencers: <code>Claude AI</code> → prompt: <em>'Write a campaign brief for an influencer promoting [product]. Include: brand background, key message, do's and don'ts, deadline, caption guidelines, hashtags.'</em> → share via <code>Google Docs</code>",
+     "After post goes live: record results in <code>Google Sheets</code>: reach, likes, comments, link clicks, promo code uses",
+     "Calculate ROI: (reach × estimated conversion rate × average deal value) ÷ total influencer cost → formula in Sheets"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Google Sheets",o:true},{n:"Google Docs",o:true},{n:"Instagram / TikTok",o:false}]
+  },
+  {id:23,name:"PR & Media Coverage",cat:"Influencer & PR",diff:"achievable",
+   industries:["Tech Startups","Healthcare","Finance","NGOs","Education","Manufacturing"],
+   tasks:["Press release writing & editing","Media contact list building (20+ journalists)","Personalized pitch email outreach","Coverage tracking & post-placement sharing"],
+   goals:["3 media placements secured/month","20 journalist pitches sent/month","Domain authority +5 points/quarter"],
+   deliverables:"Press release distribution, up to 3 placements/month",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Write a press release for [company] announcing [news]. Format: Headline, Dateline, Lead paragraph (who/what/when/where/why), 2 body paragraphs, CEO quote, company boilerplate, contact details.'</em>",
+     "Edit press release in <code>Google Docs</code> → verify all facts → get CEO approval → final saved in <code>Google Drive</code>",
+     "Build media list in <code>Google Sheets</code>: Publication / Journalist / Beat / Email / LinkedIn / Last article written",
+     "Sign up for <code>HARO</code> (free at <code>helpareporter.com</code>) → set alerts for your niche → respond to queries within 1 hour",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a personalized pitch email to a journalist who covers [beat] at [publication]. Story angle: [news]. Under 120 words. 3 subject line variants.'</em>",
+     "Send 20 personalized pitches via Gmail → follow up after 3 days with a 2-sentence nudge if no reply",
+     "Track all pitches in <code>Google Sheets</code>: Sent / Opened / Replied / Published / Link",
+     "When placed: share article via <code>Buffer</code> across all social platforms → add to website 'As Seen In' section"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Google Docs",o:true},{n:"Google Sheets",o:true},{n:"HARO (free)",o:false}]
+  },
+  {id:24,name:"Reputation Management",cat:"Influencer & PR",diff:"achievable",
+   industries:["Healthcare & Clinics","Hospitality","F&B","Legal","Automotive","Education"],
+   tasks:["Google Alerts setup for brand monitoring","Respond to all reviews within 24 hours","Proactive review solicitation via WhatsApp/email","Weekly rating & review volume tracking"],
+   goals:["All reviews responded within 24 hours","Google rating above 4.5 stars within 90 days","Review volume doubled within 3 months"],
+   deliverables:"Review monitoring, response management, alerts",
+   steps:[
+     "Go to <code>alerts.google.com</code> → create alert for brand name + misspellings + competitor name → 'As it happens' → daily digest to Gmail",
+     "Export all existing Google reviews to <code>Google Sheets</code>: Rating / Date / Review Text / Responded (Y/N)",
+     "Open <code>Claude AI</code> → prompt: <em>'Write professional responses for these 5 negative Google reviews. Each: acknowledge the issue, apologize sincerely, offer to resolve offline. Under 75 words each.'</em>",
+     "Log into <code>Google Business Profile</code> → reply to every review (positive and negative) within 24 hours using Claude drafts — always customize slightly",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a WhatsApp message asking a happy client to leave us a Google review. Include the review link. Thank them, explain it takes 30 seconds. Max 60 words.'</em>",
+     "Send review request via <code>Brevo</code> WhatsApp broadcast → segment: recent customers only → include direct review link",
+     "Add review request to <code>Brevo</code> post-service automation: 3 days after service → auto-send WhatsApp/email with review link",
+     "Track weekly in <code>Google Sheets</code>: total reviews / average rating / responded count → target: 4.5+ stars in 90 days"
+   ],
+   tools:[{n:"Google Alerts (free)",o:false},{n:"Claude AI",o:true},{n:"Brevo",o:true},{n:"Google Sheets",o:true}]
+  },
+  {id:25,name:"WhatsApp / SMS Campaigns",cat:"Messaging",diff:"easy",
+   industries:["Automotive","Healthcare","F&B","Retail","Property","Beauty & Wellness"],
+   tasks:["Opt-in contact list management","Broadcast message writing (3 types)","Drip reminder & re-engagement sequences","Monthly delivery & read rate tracking"],
+   goals:["4 broadcasts sent/month","WhatsApp open rate above 80%","No-show or churn rate below 5%"],
+   deliverables:"Broadcast campaigns, drip sequences, opt-in management",
+   steps:[
+     "Open <code>Google Sheets</code> → opt-in contact list: Name / Phone / Service Type / Consent Date (required — never send without consent)",
+     "Open <code>Claude AI</code> → prompt: <em>'Write 3 WhatsApp messages for [business type]: (1) monthly promotion, (2) appointment reminder (24h before), (3) re-engagement for customers not back in 3 months. Max 160 chars each, emoji, end with CTA.'</em>",
+     "In <code>Brevo</code> → WhatsApp Campaigns → New Campaign → select segment → paste message → add button (e.g., 'Book Now')",
+     "Schedule broadcast: Tuesday or Thursday at 10am — avoid weekends and after 8pm",
+     "Set up reminder automation: <code>Brevo</code> Automations → trigger: 'Contact attribute [appointment_date] is tomorrow' → send WhatsApp reminder with time and address",
+     "Set up re-engagement drip: contact hasn't opened any message in 60 days → send win-back offer via <code>Brevo</code>",
+     "Track in <code>Brevo</code> dashboard: delivery rate (>95%), read rate, click rate → log monthly in <code>Google Sheets</code>",
+     "Monthly: remove blocked or unsubscribed numbers → keep list clean to maintain Brevo sender reputation"
+   ],
+   tools:[{n:"Brevo",o:true},{n:"Claude AI",o:true},{n:"Google Sheets",o:true},{n:"WhatsApp Business",o:false}]
+  },
+  {id:26,name:"Sales Funnel Strategy & Setup",cat:"Sales",diff:"hard",
+   industries:["B2B Tech","SaaS","Professional Services","Manufacturing","Distribution"],
+   tasks:["Buyer journey mapping (awareness to close)","CRM pipeline stage configuration","Lead qualification criteria & scoring","Stage-specific email templates in Brevo"],
+   goals:["Full pipeline configured and live","All leads tracked in CRM (zero in WhatsApp)","Win rate improved by 15% in 90 days"],
+   deliverables:"Map buyer journey, configure CRM pipeline",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Map the buyer journey for a company selling [product/service] to [buyer type]. List every stage from awareness to signed contract. For each stage: buyer question, our action, qualification signal.'</em>",
+     "Paste journey into <code>Google Docs</code> → format as table: Stage / Buyer Question / Our Action / Exit Criteria",
+     "Define pipeline stages: Awareness → Lead → Qualified → Demo Booked → Proposal Sent → Negotiation → Won / Lost",
+     "Create pipeline tracker in <code>Google Sheets</code>: Deal Name / Company / Contact / Stage / Value / Expected Close / Next Action",
+     "Configure Odoo CRM (if accessible) → Settings → Stages → match your Google Docs map → save",
+     "Open <code>Claude AI</code> → prompt: <em>'Create a BANT qualification checklist for selling [product]. 6 yes/no questions a rep must confirm before marking a lead Qualified.'</em>",
+     "Write stage-specific email templates with <code>Claude AI</code> for each pipeline stage → save in <code>Brevo</code> template library",
+     "Set up <code>Zapier</code> → when CRM stage changes → trigger Brevo email to contact → automate stage-based follow-up"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Google Docs",o:true},{n:"Google Sheets",o:true},{n:"Brevo",o:true}]
+  },
+  {id:27,name:"Sales Collateral Creation",cat:"Sales",diff:"easy",
+   industries:["IT Services","Engineering","Manufacturing","B2B Services","Consulting"],
+   tasks:["Pitch deck design (3/month) in Canva","One-pager creation per product/service","Capability statement writing with Claude AI","PDF export & Google Drive organisation"],
+   goals:["3 collateral pieces delivered/month","Proposal acceptance rate +30%","All sales reps using branded materials"],
+   deliverables:"Pitch decks, one-pagers, capability statements (3/month)",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Write content for a pitch deck for [TechNext / product]. Slides: 1) Problem 2) Solution 3) How it works (3 steps) 4) Results (proof) 5) Why us 6) Pricing overview 7) Next step CTA.'</em>",
+     "Open <code>Canva</code> → Presentations → clean professional template → apply brand kit (colors, fonts, logo)",
+     "Paste Claude's content into each slide → add icons from Canva elements → max 20 words per slide, one idea per slide",
+     "For one-pager: <code>Canva</code> → custom A4 → top: headline + key benefit → middle: 3 features in columns → bottom: contact + CTA",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a capability statement for TechNext Asia. 200 words max. Include: who we are, what we do, who we serve, key differentiators, CTA.'</em> → paste into <code>Canva</code> design",
+     "Export all 3 pieces as PDF → upload to <code>Google Drive</code> → folder: /Sales Collateral/[Month]",
+     "Get shareable PDF link → use as attachment in <code>Brevo</code> email campaigns or WhatsApp follow-ups",
+     "Update monthly: refresh stats, case study results, and pricing → use previous month's <code>Canva</code> design as base → swap content only"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Google Docs",o:true},{n:"Google Drive",o:true}]
+  },
+  {id:28,name:"Sales Enablement Content",cat:"Sales",diff:"easy",
+   industries:["Cybersecurity","IT","SaaS","Finance","B2B Distribution"],
+   tasks:["Competitor research (top 5) with Claude AI","Battle card per competitor in Canva","Objection handling guide (top 10)","3 case studies formatted as branded PDFs"],
+   goals:["Battle cards for all top competitors done","Objection guide covering 10 scenarios","Win rate improved 20% within one quarter"],
+   deliverables:"Battle cards, case studies, objection guides",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'List top 5 competitors to [TechNext / Odoo ERP] in Malaysia. For each: strengths, weaknesses, positioning, and objections they trigger in sales conversations.'</em>",
+     "Visit each competitor website → note pricing page, homepage headline, customer testimonials → add real data to Claude's analysis",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a battle card for [competitor] vs TechNext. Format: Their pitch / Our counter. Their weakness / Our advantage. Objection they create / Our response.'</em>",
+     "Design battle card in <code>Canva</code>: A5 landscape → 2-column layout → brand colors → export PDF",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a top 10 objection handling guide for selling [service]. For each objection: exact words to say back, fear to address, and a proof point or example.'</em>",
+     "Format objection guide in <code>Google Docs</code> → share with sales team via <code>Google Drive</code>",
+     "Write 3 case studies with <code>Claude AI</code>: <em>'Turn these client results into a one-page case study. Format: Challenge → What we did → 3 result metrics → Client quote.'</em>",
+     "Design each case study in <code>Canva</code> as branded PDF → save in <code>Google Drive</code> /Sales Enablement/ → update quarterly"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Google Docs",o:true},{n:"Google Drive",o:true}]
+  },
+  {id:29,name:"Junior Sales Rep (80 hrs/mo)",cat:"Staff",diff:"hard",
+   industries:["B2B SaaS","HR Tech","Distribution","Professional Services","IT Resellers"],
+   tasks:["SDR job posting & hiring","Prospect list building (200+ leads/month)","Cold email + LinkedIn outreach sequence","Daily activity tracking & weekly 1:1 review"],
+   goals:["100+ qualified leads generated/month","30 discovery calls booked/month","5 opportunities passed to senior rep/month"],
+   deliverables:"SDR for prospecting, outreach, lead qualification",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Write a Junior SDR job description for a B2B tech company in Malaysia. Include: responsibilities, required skills, KPIs: 20 emails/day, 10 LinkedIn connects/day, 30 meetings booked/month.'</em>",
+     "Post on LinkedIn Jobs and JobStreet → design job posting graphic in <code>Canva</code> for LinkedIn feed",
+     "Shortlist applicants → Zoom interview → role-play test: give them a prospect name and ask them to cold-call you right now",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a 30-day SDR onboarding plan. Include: product training, ICP study, tool setup, script practice, and first outreach targets with daily activity goals.'</em>",
+     "Build prospect list for rep using LinkedIn free search → export to <code>Google Sheets</code>",
+     "Write email and call scripts with <code>Claude AI</code> → save in <code>Google Docs</code> → rep personalizes each",
+     "Set daily targets in <code>Google Sheets</code> activity log: 20 emails + 10 LinkedIn connects + 5 follow-ups → rep updates daily",
+     "Weekly 30-min 1:1 via Zoom → review <code>Google Sheets</code> activity log → celebrate wins, fix blockers, adjust scripts"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Google Sheets",o:true},{n:"Google Docs",o:true},{n:"Canva",o:true}]
+  },
+  {id:30,name:"Senior Sales Rep (80 hrs/mo)",cat:"Staff",diff:"hard",
+   industries:["Enterprise Software","Finance","Manufacturing","Engineering","Consulting"],
+   tasks:["Demo facilitation & discovery calls","Proposal writing per prospect","Contract negotiation support","Weekly CRM pipeline management"],
+   goals:["5 demos run/month","3 proposals sent/month","1 deal closed/month minimum"],
+   deliverables:"Experienced AE for demos, proposals, closing",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Write a Senior Account Executive job description for B2B enterprise software in Malaysia. Must-haves: 3+ years closing, quota attainment history, C-suite comfortable.'</em>",
+     "Post on LinkedIn Premium Jobs → specify: own laptop, remote-first, commission structure available",
+     "Shortlist: ask for quota attainment data from last 3 roles → interview only those who hit 80%+ in at least 2 of 3 roles",
+     "Create demo deck in <code>Canva</code> → create proposal template in <code>Google Docs</code> → share both on Day 1",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a 5-step discovery call framework for selling [service] to an operations director. Include: opening, needs questions, pain amplification, solution positioning, next step close.'</em>",
+     "Rep runs all demos via Zoom → records sessions → you review 1 recording/week → give written feedback",
+     "All proposals written with <code>Claude AI</code> + <code>Google Docs</code> → rep customizes → sends PDF from <code>Google Drive</code>",
+     "Track all deals in <code>Google Sheets</code> pipeline → weekly review: stage, next action, expected close → flag anything stuck > 2 weeks"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Google Docs",o:true},{n:"Google Sheets",o:true}]
+  },
+  {id:31,name:"Full-Time Dedicated Rep",cat:"Staff",diff:"hard",
+   industries:["Fintech","SaaS","Healthcare","Distribution","B2B Services"],
+   tasks:["Full pipeline ownership (prospect to close)","Daily outreach & follow-up cadence","Weekly pipeline reporting","Client onboarding handoff to delivery team"],
+   goals:["Revenue quota hit by month 3","40+ active clients in pipeline","Monthly churn rate held below 5%"],
+   deliverables:"160 hrs/month, full pipeline ownership",
+   steps:[
+     "Open <code>Claude AI</code> → prompt: <em>'Write a full-time B2B sales rep role description. Scope: owns full pipeline from prospect to close to onboarding handoff. KPIs: revenue quota, client count, churn rate.'</em>",
+     "Build onboarding kit in <code>Google Drive</code>: product docs, ICP profile, battle cards (service #28), objection guide, email/call scripts",
+     "Open <code>Claude AI</code> → prompt: <em>'Create a 90-day ramp plan for a full-time B2B sales rep. Month 1: learn. Month 2: assist. Month 3: own. Include daily and weekly activities per phase.'</em>",
+     "Set rep up on all tools: <code>Google Workspace</code> email, Odoo CRM access, Zoom, <code>Buffer</code> for LinkedIn brand posts",
+     "Daily async standup: rep posts in group chat — what deals moved, what's stuck, what they need today",
+     "Weekly pipeline review in <code>Google Sheets</code>: stage, deal value, next action, expected close for all open deals → review every Friday",
+     "Monthly: pull pipeline data → calculate quota attainment → present in <code>Google Slides</code> → adjust targets if needed",
+     "Build rep's LinkedIn presence using <code>Claude AI</code>-written posts → schedule via <code>Buffer</code> → 3 posts/week builds credibility"
+   ],
+   tools:[{n:"Claude AI",o:true},{n:"Google Sheets",o:true},{n:"Google Docs",o:true},{n:"Buffer",o:true}]
+  },
+  {id:32,name:"Fractional Sales Manager",cat:"Staff",diff:"hard",
+   industries:["Distribution","Manufacturing","B2B Services","IT Resellers","Property"],
+   tasks:["Weekly 1:1 coaching sessions per rep","KPI dashboard & quota tracking","Monthly forecast review meetings","Sales playbook & coaching guide creation"],
+   goals:["Team quota attainment above 80%","Accurate monthly pipeline forecast","All reps coached at least once per week"],
+   deliverables:"Part-time sales leader for coaching and forecasting",
+   steps:[
+     "Audit team: pull 3 months of pipeline data → <code>Google Sheets</code> → calculate per rep: leads, demos, proposals, closes, win rate",
+     "Open <code>Claude AI</code> → prompt: <em>'Based on these rep KPIs, identify skill gaps for each and suggest a specific coaching focus per person: [paste data].'</em>",
+     "Build coaching playbook in <code>Google Docs</code>: one section per skill: prospecting / discovery / demo / proposal / objection / closing → 3 exercises each",
+     "Set weekly 1:1 schedule per rep (30 min, Zoom) → <code>Google Sheets</code> coaching tracker: Rep / Focus Area / Discussion / Action Item / Follow-up",
+     "Create KPI dashboard in <code>Google Sheets</code>: pipeline value, calls, demos, proposals, closed, quota % per rep → color-code green/amber/red via conditional formatting",
+     "Run monthly forecast meeting: each rep presents top 5 open deals → challenge assumptions → calculate weighted forecast (probability × deal value) in Sheets",
+     "Open <code>Claude AI</code> → prompt: <em>'Write a monthly sales performance review template. Include: wins, misses, skill progress, next month focus, and 2 coaching actions per rep.'</em>",
+     "Present performance report to CEO in <code>Google Slides</code> → team results vs quota, forecast accuracy, top performers, coaching actions"
+   ],
+   tools:[{n:"Google Sheets",o:true},{n:"Claude AI",o:true},{n:"Google Docs",o:true},{n:"Google Slides",o:true}]
+  },
+  {id:33,name:"Odoo CRM Setup & Lead Management",cat:"Odoo CRM",diff:"hard",
+   industries:["Trading","Manufacturing","Distribution","Professional Services","IT Services"],
+   tasks:["Pipeline stage configuration in Odoo","Lead form creation & auto-assignment rules","Lead scoring criteria setup","Existing lead data import from Google Sheets"],
+   goals:["CRM live with full pipeline within 2 weeks","All leads tracked (zero in WhatsApp/sticky notes)","Lead response time below 1 hour"],
+   deliverables:"Pipeline config, lead forms, scoring, auto-assignment",
+   steps:[
+     "Log into <code>Odoo</code> → install CRM module → Configuration → Stages → replace defaults with: New Lead / Contacted / Qualified / Demo Booked / Proposal Sent / Won / Lost",
+     "Set up email alias: <code>Odoo</code> → Settings → email alias → sales@yourdomain.com → emails auto-create leads in CRM",
+     "Create lead capture form: <code>Google Forms</code> → connect via <code>Zapier</code> (free) → auto-create Odoo CRM lead on form submission",
+     "Open <code>Claude AI</code> → prompt: <em>'Create a lead scoring system for an Odoo ERP company. Score by: company size, job title, inquiry source, urgency. Assign points and define Hot/Warm/Cold thresholds.'</em>",
+     "In <code>Odoo</code> CRM → add custom field 'Lead Score' → manually score leads using criteria → create <code>Google Sheets</code> scoring cheat-sheet for team",
+     "Odoo → CRM → Configuration → Sales Teams → assign leads by source: website → Rep A, LinkedIn → Rep B",
+     "Import all existing leads: <code>Odoo</code> → CRM → Leads → Import → from <code>Google Sheets</code> CSV → map columns (Name, Email, Phone, Company, Stage)",
+     "Test: fill your own lead form → verify CRM lead is created → assigned to correct rep → confirmation email fires"
+   ],
+   tools:[{n:"Odoo CRM",o:false},{n:"Google Forms",o:true},{n:"Google Sheets",o:true},{n:"Zapier (free)",o:false}]
+  },
+  {id:34,name:"Online Booking & Calendar",cat:"Odoo CRM",diff:"hard",
+   industries:["Healthcare","Consulting","Beauty & Wellness","Legal","Training & Education"],
+   tasks:["Appointment types & availability setup","Google Calendar sync & OAuth connection","Confirmation & reminder email templates","Booking link distribution across channels"],
+   goals:["Booking link live on website within 1 week","No-shows reduced below 10%","All consultants' calendars synced and accurate"],
+   deliverables:"Odoo Appointments, calendar sync, auto confirmations",
+   steps:[
+     "Log into <code>Odoo</code> → Apps → search 'Appointments' → install → go to Appointments module",
+     "Create appointment types: 'Product Demo' (30 min), 'Consultation' (60 min), 'Quick Follow-up' (15 min) → set 15-min buffer between meetings",
+     "Configure availability: Mon–Fri 9am–5pm → set max appointments per day → block lunch and team meetings",
+     "Connect to <code>Google Calendar</code>: <code>Odoo</code> → Settings → Google Calendar → OAuth integration → authenticate work account → test sync",
+     "Customize confirmation email: <code>Odoo</code> → Appointments → Email Templates → use <code>Claude AI</code>: <em>'Write a friendly booking confirmation email for a tech consulting company. Include: appointment details, what to prepare, Zoom link placeholder, cancel/reschedule link.'</em>",
+     "Set up 24-hour reminder email: <code>Odoo</code> → Appointments → configure reminder → use <code>Claude AI</code> for reminder copy",
+     "Copy booking page link from <code>Odoo</code> → add to: <code>Brevo</code> email signature, LinkedIn profile 'Website' field, website contact page",
+     "Test full flow: book a test appointment → confirm Google Calendar updates → confirm emails fire → confirm rep sees it in Odoo"
+   ],
+   tools:[{n:"Odoo Appointments",o:false},{n:"Google Calendar",o:true},{n:"Claude AI",o:true},{n:"Brevo",o:true}]
+  },
+  {id:35,name:"Quote, E-Sign & Invoice",cat:"Odoo CRM",diff:"hard",
+   industries:["Engineering","Construction","IT Services","Consulting","Legal"],
+   tasks:["Quotation template setup (3 types) in Odoo Sales","E-signature workflow enablement","Auto-invoice trigger configuration on deal close","Payment link integration (Stripe/PayPal)"],
+   goals:["Quote-to-invoice time under 24 hours","DSO reduced by 10 days","100% of quotes using templates (no ad-hoc)"],
+   deliverables:"Quotation templates, e-signature, auto-invoice workflows",
+   steps:[
+     "Log into <code>Odoo</code> → Sales → Configuration → Quotation Templates → create 3 templates: Standard Service / Monthly Retainer / Project-Based → add pre-filled product lines per template",
+     "Open <code>Claude AI</code> → prompt: <em>'Write professional quotation terms & conditions for a B2B tech services company. Include: payment terms, service scope, validity period, cancellation clause. Max 150 words.'</em> → paste into Odoo quotation footer",
+     "Enable e-signature in <code>Odoo</code>: Settings → Sales → tick 'Signature on order' → set message: 'Please sign below to confirm your order'",
+     "Configure auto-invoice: <code>Odoo</code> → Sales → Settings → Invoicing Policy: 'Based on sales orders' → invoice auto-generates when quote is signed",
+     "Set payment terms per product type: <code>Odoo</code> → Accounting → Configuration → Payment Terms → create: '50% Upfront, 50% on Delivery' and 'Net 30'",
+     "Connect payment link: <code>Odoo</code> → Accounting → Settings → Payment Providers → connect Stripe → client pays online directly from invoice",
+     "Test full flow: create quote from template → send to yourself → sign it → verify invoice auto-generates → verify payment link works",
+     "Brief finance team: write SOP in <code>Google Docs</code> with screenshots → confirm everyone understands new quote → sign → invoice process"
+   ],
+   tools:[{n:"Odoo Sales",o:false},{n:"Odoo Accounting",o:false},{n:"Claude AI",o:true},{n:"Google Docs",o:true}]
+  },
+  {id:36,name:"Full Sales Pipeline Suite",cat:"Odoo CRM",diff:"hard",
+   industries:["Manufacturing","Distribution","Engineering","B2B Services","Multi-Branch Operations"],
+   tasks:["Full leads-to-invoice Odoo module configuration","User roles & access permissions setup","Data migration from Google Sheets to Odoo","Team training & SOP documentation"],
+   goals:["Full leads-to-cash visibility on one platform","All 3 departments (sales, finance, ops) live on Odoo","Zero manual data entry in pipeline within 30 days"],
+   deliverables:"Complete leads-to-invoice Odoo integration",
+   steps:[
+     "Map full business flow in <code>Google Sheets</code>: Lead Source → CRM Stage → Demo → Quote → E-Sign → Invoice → Payment → note which Odoo module handles each step",
+     "Open <code>Claude AI</code> → prompt: <em>'Create a project checklist for implementing a complete Odoo sales pipeline for a manufacturing SME. Cover: CRM, Sales, Appointments, Quoting, E-Signature, Invoicing, user training.'</em>",
+     "Install all Odoo modules: CRM + Sales + Appointments + Accounting → configure each individually (services #33, #34, #35) before connecting",
+     "Connect modules: CRM Opportunity → create Sales Quote directly from opportunity → quote signed → auto-invoice → linked to Accounting → payment updates both",
+     "Set user access: <code>Odoo</code> → Settings → Users → Sales team: CRM/Sales only / Finance: Accounting only / Admin: full access",
+     "Create data migration plan in <code>Google Sheets</code>: all existing leads, customers, open invoices → schedule import per module (CRM first, then Sales, then Accounting)",
+     "Import all data → verify counts match vs. <code>Google Sheets</code> → spot-check 10 random records for accuracy",
+     "Run 2-week parallel operation: team uses both old system AND Odoo → compare outputs → after 2 weeks switch off old system → go-live fully on Odoo"
+   ],
+   tools:[{n:"Odoo (all modules)",o:false},{n:"Claude AI",o:true},{n:"Google Sheets",o:true},{n:"Google Docs",o:true}]
+  }
+];
+
+let currentDiff='all',currentCat='all';
+
+function toggleSteps(btn,id){
+  const el=document.getElementById(id);
+  const show=el.style.display==='none'||!el.style.display;
+  el.style.display=show?'block':'none';
+  btn.textContent=show?'▲ Show less':'▼ Show all steps';
+}
+
+function renderCards(){
+  const grid=document.getElementById('grid');
+  const filtered=S.filter(s=>(currentDiff==='all'||s.diff===currentDiff)&&(currentCat==='all'||s.cat===currentCat));
+  document.getElementById('resultCount').textContent=`Showing ${filtered.length} service${filtered.length!==1?'s':''}`;
+  if(!filtered.length){
+    grid.innerHTML=`<div class="no-results"><h3>No services match this filter</h3><p>Try a different filter.</p></div>`;
+    return;
+  }
+  grid.innerHTML=filtered.map(s=>{
+    const first3=s.steps.slice(0,3),rest=s.steps.slice(3),sid=`sm-${s.id}`;
+    return`<div class="card" data-difficulty="${s.diff}">
+      <span class="card-num">#${String(s.id).padStart(2,'0')}</span>
+      <div class="card-top">
+        <span class="cat-badge" style="background:${CC[s.cat]}">${s.cat}</span>
+        <span class="diff-badge ${s.diff}">${DL[s.diff]}</span>
+      </div>
+      <h3>${s.name}</h3>
+
+      <div class="industries-row">
+        <span class="ind-label">🏢 Best for</span>
+        ${s.industries.map(i=>`<span class="ind-pill">${i}</span>`).join('')}
+      </div>
+
+      <div class="mid-section">
+        <div class="mid-half">
+          <div class="mid-label">📌 What to Do</div>
+          <div class="task-list">
+            ${s.tasks.map(t=>`<div class="task-item"><span class="task-icon">›</span><span>${t}</span></div>`).join('')}
+          </div>
+        </div>
+        <div class="mid-half">
+          <div class="mid-label">🎯 Goals & Targets</div>
+          <div class="goal-list">
+            ${s.goals.map(g=>`<div class="goal-item"><span class="goal-icon">◎</span><span>${g}</span></div>`).join('')}
+          </div>
+        </div>
+      </div>
+
+      <div class="steps-section">
+        <div class="steps-header"><div class="steps-label">📋 Step-by-Step Process</div></div>
+        <div class="steps-body">
+          ${first3.map((t,i)=>`<div class="step-item"><span class="step-num">${i+1}</span><span class="step-text">${t}</span></div>`).join('')}
+        </div>
+        ${rest.length?`<div class="steps-more" id="${sid}"><div class="steps-body" style="padding-top:0">
+          ${rest.map((t,i)=>`<div class="step-item"><span class="step-num">${i+4}</span><span class="step-text">${t}</span></div>`).join('')}
+        </div></div>
+        <button class="show-more-btn" onclick="toggleSteps(this,'${sid}')">▼ Show ${rest.length} more steps</button>`:''}
+      </div>
+
+      <div class="tools-row">
+        <span class="tools-label">🛠 Tools</span>
+        ${s.tools.map(t=>`<span class="tool-pill${t.o?' owned':''}">${t.n}</span>`).join('')}
+      </div>
+      <div class="deliverables-line"><strong>Includes:</strong> ${s.deliverables}</div>
+    </div>`;
+  }).join('');
+}
+
+document.querySelectorAll('.diff-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.diff-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    currentDiff=btn.dataset.diff;
+    renderCards();
+  });
+});
+document.getElementById('catSelect').addEventListener('change',e=>{currentCat=e.target.value;renderCards();});
+renderCards();
+</script>
+</body>
+</html>
+
+
+
