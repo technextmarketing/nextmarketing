@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Case Study — Sales Enablement Content | NextMarketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F7F9FC;color:#1A2B4A;font-size:15px;line-height:1.6}
+/* print bar */
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.pb a{color:#94A3B8;text-decoration:none;font-size:.85rem;display:flex;align-items:center;gap:.4rem}
+.pb a:hover{color:#fff}
+.btn-save{background:#00B4D8;color:#fff;border:none;padding:.55rem 1.4rem;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:.45rem;font-family:'Inter',sans-serif}
+.btn-save:hover{background:#0096B4}
+/* layout */
+.wrap{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+/* cover */
+.cov{background:linear-gradient(135deg,#0A2540 0%,#0f3460 55%,#1a5276 100%);border-radius:16px;padding:2.5rem 2.5rem 2rem;color:#fff;margin-bottom:2rem}
+.eye{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#00B4D8;margin-bottom:.6rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.9rem;font-weight:700;line-height:1.25;margin-bottom:.6rem}
+.cov .sub{color:#94A3B8;font-size:.95rem;margin-bottom:1.5rem;max-width:600px}
+.meta{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;font-size:.82rem;color:#CBD5E1}
+.meta span{display:flex;align-items:center;gap:.35rem}
+.meta strong{color:#fff}
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:1.1rem 1.25rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#00B4D8;display:block}
+.kl{font-size:.78rem;color:#94A3B8;margin-top:.25rem}
+/* boxes */
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.75rem;margin-bottom:1.5rem}
+.bx h2{font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:700;color:#0A2540;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.bx h2 .ic{background:#EFF6FF;color:#0A2540;width:28px;height:28px;border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+/* list */
+ul.bl{list-style:none;padding:0}
+ul.bl li{padding:.45rem 0 .45rem 1.4rem;position:relative;border-bottom:1px solid #F1F5F9;font-size:.9rem;color:#374151}
+ul.bl li:last-child{border-bottom:none}
+ul.bl li::before{content:"▸";position:absolute;left:0;color:#00B4D8;font-size:.8rem;top:.5rem}
+/* timeline */
+.tl-r{display:flex;gap:.875rem;margin-bottom:1.1rem;align-items:flex-start}
+.tlb{background:#0A2540;color:#fff;border-radius:8px;padding:.35rem .7rem;font-size:.75rem;font-weight:600;white-space:nowrap;font-family:'Montserrat',sans-serif;flex-shrink:0;margin-top:.1rem}
+.tl-c{flex:1}
+.tl-c strong{font-size:.9rem;color:#0A2540;display:block;margin-bottom:.2rem}
+.tl-c p{font-size:.85rem;color:#64748B}
+/* table */
+.tbl{width:100%;border-collapse:collapse;font-size:.85rem}
+.tbl th{background:#0A2540;color:#fff;padding:.65rem .9rem;text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.03em}
+.tbl th:first-child{border-radius:8px 0 0 0}
+.tbl th:last-child{border-radius:0 8px 0 0}
+.tbl td{padding:.6rem .9rem;border-bottom:1px solid #F1F5F9;color:#374151;vertical-align:middle}
+.tbl tr:hover td{background:#F8FAFF}
+.tbl tr:last-child td{border-bottom:none}
+.up{color:#16A34A;font-weight:600}
+.dn{color:#DC2626;font-weight:600}
+.tg{display:inline-block;padding:.15rem .55rem;border-radius:20px;font-size:.72rem;font-weight:600;font-family:'Montserrat',sans-serif}
+.tg.g{background:#DCFCE7;color:#166534}
+.tg.r{background:#FEE2E2;color:#991B1B}
+.tg.b{background:#DBEAFE;color:#1E40AF}
+.tg.y{background:#FEF9C3;color:#854D0E}
+/* chart */
+.ch-wrap{margin-top:1rem}
+.ch-r{display:grid;grid-template-columns:140px 1fr 70px;gap:.5rem;align-items:center;margin-bottom:.55rem}
+.ch-lbl{font-size:.82rem;color:#374151;font-weight:500}
+.ch-bg{background:#F1F5F9;border-radius:20px;height:12px;overflow:hidden}
+.ch-f{height:100%;border-radius:20px;transition:width .3s}
+.ch-v{font-size:.82rem;color:#374151;font-weight:600;text-align:right}
+/* before / after */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.5rem}
+.bab{background:#FFF5F5;border:1px solid #FCA5A5;border-radius:10px;padding:1rem 1.2rem}
+.baa{background:#F0FFF4;border:1px solid #86EFAC;border-radius:10px;padding:1rem 1.2rem}
+.ba-lbl{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.6rem}
+.bab .ba-lbl{color:#DC2626}
+.baa .ba-lbl{color:#16A34A}
+.ba-item{font-size:.85rem;color:#374151;padding:.25rem 0;border-bottom:1px solid rgba(0,0,0,.06);display:flex;justify-content:space-between;gap:.5rem}
+.ba-item:last-child{border-bottom:none}
+.ba-val{font-weight:600}
+/* deliverables */
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem .75rem;margin-top:.5rem}
+.del-i{font-size:.85rem;color:#374151;display:flex;align-items:flex-start;gap:.5rem;padding:.35rem 0}
+.del-i::before{content:"✓";color:#00B4D8;font-weight:700;flex-shrink:0;margin-top:.05rem}
+/* quote */
+.qt{background:#F0F9FF;border-left:4px solid #00B4D8;border-radius:0 10px 10px 0;padding:1.25rem 1.5rem;font-size:.9rem;color:#374151;font-style:italic;line-height:1.7}
+.qt .attr{margin-top:.75rem;font-style:normal;font-size:.82rem;color:#64748B;font-weight:600}
+/* revenue box */
+.rev-box{background:linear-gradient(135deg,#0A2540,#1a5276);border-radius:12px;padding:1.5rem;color:#fff;display:flex;align-items:center;gap:1.5rem;margin-top:1rem;flex-wrap:wrap}
+.rev-box .rib{text-align:center;flex:1;min-width:120px}
+.rev-box .riv{font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:700;color:#00B4D8}
+.rev-box .ril{font-size:.78rem;color:#94A3B8;margin-top:.25rem}
+/* battle card grid */
+.bc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-top:.75rem}
+.bc-card{background:#F8FAFF;border:1px solid #DBEAFE;border-radius:10px;padding:1rem 1.2rem}
+.bc-card h4{font-family:'Montserrat',sans-serif;font-size:.82rem;font-weight:700;color:#0A2540;margin-bottom:.5rem}
+.bc-tag{display:inline-block;background:#DBEAFE;color:#1E40AF;font-size:.7rem;font-weight:600;padding:.15rem .5rem;border-radius:12px;margin-bottom:.4rem}
+.bc-card p{font-size:.8rem;color:#64748B}
+/* footer */
+footer{text-align:center;padding:2rem;font-size:.8rem;color:#94A3B8;border-top:1px solid #E2E8F0;margin-top:2rem}
+footer strong{color:#0A2540}
+@media(max-width:640px){.kpis{grid-template-columns:1fr 1fr}.ba{grid-template-columns:1fr}.del{grid-template-columns:1fr}.bc-grid{grid-template-columns:1fr}.rev-box{flex-direction:column;text-align:center}}
+@media print{.pb{display:none!important}.wrap{padding:1rem}.cov{-webkit-print-color-adjust:exact;print-color-adjust:exact}.kpi{-webkit-print-color-adjust:exact}.tbl th{-webkit-print-color-adjust:exact}.rev-box{-webkit-print-color-adjust:exact}@page{margin:1.5cm}}
+</style>
+</head>
+<body>
+
+<!-- Print / Nav Bar -->
+<div class="pb">
+  <a href="../index.html">&#8592; Back to Services</a>
+  <button class="btn-save" onclick="window.print()">&#11015; Save as PDF</button>
+</div>
+
+<div class="wrap">
+
+  <!-- Cover -->
+  <div class="cov">
+    <p class="eye">Case Study &nbsp;·&nbsp; Sales Enablement Content</p>
+    <h1>From Inconsistent Pitches to a<br>Closed-Won Machine</h1>
+    <p class="sub">How ShieldNet Security Solutions armed 8 sales reps with battle-tested content that lifted win rates by 28% and cut ramp time in half.</p>
+    <div class="meta">
+      <span>🏢 <strong>ShieldNet Security Solutions</strong></span>
+      <span>📅 <strong>Duration:</strong> 90 Days</span>
+      <span>👥 <strong>Team Size:</strong> 8 Reps</span>
+      <span>📍 <strong>Kuala Lumpur, Malaysia</strong></span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><span class="kn">+28%</span><div class="kl">Win Rate Lift<br>(31% → 41%)</div></div>
+      <div class="kpi"><span class="kn">−50%</span><div class="kl">Rep Ramp Time<br>(16 → 8 Weeks)</div></div>
+      <div class="kpi"><span class="kn">RM280k</span><div class="kl">Est. Annual Revenue<br>Impact (8 Reps)</div></div>
+    </div>
+  </div>
+
+  <!-- Client Overview -->
+  <div class="bx">
+    <h2><span class="ic">🏢</span> Client Overview</h2>
+    <p style="font-size:.9rem;color:#374151;margin-bottom:.9rem">ShieldNet Security Solutions is a cybersecurity services firm based in Kuala Lumpur, serving mid-market and enterprise clients across banking, healthcare, and government sectors. With a team of 8 business development reps and an average deal size of RM85,000, ShieldNet competes against both local system integrators and large MNC vendors such as Palo Alto, CrowdStrike, and Fortinet.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:1rem">
+      <div style="background:#F8FAFF;border:1px solid #DBEAFE;border-radius:10px;padding:.9rem 1rem;text-align:center">
+        <div style="font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:700;color:#0A2540">8</div>
+        <div style="font-size:.78rem;color:#64748B;margin-top:.2rem">Sales Reps</div>
+      </div>
+      <div style="background:#F8FAFF;border:1px solid #DBEAFE;border-radius:10px;padding:.9rem 1rem;text-align:center">
+        <div style="font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:700;color:#0A2540">RM85k</div>
+        <div style="font-size:.78rem;color:#64748B;margin-top:.2rem">Avg Deal Size</div>
+      </div>
+      <div style="background:#F8FAFF;border:1px solid #DBEAFE;border-radius:10px;padding:.9rem 1rem;text-align:center">
+        <div style="font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:700;color:#0A2540">5</div>
+        <div style="font-size:.78rem;color:#64748B;margin-top:.2rem">Key Competitors</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Challenge -->
+  <div class="bx">
+    <h2><span class="ic">⚠️</span> The Challenge</h2>
+    <ul class="bl">
+      <li>Win rate stuck at 31% for 3 consecutive quarters despite growing pipeline volume</li>
+      <li>New reps took 16 weeks to reach full productivity — losing deals during the critical first months</li>
+      <li>No standardised objection handling: each rep improvised responses to competitor comparisons differently</li>
+      <li>Sales manager spent ~6 hours/week coaching individual reps on the same questions repeatedly</li>
+      <li>5 active competitor scenarios (Palo Alto, CrowdStrike, Fortinet, local SIs, in-house IT) had no documented counter-messaging</li>
+      <li>Proposals were formatted inconsistently, with varying quality across the team — affecting buyer trust</li>
+      <li>No library of proof points or client success stories for reps to reference during enterprise negotiations</li>
+    </ul>
+  </div>
+
+  <!-- Our Approach -->
+  <div class="bx">
+    <h2><span class="ic">🗺️</span> Our Approach</h2>
+
+    <div class="tl-r">
+      <div class="tlb">Week 1–2</div>
+      <div class="tl-c">
+        <strong>Discovery & Win/Loss Analysis</strong>
+        <p>Interviewed 6 reps and reviewed 40 closed deals (24 won, 16 lost). Mapped 5 recurring competitor scenarios and identified the top 12 buyer objections. Documented current messaging gaps and ranked content needs by deal-stage impact.</p>
+      </div>
+    </div>
+
+    <div class="tl-r">
+      <div class="tlb">Week 3–4</div>
+      <div class="tl-c">
+        <strong>Battle Card Development (Phase 1)</strong>
+        <p>Built 5 competitor battle cards — one per major rival. Each card: positioning summary, key differentiators, head-to-head comparison table, 3 disqualifying questions, and a proof point. Shared draft with sales manager for real-world accuracy check.</p>
+      </div>
+    </div>
+
+    <div class="tl-r">
+      <div class="tlb">Week 5–6</div>
+      <div class="tl-c">
+        <strong>Objection Handling Guide</strong>
+        <p>Compiled the 12 most common objections into a structured "Objection → Reframe → Proof" format. Each entry included 2 alternative responses (executive vs. technical buyer), a mini case reference, and a recommended follow-up asset. Formatted as a quick-reference PDF and a searchable Google Doc.</p>
+      </div>
+    </div>
+
+    <div class="tl-r">
+      <div class="tlb">Week 7–8</div>
+      <div class="tl-c">
+        <strong>Mini Case Studies & Proof Library</strong>
+        <p>Wrote 4 one-page case studies (anonymised) across banking, healthcare, SME, and government segments. Created a proof point library with 22 client statistics, regulatory compliance references, and third-party validation points reps could pull into any conversation.</p>
+      </div>
+    </div>
+
+    <div class="tl-r">
+      <div class="tlb">Week 9–10</div>
+      <div class="tl-c">
+        <strong>Onboarding Playbook & Training Deck</strong>
+        <p>Consolidated all assets into a 38-page New Rep Playbook — ICP profiles, discovery questions, qualification framework, proposal checklist, and content map by deal stage. Built a 20-slide training deck used in the first enablement session.</p>
+      </div>
+    </div>
+
+    <div class="tl-r">
+      <div class="tlb">Week 11–13</div>
+      <div class="tl-c">
+        <strong>Live Rollout & Coaching Calibration</strong>
+        <p>Ran 2 × 90-minute enablement workshops with the full sales team. Tracked first usage across 14 active deals. Gathered rep feedback, updated 3 battle cards with field corrections, and handed over a maintenance guide so the team could keep content fresh independently.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Win Rate Performance Table -->
+  <div class="bx">
+    <h2><span class="ic">📊</span> Win Rate Performance by Quarter</h2>
+    <div style="overflow-x:auto">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Quarter</th>
+            <th>Deals Qualified</th>
+            <th>Deals Won</th>
+            <th>Win Rate</th>
+            <th>Avg Deal Value</th>
+            <th>Revenue Closed</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Q3 2025 (Baseline)</td>
+            <td>42</td>
+            <td>13</td>
+            <td class="dn">31%</td>
+            <td>RM81,000</td>
+            <td>RM1,053,000</td>
+            <td><span class="tg r">Pre-Enablement</span></td>
+          </tr>
+          <tr>
+            <td>Q4 2025 (Baseline)</td>
+            <td>45</td>
+            <td>14</td>
+            <td class="dn">31%</td>
+            <td>RM83,000</td>
+            <td>RM1,162,000</td>
+            <td><span class="tg r">Pre-Enablement</span></td>
+          </tr>
+          <tr>
+            <td>Q1 2026 (Month 1)</td>
+            <td>48</td>
+            <td>17</td>
+            <td class="up">35%</td>
+            <td>RM84,000</td>
+            <td>RM1,428,000</td>
+            <td><span class="tg y">In Progress</span></td>
+          </tr>
+          <tr>
+            <td>Q1 2026 (Month 2)</td>
+            <td>51</td>
+            <td>20</td>
+            <td class="up">39%</td>
+            <td>RM85,500</td>
+            <td>RM1,710,000</td>
+            <td><span class="tg b">Improving</span></td>
+          </tr>
+          <tr>
+            <td>Q1 2026 (Month 3)</td>
+            <td>49</td>
+            <td>20</td>
+            <td class="up">41%</td>
+            <td>RM86,200</td>
+            <td>RM1,724,000</td>
+            <td><span class="tg g">Target Reached</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Win Rate Chart -->
+  <div class="bx">
+    <h2><span class="ic">📈</span> Win Rate Progression</h2>
+    <div class="ch-wrap">
+      <div class="ch-r">
+        <div class="ch-lbl">Q3 2025</div>
+        <div class="ch-bg"><div class="ch-f" style="width:31%;background:#CBD5E1"></div></div>
+        <div class="ch-v">31%</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-lbl">Q4 2025</div>
+        <div class="ch-bg"><div class="ch-f" style="width:31%;background:#CBD5E1"></div></div>
+        <div class="ch-v">31%</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-lbl">Month 1</div>
+        <div class="ch-bg"><div class="ch-f" style="width:35%;background:#7DD3FC"></div></div>
+        <div class="ch-v">35%</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-lbl">Month 2</div>
+        <div class="ch-bg"><div class="ch-f" style="width:39%;background:#22D3EE"></div></div>
+        <div class="ch-v">39%</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-lbl">Month 3</div>
+        <div class="ch-bg"><div class="ch-f" style="width:41%;background:#00B4D8"></div></div>
+        <div class="ch-v" style="color:#00B4D8;font-weight:700">41% ✓</div>
+      </div>
+    </div>
+    <p style="font-size:.8rem;color:#64748B;margin-top:.75rem;text-align:center">Win rate sustained above 40% following full content rollout in Month 3. Target: 40%+</p>
+  </div>
+
+  <!-- Rep Ramp Time -->
+  <div class="bx">
+    <h2><span class="ic">⏱️</span> New Rep Ramp Time Comparison</h2>
+    <div style="overflow-x:auto">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Rep</th>
+            <th>Hire Date</th>
+            <th>Method</th>
+            <th>First Deal Won</th>
+            <th>Ramp Time</th>
+            <th>Vs. Avg</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rep A (control)</td>
+            <td>Aug 2025</td>
+            <td>Old onboarding</td>
+            <td>Dec 2025</td>
+            <td class="dn">16 weeks</td>
+            <td><span class="tg r">Baseline</span></td>
+          </tr>
+          <tr>
+            <td>Rep B (control)</td>
+            <td>Sep 2025</td>
+            <td>Old onboarding</td>
+            <td>Jan 2026</td>
+            <td class="dn">17 weeks</td>
+            <td><span class="tg r">+1 week</span></td>
+          </tr>
+          <tr>
+            <td>Rep C (new playbook)</td>
+            <td>Jan 2026</td>
+            <td>New playbook</td>
+            <td>Mar 2026</td>
+            <td class="up">8 weeks</td>
+            <td><span class="tg g">−8 weeks</span></td>
+          </tr>
+          <tr>
+            <td>Rep D (new playbook)</td>
+            <td>Feb 2026</td>
+            <td>New playbook</td>
+            <td>Mar 2026</td>
+            <td class="up">7 weeks</td>
+            <td><span class="tg g">−9 weeks</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.8rem;color:#64748B;margin-top:.6rem">New reps with the enablement playbook consistently hit their first closed deal within 8 weeks vs. the historical 16-week average.</p>
+  </div>
+
+  <!-- Battle Cards Built -->
+  <div class="bx">
+    <h2><span class="ic">🃏</span> Battle Cards Delivered</h2>
+    <div class="bc-grid">
+      <div class="bc-card">
+        <div class="bc-tag">Enterprise Vendor</div>
+        <h4>ShieldNet vs. Palo Alto</h4>
+        <p>Focuses on total cost of ownership, local support SLA, and implementation speed. Key disqualifier: "Ask about their onboarding timeline for a 200-seat deployment."</p>
+      </div>
+      <div class="bc-card">
+        <div class="bc-tag">US Cloud Vendor</div>
+        <h4>ShieldNet vs. CrowdStrike</h4>
+        <p>Positions ShieldNet's on-premise hybrid option and data residency compliance for banking and government clients under Bank Negara and PDPA frameworks.</p>
+      </div>
+      <div class="bc-card">
+        <div class="bc-tag">Network Security</div>
+        <h4>ShieldNet vs. Fortinet</h4>
+        <p>Highlights managed service model vs. self-managed appliances. Addresses total headcount cost and in-house skill gap — ideal for SME and mid-market buyers.</p>
+      </div>
+      <div class="bc-card">
+        <div class="bc-tag">Local Competitors</div>
+        <h4>ShieldNet vs. Local SIs</h4>
+        <p>Differentiates on SOC-as-a-Service maturity, 24/7 response SLA, and certified analyst team. Uses case studies from comparable-sized clients as proof points.</p>
+      </div>
+      <div class="bc-card" style="grid-column:1/-1">
+        <div class="bc-tag">Internal Competition</div>
+        <h4>ShieldNet vs. In-House IT Team</h4>
+        <p>Addresses the "we'll just build it internally" objection. ROI calculator showing 3-year cost comparison: internal team (RM480k/year fully loaded) vs. ShieldNet managed service (RM156k/year). Backed by compliance gap analysis specific to their sector.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Objection Handling Table -->
+  <div class="bx">
+    <h2><span class="ic">💬</span> Top Objections — Before &amp; After</h2>
+    <div style="overflow-x:auto">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Objection</th>
+            <th>Old Response</th>
+            <th>New Reframe</th>
+            <th>Proof Asset</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"You're too expensive"</td>
+            <td>Justify price list</td>
+            <td>TCO comparison over 3 years</td>
+            <td>ROI calculator PDF</td>
+          </tr>
+          <tr>
+            <td>"We already have Fortinet"</td>
+            <td>Describe features</td>
+            <td>Managed service layer vs. appliance</td>
+            <td>Fortinet battle card</td>
+          </tr>
+          <tr>
+            <td>"We need to think about it"</td>
+            <td>Follow up next week</td>
+            <td>Surface unstated objection + micro-commitment</td>
+            <td>Discovery question guide</td>
+          </tr>
+          <tr>
+            <td>"Our IT team can handle it"</td>
+            <td>Explain SOC capabilities</td>
+            <td>In-house cost model + compliance gap</td>
+            <td>Internal IT battle card</td>
+          </tr>
+          <tr>
+            <td>"We're in budget freeze"</td>
+            <td>Wait it out</td>
+            <td>Phased engagement model + risk framing</td>
+            <td>Phased proposal template</td>
+          </tr>
+          <tr>
+            <td>"Send me a proposal first"</td>
+            <td>Send generic proposal</td>
+            <td>Discovery call gate before proposal</td>
+            <td>Qualification checklist</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Revenue Impact Box -->
+  <div class="bx">
+    <h2><span class="ic">💰</span> Estimated Revenue Impact</h2>
+    <div class="rev-box">
+      <div class="rib">
+        <div class="riv">8</div>
+        <div class="ril">Reps Enabled</div>
+      </div>
+      <div class="rib">
+        <div class="riv">+10 pts</div>
+        <div class="ril">Win Rate Gain</div>
+      </div>
+      <div class="rib">
+        <div class="riv">RM85k</div>
+        <div class="ril">Avg Deal Size</div>
+      </div>
+      <div class="rib">
+        <div class="riv">~4</div>
+        <div class="ril">Extra Deals/Rep/Year</div>
+      </div>
+      <div class="rib">
+        <div class="riv" style="font-size:1.8rem">RM280k</div>
+        <div class="ril">Est. Annual Revenue Uplift</div>
+      </div>
+    </div>
+    <p style="font-size:.8rem;color:#64748B;margin-top:.75rem">Calculation: 8 reps × ~4 additional closed deals per year × RM85,000 avg deal = RM2,720,000 potential. Conservative estimate applied at 10% incremental attribution = RM272,000. Rounded to RM280k including ramp savings.</p>
+  </div>
+
+  <!-- Before / After -->
+  <div class="bx">
+    <h2><span class="ic">⚖️</span> Before vs. After Comparison</h2>
+    <div class="ba">
+      <div class="bab">
+        <div class="ba-lbl">❌ Before</div>
+        <div class="ba-item"><span>Win Rate</span><span class="ba-val">31%</span></div>
+        <div class="ba-item"><span>Ramp Time</span><span class="ba-val">16 weeks</span></div>
+        <div class="ba-item"><span>Competitor Objections</span><span class="ba-val">Improvised</span></div>
+        <div class="ba-item"><span>Manager Coaching Hours</span><span class="ba-val">6 hrs/week</span></div>
+        <div class="ba-item"><span>Content Available to Reps</span><span class="ba-val">0 structured assets</span></div>
+        <div class="ba-item"><span>Proposal Consistency</span><span class="ba-val">Low — rep dependent</span></div>
+      </div>
+      <div class="baa">
+        <div class="ba-lbl">✅ After</div>
+        <div class="ba-item"><span>Win Rate</span><span class="ba-val">41%</span></div>
+        <div class="ba-item"><span>Ramp Time</span><span class="ba-val">8 weeks</span></div>
+        <div class="ba-item"><span>Competitor Objections</span><span class="ba-val">5 battle cards</span></div>
+        <div class="ba-item"><span>Manager Coaching Hours</span><span class="ba-val">2 hrs/week</span></div>
+        <div class="ba-item"><span>Content Available to Reps</span><span class="ba-val">38 structured assets</span></div>
+        <div class="ba-item"><span>Proposal Consistency</span><span class="ba-val">Standardised templates</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What We Delivered -->
+  <div class="bx">
+    <h2><span class="ic">📦</span> What We Delivered</h2>
+    <div class="del">
+      <div class="del-i">5 Competitor Battle Cards (one per rival)</div>
+      <div class="del-i">12-Objection Handling Guide (PDF + Google Doc)</div>
+      <div class="del-i">4 One-Page Anonymised Case Studies</div>
+      <div class="del-i">22-Point Proof Point Library</div>
+      <div class="del-i">38-Page New Rep Onboarding Playbook</div>
+      <div class="del-i">20-Slide Internal Training Deck</div>
+      <div class="del-i">3 Phased Proposal Templates (by deal size)</div>
+      <div class="del-i">ICP Profile Cards (3 buyer personas)</div>
+      <div class="del-i">Discovery Question Bank (18 questions)</div>
+      <div class="del-i">Deal-Stage Content Map (visual PDF)</div>
+      <div class="del-i">ROI Calculator Worksheet (Excel)</div>
+      <div class="del-i">Content Maintenance Guide for internal updates</div>
+    </div>
+  </div>
+
+  <!-- Testimonial -->
+  <div class="bx">
+    <h2><span class="ic">💬</span> Client Testimonial</h2>
+    <div class="qt">
+      "We'd been losing the same deals to the same competitors for years. We knew our product was better — we just didn't know how to say it. NextMarketing didn't just write us content, they reverse-engineered why we were losing and built a system that fixed it. Our new reps are closing deals in 8 weeks. Our experienced reps are winning deals they would have lost six months ago. The battle cards alone paid for this entire engagement."
+      <div class="attr">— Faizal Hamdan, Head of Sales, ShieldNet Security Solutions</div>
+    </div>
+  </div>
+
+  <footer>
+    <strong>NextMarketing</strong> — Professional Marketing Services by TechNext Asia &nbsp;|&nbsp; hello@technext.asia &nbsp;|&nbsp; www.technext.asia
+  </footer>
+
+</div>
+</body>
+</html>

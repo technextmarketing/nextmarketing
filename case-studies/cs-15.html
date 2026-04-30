@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study #15 — Monthly Analytics Report | NextMarketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}.pb-l{display:flex;align-items:center;gap:.875rem}.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}.logo span{color:#00B4D8}.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}.btn-save{background:#00B4D8;color:#0A2540;border:none;padding:.45rem 1.1rem;border-radius:6px;font-weight:700;cursor:pointer;font-size:.8rem;font-family:inherit}.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#00B4D8;margin-bottom:.75rem}.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#00B4D8;line-height:1}.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #00B4D8;display:block}p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}.tl-r{display:flex;gap:.875rem;align-items:flex-start}.tlb{background:#0A2540;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}.tlu li::before{content:'›';color:#00B4D8;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.81rem}th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}tr:last-child td{border-bottom:none}tr:nth-child(even) td{background:#F8FAFC}.up{color:#16A34A;font-weight:700}.dn{color:#DC2626;font-weight:700}.fw{font-weight:700;color:#0A2540}.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}.tr{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}.ta{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.ch-row3{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem;margin-top:.5rem}
+.ch-card{border-radius:8px;padding:1rem;text-align:center;border:1px solid}
+.ch-bad{background:#FEF2F2;border-color:#FECACA}.ch-ok{background:#FFFBEB;border-color:#FDE68A}.ch-good{background:#F0FDF4;border-color:#BBF7D0}
+.ch-cnum{font-family:'Montserrat',sans-serif;font-size:1.4rem;font-weight:700}.ch-bad .ch-cnum{color:#DC2626}.ch-ok .ch-cnum{color:#D97706}.ch-good .ch-cnum{color:#16A34A}
+.ch-clabel{font-size:.72rem;font-weight:600;margin-top:.2rem}.ch-bad .ch-clabel{color:#B91C1C}.ch-ok .ch-clabel{color:#B45309}.ch-good .ch-clabel{color:#15803D}
+.ch-csub{font-size:.67rem;color:#94A3B8;margin-top:.15rem}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}.bab .bah{color:#DC2626}.baa .bah{color:#16A34A}.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}.bar:last-child{border-bottom:none}.bar-k{color:#64748B}.bav{font-weight:700}.bab .bav{color:#DC2626}.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}.di{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#1D4ED8;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}.di::before{content:'✓';color:#16A34A;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#F0F9FF,#EFF6FF);border:1px solid #BFDBFE;border-radius:12px;padding:1.5rem}.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #00B4D8;margin-bottom:.875rem}.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}.foot strong{color:#0A2540}
+@media print{.pb{display:none}body{background:#fff}.cov,.bx{break-inside:avoid}.cov,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del,.ch-row3{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}}
+</style>
+</head>
+<body>
+<div class="pb">
+  <div class="pb-l">
+    <div class="logo"><span>Tech</span>Next <span style="color:#fff;font-weight:400">|</span> <span>NextMarketing</span></div>
+    <span class="pill">Case Study #15</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <button class="btn-save" onclick="window.print()">⬇ Save as PDF</button>
+    <a class="btn-bk" href="../index.html">← Back to Services</a>
+  </div>
+</div>
+<div class="w">
+  <div class="cov">
+    <div class="ey">CRO &amp; Reporting · 🟢 Easy Tier · NextMarketing Case Study</div>
+    <h1>Monthly Analytics Report</h1>
+    <div class="csub">How a logistics company got full visibility into its marketing performance — and reallocated budget to channels delivering 220% higher ROI</div>
+    <div class="meta">
+      <span>🏢 FastRoute Logistics Sdn Bhd · Regional Logistics</span>
+      <span>📅 Jan – Mar 2026 · 3 months</span>
+      <span>📊 GA4 + Ads + Social Dashboard</span>
+      <span>📍 Shah Alam · Johor Bahru · Penang</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="kn">100%</div><div class="kl">Marketing Data Visibility Achieved</div></div>
+      <div class="kpi"><div class="kn">3</div><div class="kl">Underperforming Channels Found</div></div>
+      <div class="kpi"><div class="kn">+220%</div><div class="kl">ROI on Reallocated Budget</div></div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">🏢 Client Overview</span>
+    <p class="n">FastRoute Logistics operates a regional last-mile delivery network covering Klang Valley, Johor Bahru, and Penang. With a fleet of 140 vehicles and 3 depot locations, they spend RM12,000/month on marketing across Google Ads, Facebook Ads, LinkedIn, and SEO — managed by a 2-person in-house team.</p>
+    <p class="n">The problem: each channel was tracked separately (or not at all), budget decisions were made on gut feel, and the marketing manager could not tell the CEO which channel was actually driving qualified leads. Monthly reporting was a manually compiled spreadsheet that took 3 days to build.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚠️ The Challenge</span>
+    <ul class="tlu" style="margin-top:.25rem">
+      <li>5 separate tools (Google Ads, Meta Ads Manager, GA4, LinkedIn Analytics, Buffer) — no unified view</li>
+      <li>GA4 not configured correctly — goals not set, traffic sources mislabelled, conversion tracking missing</li>
+      <li>RM12,000/month budget split across 4 channels with no attribution model — no idea what worked</li>
+      <li>Monthly report took 3 days to compile manually — and still contained errors and data gaps</li>
+      <li>Facebook Ads: RM3,500/month with no conversion tracking — results unmeasurable</li>
+    </ul>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📋 Our Approach — Month by Month</span>
+    <div class="tl">
+      <div class="tl-r">
+        <span class="tlb">Month 1 · Jan</span>
+        <div>
+          <div class="tlh">Setup — GA4 Fix, Tracking &amp; Dashboard Build</div>
+          <ul class="tlu">
+            <li>Audited GA4: found 4 misconfigured goals, missing UTM parameters on all ad campaigns, direct traffic inflated by 40% due to missing source tagging</li>
+            <li>Fixed GA4: set up 6 conversion events (form submit, phone click, quote request, chat start, brochure download, newsletter signup)</li>
+            <li>Added UTM tracking to all Google Ads and Meta Ads URLs — traffic sources now correctly attributed in GA4</li>
+            <li>Built unified Google Sheets dashboard: auto-pulls data from GA4, manually updated with ads + social data → 2-hour monthly update vs. previous 3-day build</li>
+            <li>January report delivered: first clean month of data, channel-by-channel breakdown, CPL by source</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-r">
+        <span class="tlb">Month 2 · Feb</span>
+        <div>
+          <div class="tlh">Insight — 3 Underperforming Channels Identified</div>
+          <ul class="tlu">
+            <li>February data revealed: Facebook Ads (RM3,500/month) generating CPL of RM182 vs. Google Ads CPL of RM44 — 4× more expensive per lead</li>
+            <li>LinkedIn (RM1,800/month) generating 0 tracked conversions — Insight Tag misconfigured, leads going untracked</li>
+            <li>SEO organic: generating 38 qualified leads/month at near-zero marginal cost — massively undervalued in budget allocation</li>
+            <li>Recommendation: reduce Facebook Ads by 50%, fix LinkedIn tracking, increase SEO content budget</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-r">
+        <span class="tlb">Month 3 · Mar</span>
+        <div>
+          <div class="tlh">Reallocation — Budget Shift &amp; ROI Improvement</div>
+          <ul class="tlu">
+            <li>RM1,750 moved from Facebook Ads to Google Ads (Exact Match campaigns) — CPL on Google dropped from RM44 to RM31</li>
+            <li>LinkedIn Insight Tag fixed — first trackable LinkedIn leads: 6 in March at CPL of RM120 (acceptable for B2B freight)</li>
+            <li>SEO blog content: 2 posts added targeting "logistics company Malaysia" and "same-day delivery Klang Valley" — organic leads up 28%</li>
+            <li>Overall marketing ROI (revenue attributed / spend): RM8.40 per RM1 spent in Mar vs. RM2.60 in Jan — +220% improvement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📊 Channel Performance Audit — February 2026 Data</span>
+    <div class="ow">
+      <table>
+        <thead><tr><th>Channel</th><th>Monthly Spend</th><th>Leads Generated</th><th>Cost Per Lead</th><th>Conversion Tracked?</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="fw">Google Ads</td><td>RM3,200</td><td>73</td><td class="up">RM44</td><td>✓ Yes</td><td><span class="tg">Performing</span></td></tr>
+          <tr><td class="fw">Facebook Ads</td><td>RM3,500</td><td>19</td><td class="dn">RM184</td><td>✓ Yes</td><td><span class="tr">Underperforming</span></td></tr>
+          <tr><td class="fw">LinkedIn Ads</td><td>RM1,800</td><td>0 tracked</td><td class="dn">N/A</td><td>✗ Tag broken</td><td><span class="tr">Not measured</span></td></tr>
+          <tr><td class="fw">SEO / Organic</td><td>RM800</td><td>38</td><td class="up">RM21</td><td>✓ GA4</td><td><span class="tg">Best ROI</span></td></tr>
+          <tr><td class="fw">Social (organic)</td><td>RM1,700</td><td>4</td><td><span class="ta">RM425</span></td><td>Partial</td><td><span class="ta">Low priority</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📊 Channel Status Before vs. After Dashboard</span>
+    <div class="ch-row3">
+      <div class="ch-card ch-bad">
+        <div class="ch-cnum">Facebook</div>
+        <div class="ch-clabel">RM184 CPL</div>
+        <div class="ch-csub">Spend reduced 50% → redeployed</div>
+      </div>
+      <div class="ch-card ch-ok">
+        <div class="ch-cnum">LinkedIn</div>
+        <div class="ch-clabel">Now Tracked</div>
+        <div class="ch-csub">Tag fixed → 6 leads in Month 3</div>
+      </div>
+      <div class="ch-card ch-good">
+        <div class="ch-cnum">Google</div>
+        <div class="ch-clabel">RM31 CPL</div>
+        <div class="ch-csub">Budget increased → CPL dropped 30%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚖️ Before vs. After</span>
+    <div class="ba">
+      <div class="bab">
+        <div class="bah">❌ Before — December 2025</div>
+        <div class="bar"><span class="bar-k">Data visibility</span><span class="bav">5 separate tools</span></div>
+        <div class="bar"><span class="bar-k">Monthly report build time</span><span class="bav">3 days manual</span></div>
+        <div class="bar"><span class="bar-k">GA4 conversion tracking</span><span class="bav">Not configured</span></div>
+        <div class="bar"><span class="bar-k">Budget decision basis</span><span class="bav">Gut feel</span></div>
+        <div class="bar"><span class="bar-k">Marketing ROI visibility</span><span class="bav">0%</span></div>
+      </div>
+      <div class="baa">
+        <div class="bah">✅ After — March 2026</div>
+        <div class="bar"><span class="bar-k">Data visibility</span><span class="bav">1 unified dashboard</span></div>
+        <div class="bar"><span class="bar-k">Monthly report build time</span><span class="bav">2 hours auto-update</span></div>
+        <div class="bar"><span class="bar-k">GA4 conversion tracking</span><span class="bav">6 events active</span></div>
+        <div class="bar"><span class="bar-k">Budget decision basis</span><span class="bav">CPL data per channel</span></div>
+        <div class="bar"><span class="bar-k">Marketing ROI visibility</span><span class="bav">100% attributed</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📦 What We Delivered</span>
+    <div class="del">
+      <div class="di">GA4 audit + 6 conversion events configured correctly</div>
+      <div class="di">UTM parameter setup for all active ad campaigns</div>
+      <div class="di">Unified Google Sheets marketing dashboard (monthly auto-update)</div>
+      <div class="di">LinkedIn Insight Tag fix + verification</div>
+      <div class="di">3 monthly analytics reports with channel breakdown + recommendations</div>
+      <div class="di">Budget reallocation recommendation (Month 2) — implemented Month 3</div>
+      <div class="di">CPL tracking table by channel — updated monthly</div>
+      <div class="di">Marketing ROI summary: revenue attributed per RM1 spent</div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">💬 Client Testimonial</span>
+    <div class="qt">
+      <div class="qt-t">For the first time in 4 years, I can tell the CEO exactly which channel is generating leads and what each one costs. We moved budget from Facebook to Google based on the February report and our cost per lead dropped by 30% the next month. The dashboard alone is worth more than what we're paying — and it took NextMarketing one month to build what we couldn't do ourselves in years.</div>
+      <div class="qt-n">Nurul Aina binti Azlan</div>
+      <div class="qt-r">Marketing Manager · FastRoute Logistics Sdn Bhd · Shah Alam</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <strong>NextMarketing by TechNext Asia</strong> · Monthly Analytics Report · Case Study #15<br>
+    <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmarketing.github.io/nextmarketing</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study #12 — Graphic Design | NextMarketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}.pb-l{display:flex;align-items:center;gap:.875rem}.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}.logo span{color:#00B4D8}.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}.btn-save{background:#00B4D8;color:#0A2540;border:none;padding:.45rem 1.1rem;border-radius:6px;font-weight:700;cursor:pointer;font-size:.8rem;font-family:inherit}.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#00B4D8;margin-bottom:.75rem}.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#00B4D8;line-height:1}.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #00B4D8;display:block}p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}.tl-r{display:flex;gap:.875rem;align-items:flex-start}.tlb{background:#0A2540;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}.tlu li::before{content:'›';color:#00B4D8;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.81rem}th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}tr:last-child td{border-bottom:none}tr:nth-child(even) td{background:#F8FAFC}.up{color:#16A34A;font-weight:700}.dn{color:#DC2626;font-weight:700}.fw{font-weight:700;color:#0A2540}.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}.tr{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.asset-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:.5rem}.asset{border:1px solid #E2E8F0;border-radius:8px;padding:.875rem;text-align:center;background:#FAFBFC}.asset-num{font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:700;color:#0A2540}.asset-type{font-size:.72rem;color:#64748B;margin-top:.2rem;font-weight:600}.asset-note{font-size:.67rem;color:#94A3B8;margin-top:.1rem}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}.ch-r{display:grid;grid-template-columns:100px 1fr 70px;gap:.55rem;align-items:center}.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}.ch-t{background:#EFF6FF;border-radius:4px;height:22px;overflow:hidden}.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}.bab .bah{color:#DC2626}.baa .bah{color:#16A34A}.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}.bar:last-child{border-bottom:none}.bar-k{color:#64748B}.bav{font-weight:700}.bab .bav{color:#DC2626}.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}.di{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#1D4ED8;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}.di::before{content:'✓';color:#16A34A;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#F0F9FF,#EFF6FF);border:1px solid #BFDBFE;border-radius:12px;padding:1.5rem}.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #00B4D8;margin-bottom:.875rem}.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}.foot strong{color:#0A2540}
+@media print{.pb{display:none}body{background:#fff}.cov,.bx{break-inside:avoid}.cov,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del,.asset-grid{grid-template-columns:1fr 1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}}
+</style>
+</head>
+<body>
+<div class="pb">
+  <div class="pb-l">
+    <div class="logo"><span>Tech</span>Next <span style="color:#fff;font-weight:400">|</span> <span>NextMarketing</span></div>
+    <span class="pill">Case Study #12</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <button class="btn-save" onclick="window.print()">⬇ Save as PDF</button>
+    <a class="btn-bk" href="../index.html">← Back to Services</a>
+  </div>
+</div>
+<div class="w">
+  <div class="cov">
+    <div class="ey">Graphic Design · 🟢 Easy Tier · NextMarketing Case Study</div>
+    <h1>Graphic Design</h1>
+    <div class="csub">How a financial advisory firm replaced 4 conflicting visual styles with one brand identity — and saw engagement rise 2.4× across all channels</div>
+    <div class="meta">
+      <span>🏢 Meridian Wealth Advisory · Financial Services</span>
+      <span>📅 Jan – Mar 2026 · 3 months</span>
+      <span>🎨 10 Branded Assets / Month</span>
+      <span>📍 Kuala Lumpur, Malaysia</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="kn">100%</div><div class="kl">Brand Consistency Achieved</div></div>
+      <div class="kpi"><div class="kn">2.4×</div><div class="kl">Average Post Engagement Rate</div></div>
+      <div class="kpi"><div class="kn">30</div><div class="kl">Branded Assets Delivered</div></div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">🏢 Client Overview</span>
+    <p class="n">Meridian Wealth Advisory is an independent financial advisory boutique in KL serving high-net-worth individuals with investment planning, insurance, and estate management. With 4 licensed advisors and a small admin team, they had been posting financial tips and market updates on LinkedIn and Instagram for 18 months.</p>
+    <p class="n">The problem: every team member was creating their own posts using different design tools, font sizes, colour schemes, and photo styles. The result was a feed that looked inconsistent and unprofessional — undercutting the trust a financial services brand depends on.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚠️ The Challenge</span>
+    <ul class="tlu" style="margin-top:.25rem">
+      <li>4 advisors posting independently — 4 different design approaches, 3 different font families in use simultaneously</li>
+      <li>Stock photos from 3 different providers with inconsistent visual style (some professional, some casual)</li>
+      <li>No brand kit — logo file existed but was never applied consistently to social content</li>
+      <li>Engagement rate: 1.8% average — below financial services benchmark of 2.5%</li>
+      <li>Prospects told the firm: "Your posts don't look like a proper wealth management company"</li>
+    </ul>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📋 Our Approach — Month by Month</span>
+    <div class="tl">
+      <div class="tl-r">
+        <span class="tlb">Month 1 · Jan</span>
+        <div>
+          <div class="tlh">Brand Audit &amp; Kit Creation</div>
+          <ul class="tlu">
+            <li>Conducted a brand audit: collected all 47 posts from the last 6 months — documented every unique color, font, and layout used</li>
+            <li>Defined brand standards from the logo: primary navy (#0D1B2A), gold accent (#C9A84C), white; fonts: Playfair Display (headings) + Inter (body)</li>
+            <li>Built Canva Brand Kit — uploaded all logo variants, locked colours and fonts, set photo style guide (professional, warm-toned, human)</li>
+            <li>Created 3 master post templates: Insight Card (text-heavy), Market Update (data-led), Client Tip (action-driven)</</li>
+            <li>Delivered Month 1 assets: 6 social posts + 2 LinkedIn banners + 2 email headers — all from brand kit</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-r">
+        <span class="tlb">Month 2 · Feb</span>
+        <div>
+          <div class="tlh">Consistency at Scale — All Channels</div>
+          <ul class="tlu">
+            <li>All 4 advisors briefed on brand kit usage — shared Canva team link so all could access templates without editing originals</li>
+            <li>Month 2 assets: 6 posts + 2 infographics ("5 signs you need an estate plan") + 2 ad creatives for Meta awareness campaign</li>
+            <li>Engagement rose to 3.1% average — 72% increase from 1.8% pre-engagement baseline</li>
+            <li>Infographic posts performed 3.2× better than text-only posts — adjusted Month 3 mix accordingly</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-r">
+        <span class="tlb">Month 3 · Mar</span>
+        <div>
+          <div class="tlh">Peak Results — 2.4× Engagement &amp; Identity Locked</div>
+          <ul class="tlu">
+            <li>Month 3 assets: 6 posts + 2 infographics + 1 pitch deck cover + 1 capability one-pager</li>
+            <li>Engagement averaged 4.3% in March — 2.4× the pre-engagement baseline of 1.8%</li>
+            <li>One LinkedIn post ("3 mistakes Malaysian investors make with EPF") reached 4,200 impressions — best performing post in firm's history</li>
+            <li>Delivered full brand standards PDF — template library, do's &amp; don'ts guide, Canva access instructions for ongoing self-service</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📦 Assets Delivered — 30 Total Across 3 Months</span>
+    <div class="asset-grid">
+      <div class="asset"><div class="asset-num">18</div><div class="asset-type">Social Posts</div><div class="asset-note">LinkedIn + Instagram feed</div></div>
+      <div class="asset"><div class="asset-num">4</div><div class="asset-type">Infographics</div><div class="asset-note">Data-led visual cards</div></div>
+      <div class="asset"><div class="asset-num">4</div><div class="asset-type">Email Headers</div><div class="asset-note">600×200 Brevo-ready PNG</div></div>
+      <div class="asset"><div class="asset-num">2</div><div class="asset-type">LinkedIn Banners</div><div class="asset-note">Profile + company page</div></div>
+      <div class="asset"><div class="asset-num">1</div><div class="asset-type">Pitch Deck Cover</div><div class="asset-note">Branded presentation slide</div></div>
+      <div class="asset"><div class="asset-num">1</div><div class="asset-type">Capability One-Pager</div><div class="asset-note">PDF-ready A4 layout</div></div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📈 Engagement Rate Growth</span>
+    <div class="ch">
+      <div class="ch-r"><div class="ch-l">Before</div><div class="ch-t"><div class="ch-f" style="width:42%;background:#94A3B8"><span class="ch-fv">1.8% avg</span></div></div><div class="ch-n">1.8%</div></div>
+      <div class="ch-r"><div class="ch-l">Month 1</div><div class="ch-t"><div class="ch-f" style="width:58%;background:#67E8F9"><span class="ch-fv">2.5% avg</span></div></div><div class="ch-n">2.5%</div></div>
+      <div class="ch-r"><div class="ch-l">Month 2</div><div class="ch-t"><div class="ch-f" style="width:72%;background:#22D3EE"><span class="ch-fv">3.1% avg</span></div></div><div class="ch-n">3.1%</div></div>
+      <div class="ch-r"><div class="ch-l">Month 3</div><div class="ch-t"><div class="ch-f" style="width:100%;background:#00B4D8"><span class="ch-fv">4.3% avg (2.4× uplift)</span></div></div><div class="ch-n">4.3%</div></div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚖️ Before vs. After</span>
+    <div class="ba">
+      <div class="bab">
+        <div class="bah">❌ Before — December 2025</div>
+        <div class="bar"><span class="bar-k">Brand consistency</span><span class="bav">None (4 styles)</span></div>
+        <div class="bar"><span class="bar-k">Fonts in use</span><span class="bav">3 different families</span></div>
+        <div class="bar"><span class="bar-k">Avg. engagement rate</span><span class="bav">1.8%</span></div>
+        <div class="bar"><span class="bar-k">Design tool</span><span class="bav">Mixed (PowerPoint, Canva, phone apps)</span></div>
+        <div class="bar"><span class="bar-k">Brand kit</span><span class="bav">None</span></div>
+      </div>
+      <div class="baa">
+        <div class="bah">✅ After — March 2026</div>
+        <div class="bar"><span class="bar-k">Brand consistency</span><span class="bav">100% unified</span></div>
+        <div class="bar"><span class="bar-k">Fonts in use</span><span class="bav">1 system (2 weights)</span></div>
+        <div class="bar"><span class="bar-k">Avg. engagement rate</span><span class="bav">4.3% (+139%)</span></div>
+        <div class="bar"><span class="bar-k">Design tool</span><span class="bav">Canva Brand Kit (team)</span></div>
+        <div class="bar"><span class="bar-k">Brand kit</span><span class="bav">✓ Locked + documented</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">💬 Client Testimonial</span>
+    <div class="qt">
+      <div class="qt-t">A prospect told us at a networking event that they had been following our LinkedIn for two months before reaching out — because the content looked credible and professional. That's never happened before. We've always relied on referrals, but now the brand itself is doing the selling before we even speak to anyone.</div>
+      <div class="qt-n">Darren Chew Wei Ming</div>
+      <div class="qt-r">Principal Advisor · Meridian Wealth Advisory · Kuala Lumpur</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <strong>NextMarketing by TechNext Asia</strong> · Graphic Design · Case Study #12<br>
+    <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmarketing.github.io/nextmarketing</span>
+  </div>
+</div>
+</body>
+</html>

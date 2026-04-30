@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study #04 — Social Media 4 Platforms | NextMarketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-save{background:#00B4D8;color:#0A2540;border:none;padding:.45rem 1.1rem;border-radius:6px;font-weight:700;cursor:pointer;font-size:.8rem;font-family:inherit}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#00B4D8;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#00B4D8;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #00B4D8;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#0A2540;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#00B4D8;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}
+.dn{color:#DC2626;font-weight:700}
+.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:100px 1fr 70px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#EFF6FF;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.plat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:.5rem}
+.plat{border-radius:8px;padding:.875rem;text-align:center;border:1px solid}
+.plat-li{background:#EFF6FF;border-color:#BFDBFE}
+.plat-fb{background:#F0F9FF;border-color:#BAE6FD}
+.plat-ig{background:#FDF4FF;border-color:#E9D5FF}
+.plat-tt{background:#FFF1F2;border-color:#FECDD3}
+.plat-num{font-family:'Montserrat',sans-serif;font-size:1.4rem;font-weight:700;line-height:1}
+.plat-li .plat-num{color:#1D4ED8}
+.plat-fb .plat-num{color:#0284C7}
+.plat-ig .plat-num{color:#7C3AED}
+.plat-tt .plat-num{color:#E11D48}
+.plat-name{font-size:.7rem;color:#64748B;margin-top:.3rem;font-weight:600}
+.plat-sub{font-size:.67rem;color:#94A3B8;margin-top:.15rem}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}
+.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}
+.bar-k{color:#64748B}
+.bav{font-weight:700}
+.bab .bav{color:#DC2626}
+.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#1D4ED8;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#16A34A;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#F0F9FF,#EFF6FF);border:1px solid #BFDBFE;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #00B4D8;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}
+.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media print{.pb{display:none}body{background:#fff}.cov,.bx{break-inside:avoid}.cov,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.plat-grid{grid-template-columns:repeat(2,1fr)}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}}
+</style>
+</head>
+<body>
+
+<div class="pb">
+  <div class="pb-l">
+    <div class="logo"><span>Tech</span>Next <span style="color:#fff;font-weight:400">|</span> <span>NextMarketing</span></div>
+    <span class="pill">Case Study #04</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <button class="btn-save" onclick="window.print()">⬇ Save as PDF</button>
+    <a class="btn-bk" href="../index.html">← Back to Services</a>
+  </div>
+</div>
+
+<div class="w">
+
+  <div class="cov">
+    <div class="ey">Social Media · 🟢 Easy Tier · NextMarketing Case Study</div>
+    <h1>Social Media — 4 Platforms</h1>
+    <div class="csub">How an HR Tech startup built 580 followers across 4 platforms in 60 days and started receiving inbound demo requests</div>
+    <div class="meta">
+      <span>🏢 HireFlow Solutions · HR Tech Startup</span>
+      <span>📅 Feb – Mar 2026 · 60 days</span>
+      <span>📱 LinkedIn · Facebook · Instagram · TikTok</span>
+      <span>📍 Petaling Jaya, Malaysia</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="kn">+580</div><div class="kl">New Followers in 60 Days</div></div>
+      <div class="kpi"><div class="kn">3</div><div class="kl">Inbound Demo Requests/Month</div></div>
+      <div class="kpi"><div class="kn">25%</div><div class="kl">Brand Recall Lift (survey)</div></div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">🏢 Client Overview</span>
+    <p class="n">HireFlow Solutions is a pre-revenue HR technology startup building an AI-assisted applicant tracking system (ATS) for Malaysian SMEs. At the start of the engagement, the founding team of 6 was focused entirely on product development — with zero marketing infrastructure and no social media presence on any platform.</p>
+    <p class="n">The founders understood that B2B SaaS requires consistent brand visibility before the sales cycle begins. They needed a multi-platform social presence established quickly to support an upcoming pitch to seed investors and to begin generating early market awareness.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚠️ The Challenge</span>
+    <ul class="tlu" style="margin-top:.25rem">
+      <li>Zero social presence — accounts existed but were unclaimed or empty on all 4 platforms</li>
+      <li>No brand guidelines — only a logo file and a rough color palette shared in a Google Drive folder</li>
+      <li>B2B audience on LinkedIn required different tone and format from TikTok's short-video format</li>
+      <li>16 posts/month needed across 4 platforms with a solo content operator (no agency team)</li>
+      <li>Founders unavailable for content review more than 30 minutes per week</li>
+    </ul>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📋 Our Approach — Week by Week</span>
+    <div class="tl">
+      <div class="tl-r">
+        <span class="tlb">Week 1–2</span>
+        <div>
+          <div class="tlh">Setup — Brand Identity &amp; Platform Configuration</div>
+          <ul class="tlu">
+            <li>Built Canva Brand Kit from logo: extracted primary blue (#1D4ED8) + secondary navy + white, set Inter as system font</li>
+            <li>Created 4 platform templates: LinkedIn 1200×627, IG 1080×1080, FB 1200×630, TikTok cover 1080×1920</li>
+            <li>Optimised all 4 profiles — bios, cover photos, About sections, website links — using Claude AI for copy</li>
+            <li>Built 60-day content calendar in Google Sheets: 16 posts/month = 4 per platform, alternating formats</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-r">
+        <span class="tlb">Week 3–5</span>
+        <div>
+          <div class="tlh">Publish — Platform-Specific Content Launch</div>
+          <ul class="tlu">
+            <li>LinkedIn (Tue/Thu 8am): long-form insight posts — "3 reasons ATS systems fail SMEs" style. Avg 180 impressions/post in Week 3</li>
+            <li>Instagram/Facebook (Tue/Thu 12pm): visual tip cards and product screenshots with benefits-led captions</li>
+            <li>TikTok (Wed/Fri 6pm): 30-second scripted videos — Hook: "Your HR team is wasting 4 hours a week on this..." — recorded by co-founder, edited in Canva Video</li>
+            <li>All posts scheduled through Buffer — zero missed publish dates across 60 days</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-r">
+        <span class="tlb">Week 6–8</span>
+        <div>
+          <div class="tlh">Optimise — Data-Driven Content Refinement</div>
+          <ul class="tlu">
+            <li>LinkedIn insight posts with specific statistics outperformed opinion posts by 2.3× in impressions</li>
+            <li>TikTok "problem-first" hooks (leading with a pain point) generated 4× more saves than product-led hooks</li>
+            <li>3 LinkedIn posts triggered direct DMs from HR managers — converted to demo requests by founder follow-up</li>
+            <li>Delivered 60-day report: platform breakdown, top content formats, follower acquisition cost per platform</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📊 Follower Growth by Platform — 60 Days</span>
+    <div class="plat-grid">
+      <div class="plat plat-li">
+        <div class="plat-num">210</div>
+        <div class="plat-name">LinkedIn</div>
+        <div class="plat-sub">B2B decision-makers</div>
+      </div>
+      <div class="plat plat-fb">
+        <div class="plat-num">98</div>
+        <div class="plat-name">Facebook</div>
+        <div class="plat-sub">HR community groups</div>
+      </div>
+      <div class="plat plat-ig">
+        <div class="plat-num">155</div>
+        <div class="plat-name">Instagram</div>
+        <div class="plat-sub">Visual brand discovery</div>
+      </div>
+      <div class="plat plat-tt">
+        <div class="plat-num">117</div>
+        <div class="plat-name">TikTok</div>
+        <div class="plat-sub">Viral reach potential</div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:.77rem;color:#64748B;margin-top:.75rem;font-weight:600">Total: 580 followers gained across all platforms in 60 days — from zero baseline</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📈 Weekly Cumulative Follower Growth</span>
+    <div class="ch">
+      <div class="ch-r">
+        <div class="ch-l">Week 1–2</div>
+        <div class="ch-t"><div class="ch-f" style="width:15%;background:#94A3B8"><span class="ch-fv">85</span></div></div>
+        <div class="ch-n">85</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Week 3–4</div>
+        <div class="ch-t"><div class="ch-f" style="width:31%;background:#67E8F9"><span class="ch-fv">180</span></div></div>
+        <div class="ch-n">180</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Week 5–6</div>
+        <div class="ch-t"><div class="ch-f" style="width:72%;background:#22D3EE"><span class="ch-fv">416</span></div></div>
+        <div class="ch-n">416</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Week 7–8</div>
+        <div class="ch-t"><div class="ch-f" style="width:100%;background:#00B4D8"><span class="ch-fv">580 total</span></div></div>
+        <div class="ch-n">580</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚖️ Before vs. After — 60-Day Comparison</span>
+    <div class="ba">
+      <div class="bab">
+        <div class="bah">❌ Before — February 2026</div>
+        <div class="bar"><span class="bar-k">Social presence</span><span class="bav">Zero (all platforms)</span></div>
+        <div class="bar"><span class="bar-k">Brand guidelines</span><span class="bav">Logo only</span></div>
+        <div class="bar"><span class="bar-k">Content published</span><span class="bav">0 posts</span></div>
+        <div class="bar"><span class="bar-k">Inbound demo leads</span><span class="bav">0 / month</span></div>
+        <div class="bar"><span class="bar-k">Brand recall (survey)</span><span class="bav">Baseline: 0%</span></div>
+      </div>
+      <div class="baa">
+        <div class="bah">✅ After — March 2026</div>
+        <div class="bar"><span class="bar-k">Social presence</span><span class="bav">Active on 4 platforms</span></div>
+        <div class="bar"><span class="bar-k">Brand guidelines</span><span class="bav">Full Canva Brand Kit</span></div>
+        <div class="bar"><span class="bar-k">Content published</span><span class="bav">32 posts total</span></div>
+        <div class="bar"><span class="bar-k">Inbound demo leads</span><span class="bav">3 / month</span></div>
+        <div class="bar"><span class="bar-k">Brand recall (survey)</span><span class="bav">+25% among target ICP</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📦 What We Delivered</span>
+    <div class="del">
+      <div class="di">32 branded posts across 4 platforms (16/month × 2 months)</div>
+      <div class="di">2 monthly content calendars with platform-specific formats</div>
+      <div class="di">Canva Brand Kit + 4 platform-specific post templates</div>
+      <div class="di">4 fully optimised platform profiles (bio, cover, links)</div>
+      <div class="di">Buffer setup: all 4 platforms connected, 2-month post queue</div>
+      <div class="di">4 TikTok scripts + co-founder recording guidance</div>
+      <div class="di">Weekly follower tracking dashboard (Google Sheets)</div>
+      <div class="di">60-day analytics report with platform performance breakdown</div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">💬 Client Testimonial</span>
+    <div class="qt">
+      <div class="qt-t">We went from having nothing to having a full content system across four platforms in two weeks. What surprised us most was the LinkedIn traction — we started getting DMs from HR managers asking about demos, which is exactly what we needed for our seed round narrative. NextMarketing made it look like we had a full marketing team behind us.</div>
+      <div class="qt-n">Priya Nair</div>
+      <div class="qt-r">Co-founder &amp; CEO · HireFlow Solutions · Petaling Jaya</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <strong>NextMarketing by TechNext Asia</strong> · Social Media Management · Case Study #04<br>
+    <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmarketing.github.io/nextmarketing</span>
+  </div>
+
+</div>
+</body>
+</html>

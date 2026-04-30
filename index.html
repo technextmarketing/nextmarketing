@@ -107,6 +107,8 @@
 
     .deliverables-line{font-size:.73rem;color:var(--muted);border-top:1px solid var(--border);padding-top:.65rem;line-height:1.5;}
     .deliverables-line strong{color:var(--text);font-weight:600;}
+    .cs-btn{display:inline-flex;align-items:center;gap:.35rem;background:linear-gradient(135deg,#0A2540,#0f3460);color:#fff;text-decoration:none;font-size:.75rem;font-weight:600;padding:.45rem 1rem;border-radius:8px;margin-top:.1rem;transition:opacity .18s;font-family:'Inter',sans-serif;}
+    .cs-btn:hover{opacity:.85;}
 
     .no-results{grid-column:1/-1;text-align:center;padding:4rem 2rem;color:var(--muted);}
 
@@ -244,7 +246,8 @@ const S=[
      "Every morning: check FB & IG notifications → reply to all comments within 1 hour using <code>Claude AI</code>-drafted responses",
      "End of month: open <code>Buffer Analytics</code> → screenshot top 3 posts → note format → replicate next month"
    ],
-   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Buffer",o:true},{n:"Google Sheets",o:true}]
+   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Buffer",o:true},{n:"Google Sheets",o:true}],
+   cs:"case-studies/cs-03.html"
   },
   {id:4,name:"Social Media — 4 Platforms",cat:"Social Media",diff:"easy",
    industries:["Tech Startups","B2B Services","Education","Consulting","SaaS"],
@@ -261,7 +264,8 @@ const S=[
      "Track follower count weekly per platform in <code>Google Sheets</code>",
      "Month-end: paste Buffer stats into <code>Claude AI</code> → prompt: <em>'Analyze this performance and suggest 3 content changes for next month.'</em>"
    ],
-   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Buffer",o:true},{n:"Google Sheets",o:true}]
+   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Buffer",o:true},{n:"Google Sheets",o:true}],
+   cs:"case-studies/cs-04.html"
   },
   {id:5,name:"Google Ads Management",cat:"Ads",diff:"hard",
    industries:["SaaS","E-Commerce","Healthcare","Legal","Real Estate"],
@@ -329,7 +333,8 @@ const S=[
      "After send: monitor open rate in <code>Brevo Reports</code> every 2 hours → record in <code>Google Sheets</code> campaign log",
      "Month-end: paste all stats into <code>Claude AI</code> → prompt: <em>'What do these email stats tell me and what should I improve?'</em>"
    ],
-   tools:[{n:"Brevo",o:true},{n:"Canva",o:true},{n:"Claude AI",o:true},{n:"Google Sheets",o:true}]
+   tools:[{n:"Brevo",o:true},{n:"Canva",o:true},{n:"Claude AI",o:true},{n:"Google Sheets",o:true}],
+   cs:"case-studies/cs-08.html"
   },
   {id:9,name:"Email Marketing — Pro",cat:"Email",diff:"achievable",
    industries:["E-Commerce","SaaS","Healthcare","Finance","Online Education"],
@@ -363,7 +368,8 @@ const S=[
      "Publish → <code>Google Search Console</code> → URL Inspection → Request Indexing",
      "Track ranking in <code>Google Sheets</code> at 30 / 60 / 90 days using Search Console data"
    ],
-   tools:[{n:"Claude AI",o:true},{n:"Google Docs",o:true},{n:"Google Sheets",o:true},{n:"Google Search Console",o:false}]
+   tools:[{n:"Claude AI",o:true},{n:"Google Docs",o:true},{n:"Google Sheets",o:true},{n:"Google Search Console",o:false}],
+   cs:"case-studies/cs-10.html"
   },
   {id:11,name:"Content Writing — Pro",cat:"Content",diff:"achievable",
    industries:["SaaS","Fintech","Healthcare","Consulting","B2B Tech"],
@@ -397,7 +403,8 @@ const S=[
      "Export all 10 assets as PNG → organize in <code>Google Drive</code>: /Assets/[Month]/Social / Ads / Email",
      "Month-end: check which design style got most engagement in <code>Buffer</code> → note format in <code>Google Docs</code> design log → repeat winner"
    ],
-   tools:[{n:"Canva",o:true},{n:"Google Drive",o:true},{n:"Brevo",o:true},{n:"Buffer",o:true}]
+   tools:[{n:"Canva",o:true},{n:"Google Drive",o:true},{n:"Brevo",o:true},{n:"Buffer",o:true}],
+   cs:"case-studies/cs-12.html"
   },
   {id:13,name:"Short-Form Video",cat:"Content",diff:"achievable",
    industries:["Property","F&B","Fitness & Wellness","Beauty","Retail","Education"],
@@ -448,7 +455,8 @@ const S=[
      "Add screenshots of top posts, email campaigns, and GA4 traffic chart to slides",
      "Export as PDF → share via <code>Google Drive</code> link → send to management using <code>Brevo</code>"
    ],
-   tools:[{n:"Google Sheets",o:true},{n:"Buffer Analytics",o:true},{n:"Brevo Reports",o:true},{n:"Claude AI",o:true}]
+   tools:[{n:"Google Sheets",o:true},{n:"Buffer Analytics",o:true},{n:"Brevo Reports",o:true},{n:"Claude AI",o:true}],
+   cs:"case-studies/cs-15.html"
   },
   {id:16,name:"Marketing Automation — Starter",cat:"Automation",diff:"achievable",
    industries:["Real Estate","Healthcare","B2B Services","Education","Insurance"],
@@ -499,7 +507,8 @@ const S=[
      "Schedule social via <code>Buffer</code> and email via <code>Brevo</code> directly from Drive",
      "Track best-performing content in <code>Google Sheets</code> → refine prompt library monthly based on top results"
    ],
-   tools:[{n:"Claude AI",o:true},{n:"Google Docs",o:true},{n:"Google Sheets",o:true},{n:"Buffer",o:true}]
+   tools:[{n:"Claude AI",o:true},{n:"Google Docs",o:true},{n:"Google Sheets",o:true},{n:"Buffer",o:true}],
+   cs:"case-studies/cs-18.html"
   },
   {id:19,name:"AI Ad Optimization",cat:"AI",diff:"hard",
    industries:["E-Commerce","Retail","Travel","Finance","Consumer Brands"],
@@ -618,7 +627,8 @@ const S=[
      "Track in <code>Brevo</code> dashboard: delivery rate (>95%), read rate, click rate → log monthly in <code>Google Sheets</code>",
      "Monthly: remove blocked or unsubscribed numbers → keep list clean to maintain Brevo sender reputation"
    ],
-   tools:[{n:"Brevo",o:true},{n:"Claude AI",o:true},{n:"Google Sheets",o:true},{n:"WhatsApp Business",o:false}]
+   tools:[{n:"Brevo",o:true},{n:"Claude AI",o:true},{n:"Google Sheets",o:true},{n:"WhatsApp Business",o:false}],
+   cs:"case-studies/cs-25.html"
   },
   {id:26,name:"Sales Funnel Strategy & Setup",cat:"Sales",diff:"hard",
    industries:["B2B Tech","SaaS","Professional Services","Manufacturing","Distribution"],
@@ -652,7 +662,8 @@ const S=[
      "Get shareable PDF link → use as attachment in <code>Brevo</code> email campaigns or WhatsApp follow-ups",
      "Update monthly: refresh stats, case study results, and pricing → use previous month's <code>Canva</code> design as base → swap content only"
    ],
-   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Google Docs",o:true},{n:"Google Drive",o:true}]
+   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Google Docs",o:true},{n:"Google Drive",o:true}],
+   cs:"case-studies/cs-27.html"
   },
   {id:28,name:"Sales Enablement Content",cat:"Sales",diff:"easy",
    industries:["Cybersecurity","IT","SaaS","Finance","B2B Distribution"],
@@ -669,7 +680,8 @@ const S=[
      "Write 3 case studies with <code>Claude AI</code>: <em>'Turn these client results into a one-page case study. Format: Challenge → What we did → 3 result metrics → Client quote.'</em>",
      "Design each case study in <code>Canva</code> as branded PDF → save in <code>Google Drive</code> /Sales Enablement/ → update quarterly"
    ],
-   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Google Docs",o:true},{n:"Google Drive",o:true}]
+   tools:[{n:"Claude AI",o:true},{n:"Canva",o:true},{n:"Google Docs",o:true},{n:"Google Drive",o:true}],
+   cs:"case-studies/cs-28.html"
   },
   {id:29,name:"Junior Sales Rep (80 hrs/mo)",cat:"Staff",diff:"hard",
    industries:["B2B SaaS","HR Tech","Distribution","Professional Services","IT Resellers"],
@@ -872,6 +884,7 @@ function renderCards(){
         ${s.tools.map(t=>`<span class="tool-pill${t.o?' owned':''}">${t.n}</span>`).join('')}
       </div>
       <div class="deliverables-line"><strong>Includes:</strong> ${s.deliverables}</div>
+      ${s.cs?`<a href="${s.cs}" target="_blank" class="cs-btn">📄 View Case Study</a>`:''}
     </div>`;
   }).join('');
 }

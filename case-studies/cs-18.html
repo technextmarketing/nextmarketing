@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study #18 — AI Content Generation | NextMarketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}.pb-l{display:flex;align-items:center;gap:.875rem}.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}.logo span{color:#00B4D8}.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}.btn-save{background:#00B4D8;color:#0A2540;border:none;padding:.45rem 1.1rem;border-radius:6px;font-weight:700;cursor:pointer;font-size:.8rem;font-family:inherit}.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#00B4D8;margin-bottom:.75rem}.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#00B4D8;line-height:1}.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #00B4D8;display:block}p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}.tl-r{display:flex;gap:.875rem;align-items:flex-start}.tlb{background:#0A2540;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}.tlu li::before{content:'›';color:#00B4D8;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.81rem}th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}tr:last-child td{border-bottom:none}tr:nth-child(even) td{background:#F8FAFC}.up{color:#16A34A;font-weight:700}.dn{color:#DC2626;font-weight:700}.fw{font-weight:700;color:#0A2540}.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.output-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:.5rem}
+.og{border:1px solid #E2E8F0;border-radius:8px;padding:.875rem;text-align:center;background:#FAFBFC}
+.og-num{font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:700;color:#0A2540}
+.og-type{font-size:.72rem;color:#64748B;margin-top:.2rem;font-weight:600}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}.ch-r{display:grid;grid-template-columns:100px 1fr 70px;gap:.55rem;align-items:center}.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}.ch-t{background:#EFF6FF;border-radius:4px;height:22px;overflow:hidden}.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}.bab .bah{color:#DC2626}.baa .bah{color:#16A34A}.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}.bar:last-child{border-bottom:none}.bar-k{color:#64748B}.bav{font-weight:700}.bab .bav{color:#DC2626}.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}.di{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#1D4ED8;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}.di::before{content:'✓';color:#16A34A;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#F0F9FF,#EFF6FF);border:1px solid #BFDBFE;border-radius:12px;padding:1.5rem}.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #00B4D8;margin-bottom:.875rem}.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}.foot strong{color:#0A2540}
+@media print{.pb{display:none}body{background:#fff}.cov,.bx{break-inside:avoid}.cov,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del,.output-grid{grid-template-columns:1fr 1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}}
+</style>
+</head>
+<body>
+<div class="pb">
+  <div class="pb-l">
+    <div class="logo"><span>Tech</span>Next <span style="color:#fff;font-weight:400">|</span> <span>NextMarketing</span></div>
+    <span class="pill">Case Study #18</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <button class="btn-save" onclick="window.print()">⬇ Save as PDF</button>
+    <a class="btn-bk" href="../index.html">← Back to Services</a>
+  </div>
+</div>
+<div class="w">
+  <div class="cov">
+    <div class="ey">AI Services · 🟢 Easy Tier · NextMarketing Case Study</div>
+    <h1>AI Content Generation</h1>
+    <div class="csub">How a boutique digital agency went from a 3-week content backlog to 72 pieces produced in 90 days — at 65% lower cost per piece</div>
+    <div class="meta">
+      <span>🏢 PixelForge Digital · Boutique Agency · 8 staff</span>
+      <span>📅 Jan – Mar 2026 · 3 months</span>
+      <span>🤖 Claude AI-Assisted Pipeline</span>
+      <span>📍 Mont Kiara, Kuala Lumpur</span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><div class="kn">10×</div><div class="kl">Content Output Increase</div></div>
+      <div class="kpi"><div class="kn">−65%</div><div class="kl">Cost Per Content Piece</div></div>
+      <div class="kpi"><div class="kn">72</div><div class="kl">Pieces Produced in 90 Days</div></div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">🏢 Client Overview</span>
+    <p class="n">PixelForge Digital is a boutique full-service digital marketing agency in Mont Kiara serving 14 active retainer clients across e-commerce, F&amp;B, and professional services. The 8-person team includes 2 content writers, 2 designers, 2 account managers, and 2 technical staff.</p>
+    <p class="n">Content production had become the agency's biggest bottleneck. Their two writers were responsible for blogs, social captions, ad copy, email newsletters, and website copy across all 14 clients — an impossible workload that had created a 3-week content backlog and was causing client dissatisfaction.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚠️ The Challenge</span>
+    <ul class="tlu" style="margin-top:.25rem">
+      <li>2 writers producing 6–8 content pieces/month combined — across 14 clients, that's less than 1 piece per client per month</li>
+      <li>3-week backlog: clients requesting content on Week 1 received it in Week 4 or later</li>
+      <li>Average cost per piece (writer salary + overhead): RM850 — unsustainable at client retainer rates</li>
+      <li>Brand voice inconsistency across clients — rushing content led to generic, interchangeable copy</li>
+      <li>2 client complaints received in December 2025 about missed content deadlines</li>
+    </ul>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📋 Our Approach — Month by Month</span>
+    <div class="tl">
+      <div class="tl-r">
+        <span class="tlb">Month 1 · Jan</span>
+        <div>
+          <div class="tlh">Pipeline Design — AI Workflows Per Content Type</div>
+          <ul class="tlu">
+            <li>Documented 6 content types in the agency's output: blog posts, social captions (IG/LinkedIn), Google ad copy, email campaigns, product descriptions, website landing page copy</li>
+            <li>Built a Claude AI prompt template for each content type — including brand voice guidelines as context in each prompt</li>
+            <li>Created client-specific voice profiles in Google Docs: tone, vocabulary, topics to avoid, example approved content — loaded into each prompt as context</li>
+            <li>Month 1 output: 20 pieces across 8 clients — all delivered on time. Previous pace: 6–8 pieces/month</li>
+            <li>Cost per piece in Month 1: RM298 (same writer time, 3.5× more output)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-r">
+        <span class="tlb">Month 2 · Feb</span>
+        <div>
+          <div class="tlh">Scale — 24 Pieces, Template Refinement</div>
+          <ul class="tlu">
+            <li>Writers shifted role: from writing from scratch → prompt engineering + editing AI output → higher leverage work</li>
+            <li>Built a content brief template in Google Sheets: client, content type, target keyword, CTA, tone, word count → feed directly into Claude AI prompt</li>
+            <li>24 pieces delivered in February — backlog eliminated by Week 3</li>
+            <li>Quality check: account managers reviewed 10 random pieces — 9/10 rated "client-ready without major edits"</li>
+            <li>Cost per piece: RM260 — further reduced as prompts improved</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tl-r">
+        <span class="tlb">Month 3 · Mar</span>
+        <div>
+          <div class="tlh">Optimise — 28 Pieces, RM180/Piece, Brand Voice Locked</div>
+          <ul class="tlu">
+            <li>Established master prompt library in Google Docs: 6 content types × 14 client voice profiles = 84 ready-to-use prompts</li>
+            <li>28 pieces delivered in March — agency's highest monthly output ever by 3×</li>
+            <li>Cost per piece: RM180 — 79% reduction from pre-AI baseline of RM850</li>
+            <li>Clients unaware of AI involvement — brand voice maintained across all accounts per account manager feedback</li>
+            <li>Agency added 2 new retainer clients in March — citing content capacity as their competitive advantage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📊 Monthly Output &amp; Cost Comparison</span>
+    <div class="ow">
+      <table>
+        <thead><tr><th>Period</th><th>Pieces Produced</th><th>Clients Served</th><th>Avg. Cost/Piece</th><th>Backlog Status</th><th>Client Complaints</th></tr></thead>
+        <tbody>
+          <tr><td class="fw">Before (Dec 2025)</td><td class="dn">6–8</td><td>14</td><td class="dn">RM850</td><td class="dn">3 weeks</td><td class="dn">2</td></tr>
+          <tr><td class="fw">Month 1 — Jan</td><td class="up">20 <span class="tg">+150%</span></td><td>14</td><td class="up">RM298</td><td><span class="tg">Cleared</span></td><td>0</td></tr>
+          <tr><td class="fw">Month 2 — Feb</td><td class="up">24 <span class="tg">+200%</span></td><td>14</td><td class="up">RM260</td><td><span class="tg">Zero backlog</span></td><td>0</td></tr>
+          <tr><td class="fw">Month 3 — Mar</td><td class="up">28 <span class="tg">+250%</span></td><td>16</td><td class="up">RM180</td><td><span class="tg">Zero backlog</span></td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📦 Content Types in the AI Pipeline — Month 3 Mix</span>
+    <div class="output-grid">
+      <div class="og"><div class="og-num">10</div><div class="og-type">Blog Posts</div></div>
+      <div class="og"><div class="og-num">8</div><div class="og-type">Social Captions</div></div>
+      <div class="og"><div class="og-num">4</div><div class="og-type">Email Campaigns</div></div>
+      <div class="og"><div class="og-num">3</div><div class="og-type">Ad Copy Sets</div></div>
+      <div class="og"><div class="og-num">2</div><div class="og-type">Landing Pages</div></div>
+      <div class="og"><div class="og-num">1</div><div class="og-type">Product Descriptions</div></div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📈 Monthly Content Output Growth</span>
+    <div class="ch">
+      <div class="ch-r"><div class="ch-l">Before</div><div class="ch-t"><div class="ch-f" style="width:25%;background:#94A3B8"><span class="ch-fv">7 pieces avg</span></div></div><div class="ch-n">~7</div></div>
+      <div class="ch-r"><div class="ch-l">Month 1</div><div class="ch-t"><div class="ch-f" style="width:71%;background:#67E8F9"><span class="ch-fv">20 pieces</span></div></div><div class="ch-n">20</div></div>
+      <div class="ch-r"><div class="ch-l">Month 2</div><div class="ch-t"><div class="ch-f" style="width:86%;background:#22D3EE"><span class="ch-fv">24 pieces</span></div></div><div class="ch-n">24</div></div>
+      <div class="ch-r"><div class="ch-l">Month 3</div><div class="ch-t"><div class="ch-f" style="width:100%;background:#00B4D8"><span class="ch-fv">28 pieces (10× pre-AI)</span></div></div><div class="ch-n">28</div></div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚖️ Before vs. After</span>
+    <div class="ba">
+      <div class="bab">
+        <div class="bah">❌ Before — December 2025</div>
+        <div class="bar"><span class="bar-k">Monthly output</span><span class="bav">6–8 pieces</span></div>
+        <div class="bar"><span class="bar-k">Cost per piece</span><span class="bav">RM850</span></div>
+        <div class="bar"><span class="bar-k">Content backlog</span><span class="bav">3 weeks</span></div>
+        <div class="bar"><span class="bar-k">Writer time: drafting</span><span class="bav">90%</span></div>
+        <div class="bar"><span class="bar-k">Client complaints</span><span class="bav">2 / month</span></div>
+      </div>
+      <div class="baa">
+        <div class="bah">✅ After — March 2026</div>
+        <div class="bar"><span class="bar-k">Monthly output</span><span class="bav">28 pieces (10×)</span></div>
+        <div class="bar"><span class="bar-k">Cost per piece</span><span class="bav">RM180 (−79%)</span></div>
+        <div class="bar"><span class="bar-k">Content backlog</span><span class="bav">Zero</span></div>
+        <div class="bar"><span class="bar-k">Writer time: drafting</span><span class="bav">30% (editing + QC)</span></div>
+        <div class="bar"><span class="bar-k">Client complaints</span><span class="bav">0 / month</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">💬 Client Testimonial</span>
+    <div class="qt">
+      <div class="qt-t">We were losing clients because we couldn't deliver content fast enough. In three months, NextMarketing built an AI pipeline that lets our writers produce 4× more without working longer hours. The quality is the same — our clients can't tell the difference. We onboarded two new clients in March specifically because we could now say "yes" to their content volume requirements.</div>
+      <div class="qt-n">Marcus Tan Chee Wei</div>
+      <div class="qt-r">Managing Director · PixelForge Digital · Mont Kiara, KL</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <strong>NextMarketing by TechNext Asia</strong> · AI Content Generation · Case Study #18<br>
+    <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmarketing.github.io/nextmarketing</span>
+  </div>
+</div>
+</body>
+</html>
