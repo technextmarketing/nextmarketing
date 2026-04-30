@@ -19,7 +19,6 @@ p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}p.n:last
 .del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}.di{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#1D4ED8;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}.di::before{content:'✓';color:#16A34A;flex-shrink:0;font-weight:700}
 .qt{background:linear-gradient(135deg,#F0F9FF,#EFF6FF);border:1px solid #BFDBFE;border-radius:12px;padding:1.5rem}.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #00B4D8;margin-bottom:.875rem}.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
 .foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}.foot strong{color:#0A2540}
-@media print{.pb{display:none}body{background:#fff}.cov,.bx{break-inside:avoid}.cov,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 @media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}}
 </style>
 </head>
@@ -30,7 +29,7 @@ p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}p.n:last
     <span class="pill">Case Study #10</span>
   </div>
   <div style="display:flex;align-items:center;gap:1rem">
-    <button class="btn-save" onclick="window.print()">⬇ Save as PDF</button>
+    <button class="btn-save" onclick="downloadDoc()">⬇ Download Doc</button>
     <a class="btn-bk" href="../index.html">← Back to Services</a>
   </div>
 </div>
@@ -77,14 +76,10 @@ p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}p.n:last
         <div>
           <div class="tlh">Foundation — Keyword Research &amp; First 4 Posts</div>
           <ul class="tlu">
-            <li>Set up Google Search Console — verified ownership, submitted sitemap, reviewed current crawl errors</li>
-            <li>Used Claude AI to generate 20 buyer-intent keyword ideas for Malaysian IT services: "managed IT support KL", "cloud migration Malaysia SME", "cybersecurity audit cost Malaysia"</li>
-            <li>Prioritised 12 keywords (low competition, high buyer intent) — mapped each to one blog post</li>
-            <li>Post 1: "What Does Managed IT Support Actually Cost in Malaysia?" — 1,150 words, 3 H2 sections, internal link to Services page</li>
-            <li>Post 2: "5 Signs Your Business Needs a Cloud Migration" — 980 words, decision-stage intent</li>
-            <li>Post 3: "Cybersecurity Audit Checklist for Malaysian SMEs" — 1,100 words, downloadable checklist hook</li>
-            <li>Post 4: "On-Premise vs. Cloud: Which Is Right for Malaysian SMEs?" — 1,020 words, comparison format</li>
-            <li>All 4 published → Search Console indexing requested within 24 hours of publish</li>
+            <li>Set up Google Search Console — establishing the technical foundation for organic search tracking and identifying existing crawl issues before the first post was published.</li>
+            <li>Conducted buyer-intent keyword research for Malaysian IT services — identifying 12 high-priority, low-competition topics spanning awareness, consideration, and decision-stage search queries, each mapped to a dedicated blog post.</li>
+            <li>Published 4 blog posts in January — managed IT costs, cloud migration readiness, cybersecurity audits for SMEs, and on-premise vs. cloud comparisons — covering the full spectrum of DataSync's target buyer journey.</li>
+            <li>All 4 posts indexed within 24 hours of publication — by end of January, organic sessions had grown 11% and monthly contact form submissions increased from 3 to 4.</li>
           </ul>
         </div>
       </div>
@@ -191,5 +186,8 @@ p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}p.n:last
     <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmarketing.github.io/nextmarketing</span>
   </div>
 </div>
+<script>
+function downloadDoc(){var t=document.querySelector('h1')?document.querySelector('h1').innerText:'Case Study';var b='<h1 style="font-size:22pt;color:#0A2540;font-family:Calibri,sans-serif">'+t+'</h1>';var sub=document.querySelector('.csub');if(sub)b+='<p style="font-size:11pt;color:#555;margin-bottom:14pt;font-style:italic">'+sub.innerText+'</p><hr>';var kpis=document.querySelectorAll('.kpi');if(kpis.length){b+='<table border="1" cellpadding="10" style="width:100%;border-collapse:collapse;margin:14pt 0"><tr>';kpis.forEach(function(k){var n=k.querySelector('.kn');var l=k.querySelector('.kl');b+='<td align="center" style="background:#EEF4FB"><b style="font-size:14pt;color:#0A2540">'+(n?n.innerText:'')+'</b><br><span style="font-size:9pt;color:#555">'+(l?l.innerText.replace(/\n/g,' '):'')+'</span></td>';});b+='</tr></table>';}document.querySelectorAll('.bx').forEach(function(bx){var h2=bx.querySelector('.bh');if(h2)b+='<h2 style="font-size:13pt;color:#0A2540;font-family:Calibri,sans-serif;border-bottom:2px solid #0A2540;padding-bottom:3pt;margin-top:18pt">'+h2.innerText.replace(/[^\w\s&.,':()/%+\-]/g,'').trim()+'</h2>';bx.querySelectorAll('table').forEach(function(tbl){b+='<table border="1" cellpadding="6" style="width:100%;border-collapse:collapse;font-size:10pt;margin:8pt 0">';tbl.querySelectorAll('tr').forEach(function(row){b+='<tr>';row.querySelectorAll('th').forEach(function(th){b+='<th style="background:#0A2540;color:#fff;padding:5pt">'+th.innerText+'</th>';});row.querySelectorAll('td').forEach(function(td){b+='<td style="padding:5pt;border:1px solid #ccc">'+td.innerText+'</td>';});b+='</tr>';});b+='</table><br>';});bx.querySelectorAll('ul.tlu').forEach(function(ul){b+='<ul style="font-size:10pt;margin-left:18pt">';ul.querySelectorAll('li').forEach(function(li){b+='<li style="margin-bottom:3pt">'+li.innerText+'</li>';});b+='</ul>';});bx.querySelectorAll('.tl-r').forEach(function(tl){var badge=tl.querySelector('.tlb');var strong=tl.querySelector('.tlh');var ul=tl.querySelector('.tlu');b+='<p style="font-size:10pt;margin:10pt 0 4pt"><b style="background:#0A2540;color:#fff;padding:2pt 5pt">'+(badge?badge.innerText:'')+'</b>&nbsp;&nbsp;<b>'+(strong?strong.innerText:'')+'</b></p>';if(ul){b+='<ul style="font-size:10pt;margin-left:18pt">';ul.querySelectorAll('li').forEach(function(li){b+='<li style="margin-bottom:3pt">'+li.innerText+'</li>';});b+='</ul>';}});var bab=bx.querySelector('.bab'),baa=bx.querySelector('.baa');if(bab&&baa){b+='<table border="1" cellpadding="8" style="width:100%;border-collapse:collapse;margin:8pt 0"><tr><td width="50%" style="background:#FFF5F5;vertical-align:top"><b>Before</b><br><br>'+[...bab.querySelectorAll('.bar')].map(function(r){return(r.querySelector('.bar-k')?r.querySelector('.bar-k').innerText:'')+': '+(r.querySelector('.bav')?r.querySelector('.bav').innerText:'');}).join('<br>')+'</td><td width="50%" style="background:#F0FFF4;vertical-align:top"><b>After</b><br><br>'+[...baa.querySelectorAll('.bar')].map(function(r){return(r.querySelector('.bar-k')?r.querySelector('.bar-k').innerText:'')+': '+(r.querySelector('.bav')?r.querySelector('.bav').innerText:'');}).join('<br>')+'</td></tr></table><br>';}var dels=bx.querySelectorAll('.di');if(dels.length&&!bx.querySelector('table')&&!bx.querySelector('.tl-r')&&!bx.querySelector('.bab')){b+='<ul style="font-size:10pt;margin-left:18pt">';dels.forEach(function(d){b+='<li style="margin-bottom:3pt">'+d.innerText+'</li>';});b+='</ul>';}var qt=bx.querySelector('.qt-t');if(qt)b+='<blockquote style="border-left:4px solid #00B4D8;background:#F0F9FF;padding:10pt 14pt;margin:8pt 0;font-style:italic;font-size:10pt">'+qt.innerText+'</blockquote>';if(!bx.querySelector('table')&&!bx.querySelector('ul')&&!bx.querySelector('.tl-r')&&!bx.querySelector('.bab')&&!bx.querySelector('.di')&&!bx.querySelector('.qt-t')){bx.querySelectorAll('p.n').forEach(function(p){if(p.innerText.trim())b+='<p style="font-size:10pt;color:#333">'+p.innerText+'</p>';});}});b+='<p style="margin-top:36pt;font-size:9pt;color:#aaa;border-top:1px solid #ddd;padding-top:6pt">NextMarketing — Professional Marketing Services by TechNext Asia | hello@technext.asia</p>';var html='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><meta name=ProgId content=Word.Document><style>body{font-family:Calibri,sans-serif}</style></head><body style="font-family:Calibri;margin:2.5cm 3cm">'+b+'</body></html>';var blob=new Blob(['﻿',html],{type:'application/msword'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='NextMarketing-Case-Study.doc';document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(a.href);},100);}
+</script>
 </body>
 </html>

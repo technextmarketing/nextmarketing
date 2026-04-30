@@ -18,7 +18,6 @@
 .del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}.di{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#1D4ED8;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}.di::before{content:'✓';color:#16A34A;flex-shrink:0;font-weight:700}
 .qt{background:linear-gradient(135deg,#F0F9FF,#EFF6FF);border:1px solid #BFDBFE;border-radius:12px;padding:1.5rem}.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #00B4D8;margin-bottom:.875rem}.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
 .foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}.foot strong{color:#0A2540}
-@media print{.pb{display:none}body{background:#fff}.cov,.bx{break-inside:avoid}.cov,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 @media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}}
 </style>
 </head>
@@ -29,7 +28,7 @@
     <span class="pill">Case Study #25</span>
   </div>
   <div style="display:flex;align-items:center;gap:1rem">
-    <button class="btn-save" onclick="window.print()">⬇ Save as PDF</button>
+    <button class="btn-save" onclick="downloadDoc()">⬇ Download Doc</button>
     <a class="btn-bk" href="../index.html">← Back to Services</a>
   </div>
 </div>
@@ -74,36 +73,33 @@
       <div class="tl-r">
         <span class="tlb">Week 1–2</span>
         <div>
-          <div class="tlh">Setup — Brevo WhatsApp + Contact Import</div>
+          <div class="tlh">Setup — WhatsApp Channel &amp; Contact Base</div>
           <ul class="tlu">
-            <li>Connected AutoCare's business WhatsApp number to Brevo — enabled WhatsApp Campaigns module</li>
-            <li>Imported 2,840 customer contacts from the service booking system (CSV export) into Brevo — segmented by: last visit date, service type, and vehicle type</li>
-            <li>Built opt-in confirmation: existing customers received a one-time "Would you like appointment reminders via WhatsApp?" message — 78% opt-in rate (2,215 opted in)</li>
-            <li>Created 3 message templates: (1) 48-hour reminder, (2) day-of reminder, (3) post-service follow-up</li>
+            <li>Established a professional WhatsApp messaging channel and migrated all 2,840 customer contacts from the existing booking system — segmenting the list by visit recency, service category, and vehicle type for targeted future campaigns.</li>
+            <li>Launched a consent-first opt-in campaign to the existing contact base — 78% of customers (2,215 contacts) opted in to WhatsApp appointment reminders, building a high-quality, compliant messaging audience from day one.</li>
+            <li>Developed a 3-message sequence covering the full appointment journey: a 48-hour advance reminder, a same-day confirmation, and a post-service follow-up — designed to reduce no-shows while maintaining a positive customer experience.</li>
           </ul>
         </div>
       </div>
       <div class="tl-r">
         <span class="tlb">Week 3–4</span>
         <div>
-          <div class="tlh">Launch — Automated Reminders Go Live</div>
+          <div class="tlh">Launch — Automated Reminders &amp; First Results</div>
           <ul class="tlu">
-            <li>Automated trigger: 48 hours before appointment → WhatsApp message: "Hi [Name], reminder: your [service] appointment is on [date] at [time]. Reply YES to confirm or RESCHEDULE to change."</li>
-            <li>Day-of reminder at 8am: "Good morning [Name]! Your AutoCare appointment is today at [time]. Our team is ready for your [vehicle plate]. See you soon!"</li>
-            <li>Week 3 results: no-show rate dropped from 30% to 11% in the first 2 weeks — 92% of messages opened within 5 minutes</li>
-            <li>18 customers replied RESCHEDULE — bays refilled from waitlist the same day</li>
+            <li>Launched the automated reminder sequence across all opted-in contacts — personalised messages triggered automatically at 48 hours and again on the morning of each appointment, without any manual effort from the service team.</li>
+            <li>The no-show rate dropped from 30% to 11% within the first two weeks of automation — 92% of messages were opened within 5 minutes of delivery, confirming WhatsApp as the right channel for this audience.</li>
+            <li>18 rescheduling requests were captured and actioned proactively — freed bays were filled from a managed waitlist the same day, turning potential revenue loss into recovered appointments.</li>
           </ul>
         </div>
       </div>
       <div class="tl-r">
         <span class="tlb">Week 5–8</span>
         <div>
-          <div class="tlh">Scale — Promotions + Re-Engagement Broadcast</div>
+          <div class="tlh">Scale — Promotions, Re-Engagement &amp; Revenue Recovery</div>
           <ul class="tlu">
-            <li>Launched monthly promotion broadcast: "Tyre rotation + alignment — RM88 this weekend only (was RM138). Book now: [link]" — sent to 2,215 opted-in contacts</li>
-            <li>Promo broadcast: 94% open rate, 12% click rate, 68 bookings attributed directly to message within 48 hours</li>
-            <li>Re-engagement campaign: 640 contacts with last visit 6+ months ago received: "We miss your car! Book a FREE 15-point inspection this month" — 89 bookings generated</li>
-            <li>Month 2 no-show rate: 4% — 27 no-shows vs. 204 before. Revenue recovered: RM19,116 + RM3,000 from re-engagement = RM22,116</li>
+            <li>Extended the WhatsApp channel beyond reminders to include a monthly promotions broadcast — a tyre servicing offer sent to 2,215 opted-in contacts achieved a 94% open rate, 12% click rate, and 68 direct bookings within 48 hours.</li>
+            <li>Launched a re-engagement campaign targeting 640 lapsed customers (last visit 6+ months prior) with a free inspection offer — 89 bookings were generated from contacts who had received no communication in over half a year.</li>
+            <li>By Month 2, the no-show rate had fallen to 4% — recovering RM22,116 in monthly revenue that had previously been lost to empty bays, representing a full return on the engagement in a single month.</li>
           </ul>
         </div>
       </div>
@@ -190,5 +186,8 @@
     <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmarketing.github.io/nextmarketing</span>
   </div>
 </div>
+<script>
+function downloadDoc(){var t=document.querySelector('h1')?document.querySelector('h1').innerText:'Case Study';var b='<h1 style="font-size:22pt;color:#0A2540;font-family:Calibri,sans-serif">'+t+'</h1>';var sub=document.querySelector('.csub');if(sub)b+='<p style="font-size:11pt;color:#555;margin-bottom:14pt;font-style:italic">'+sub.innerText+'</p><hr>';var kpis=document.querySelectorAll('.kpi');if(kpis.length){b+='<table border="1" cellpadding="10" style="width:100%;border-collapse:collapse;margin:14pt 0"><tr>';kpis.forEach(function(k){var n=k.querySelector('.kn');var l=k.querySelector('.kl');b+='<td align="center" style="background:#EEF4FB"><b style="font-size:14pt;color:#0A2540">'+(n?n.innerText:'')+'</b><br><span style="font-size:9pt;color:#555">'+(l?l.innerText.replace(/\n/g,' '):'')+'</span></td>';});b+='</tr></table>';}document.querySelectorAll('.bx').forEach(function(bx){var h2=bx.querySelector('.bh');if(h2)b+='<h2 style="font-size:13pt;color:#0A2540;font-family:Calibri,sans-serif;border-bottom:2px solid #0A2540;padding-bottom:3pt;margin-top:18pt">'+h2.innerText.replace(/[^\w\s&.,':()/%+\-]/g,'').trim()+'</h2>';bx.querySelectorAll('table').forEach(function(tbl){b+='<table border="1" cellpadding="6" style="width:100%;border-collapse:collapse;font-size:10pt;margin:8pt 0">';tbl.querySelectorAll('tr').forEach(function(row){b+='<tr>';row.querySelectorAll('th').forEach(function(th){b+='<th style="background:#0A2540;color:#fff;padding:5pt">'+th.innerText+'</th>';});row.querySelectorAll('td').forEach(function(td){b+='<td style="padding:5pt;border:1px solid #ccc">'+td.innerText+'</td>';});b+='</tr>';});b+='</table><br>';});bx.querySelectorAll('ul.tlu').forEach(function(ul){b+='<ul style="font-size:10pt;margin-left:18pt">';ul.querySelectorAll('li').forEach(function(li){b+='<li style="margin-bottom:3pt">'+li.innerText+'</li>';});b+='</ul>';});bx.querySelectorAll('.tl-r').forEach(function(tl){var badge=tl.querySelector('.tlb');var strong=tl.querySelector('.tlh');var ul=tl.querySelector('.tlu');b+='<p style="font-size:10pt;margin:10pt 0 4pt"><b style="background:#0A2540;color:#fff;padding:2pt 5pt">'+(badge?badge.innerText:'')+'</b>&nbsp;&nbsp;<b>'+(strong?strong.innerText:'')+'</b></p>';if(ul){b+='<ul style="font-size:10pt;margin-left:18pt">';ul.querySelectorAll('li').forEach(function(li){b+='<li style="margin-bottom:3pt">'+li.innerText+'</li>';});b+='</ul>';}});var bab=bx.querySelector('.bab'),baa=bx.querySelector('.baa');if(bab&&baa){b+='<table border="1" cellpadding="8" style="width:100%;border-collapse:collapse;margin:8pt 0"><tr><td width="50%" style="background:#FFF5F5;vertical-align:top"><b>Before</b><br><br>'+[...bab.querySelectorAll('.bar')].map(function(r){return(r.querySelector('.bar-k')?r.querySelector('.bar-k').innerText:'')+': '+(r.querySelector('.bav')?r.querySelector('.bav').innerText:'');}).join('<br>')+'</td><td width="50%" style="background:#F0FFF4;vertical-align:top"><b>After</b><br><br>'+[...baa.querySelectorAll('.bar')].map(function(r){return(r.querySelector('.bar-k')?r.querySelector('.bar-k').innerText:'')+': '+(r.querySelector('.bav')?r.querySelector('.bav').innerText:'');}).join('<br>')+'</td></tr></table><br>';}var dels=bx.querySelectorAll('.di');if(dels.length&&!bx.querySelector('table')&&!bx.querySelector('.tl-r')&&!bx.querySelector('.bab')){b+='<ul style="font-size:10pt;margin-left:18pt">';dels.forEach(function(d){b+='<li style="margin-bottom:3pt">'+d.innerText+'</li>';});b+='</ul>';}var qt=bx.querySelector('.qt-t');if(qt)b+='<blockquote style="border-left:4px solid #00B4D8;background:#F0F9FF;padding:10pt 14pt;margin:8pt 0;font-style:italic;font-size:10pt">'+qt.innerText+'</blockquote>';if(!bx.querySelector('table')&&!bx.querySelector('ul')&&!bx.querySelector('.tl-r')&&!bx.querySelector('.bab')&&!bx.querySelector('.di')&&!bx.querySelector('.qt-t')){bx.querySelectorAll('p.n').forEach(function(p){if(p.innerText.trim())b+='<p style="font-size:10pt;color:#333">'+p.innerText+'</p>';});}});b+='<p style="margin-top:36pt;font-size:9pt;color:#aaa;border-top:1px solid #ddd;padding-top:6pt">NextMarketing — Professional Marketing Services by TechNext Asia | hello@technext.asia</p>';var html='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><meta name=ProgId content=Word.Document><style>body{font-family:Calibri,sans-serif}</style></head><body style="font-family:Calibri;margin:2.5cm 3cm">'+b+'</body></html>';var blob=new Blob(['﻿',html],{type:'application/msword'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='NextMarketing-Case-Study.doc';document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(a.href);},100);}
+</script>
 </body>
 </html>

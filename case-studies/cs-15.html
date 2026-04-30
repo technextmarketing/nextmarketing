@@ -22,7 +22,6 @@
 .del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}.di{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#1D4ED8;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}.di::before{content:'✓';color:#16A34A;flex-shrink:0;font-weight:700}
 .qt{background:linear-gradient(135deg,#F0F9FF,#EFF6FF);border:1px solid #BFDBFE;border-radius:12px;padding:1.5rem}.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #00B4D8;margin-bottom:.875rem}.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
 .foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}.foot strong{color:#0A2540}
-@media print{.pb{display:none}body{background:#fff}.cov,.bx{break-inside:avoid}.cov,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 @media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del,.ch-row3{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}}
 </style>
 </head>
@@ -33,7 +32,7 @@
     <span class="pill">Case Study #15</span>
   </div>
   <div style="display:flex;align-items:center;gap:1rem">
-    <button class="btn-save" onclick="window.print()">⬇ Save as PDF</button>
+    <button class="btn-save" onclick="downloadDoc()">⬇ Download Doc</button>
     <a class="btn-bk" href="../index.html">← Back to Services</a>
   </div>
 </div>
@@ -78,25 +77,22 @@
       <div class="tl-r">
         <span class="tlb">Month 1 · Jan</span>
         <div>
-          <div class="tlh">Setup — GA4 Fix, Tracking &amp; Dashboard Build</div>
+          <div class="tlh">Setup — Data Audit, Tracking Fix &amp; Dashboard Build</div>
           <ul class="tlu">
-            <li>Audited GA4: found 4 misconfigured goals, missing UTM parameters on all ad campaigns, direct traffic inflated by 40% due to missing source tagging</li>
-            <li>Fixed GA4: set up 6 conversion events (form submit, phone click, quote request, chat start, brochure download, newsletter signup)</li>
-            <li>Added UTM tracking to all Google Ads and Meta Ads URLs — traffic sources now correctly attributed in GA4</li>
-            <li>Built unified Google Sheets dashboard: auto-pulls data from GA4, manually updated with ads + social data → 2-hour monthly update vs. previous 3-day build</li>
-            <li>January report delivered: first clean month of data, channel-by-channel breakdown, CPL by source</li>
+            <li>Conducted a full audit of all marketing data sources — uncovering 4 misconfigured tracking goals, missing campaign attribution across all ad spend, and a 40% inflation in direct traffic caused by untagged sources.</li>
+            <li>Rebuilt the tracking and attribution infrastructure — configuring 6 conversion events and ensuring every active paid campaign reported its traffic source accurately, giving the team clean, actionable data for the first time.</li>
+            <li>Built a unified marketing dashboard consolidating all channel performance into a single view — reducing the monthly reporting task from a 3-day manual process to a 2-hour update, with the first clean month of data delivered in January.</li>
           </ul>
         </div>
       </div>
       <div class="tl-r">
         <span class="tlb">Month 2 · Feb</span>
         <div>
-          <div class="tlh">Insight — 3 Underperforming Channels Identified</div>
+          <div class="tlh">Insight — Underperforming Channels Identified</div>
           <ul class="tlu">
-            <li>February data revealed: Facebook Ads (RM3,500/month) generating CPL of RM182 vs. Google Ads CPL of RM44 — 4× more expensive per lead</li>
-            <li>LinkedIn (RM1,800/month) generating 0 tracked conversions — Insight Tag misconfigured, leads going untracked</li>
-            <li>SEO organic: generating 38 qualified leads/month at near-zero marginal cost — massively undervalued in budget allocation</li>
-            <li>Recommendation: reduce Facebook Ads by 50%, fix LinkedIn tracking, increase SEO content budget</li>
+            <li>February's first full month of clean data exposed clear underperforming channels — including one spending RM3,500/month at a cost per lead 4× higher than the best-performing channel, and another with broken conversion tracking that had left RM1,800/month of spend completely unmeasured.</li>
+            <li>SEO organic emerged as the highest-ROI channel at near-zero marginal cost — generating 38 qualified leads per month from an asset that had been systematically undervalued in the existing budget allocation.</li>
+            <li>Issued a formal budget reallocation recommendation with CPL data by channel — reduce spend on the underperforming channel, fix the broken LinkedIn tracking, and increase investment in SEO content.</li>
           </ul>
         </div>
       </div>
@@ -105,10 +101,9 @@
         <div>
           <div class="tlh">Reallocation — Budget Shift &amp; ROI Improvement</div>
           <ul class="tlu">
-            <li>RM1,750 moved from Facebook Ads to Google Ads (Exact Match campaigns) — CPL on Google dropped from RM44 to RM31</li>
-            <li>LinkedIn Insight Tag fixed — first trackable LinkedIn leads: 6 in March at CPL of RM120 (acceptable for B2B freight)</li>
-            <li>SEO blog content: 2 posts added targeting "logistics company Malaysia" and "same-day delivery Klang Valley" — organic leads up 28%</li>
-            <li>Overall marketing ROI (revenue attributed / spend): RM8.40 per RM1 spent in Mar vs. RM2.60 in Jan — +220% improvement</li>
+            <li>The recommended budget reallocation was implemented — redirecting RM1,750 from the underperforming channel into a higher-converting campaign, dropping cost per lead from RM44 to RM31 within the same month.</li>
+            <li>The previously untracked channel was fixed and delivered its first 6 verified leads in March, while SEO organic traffic grew 28% following new content additions — both channels now fully attributed and contributing measurable value.</li>
+            <li>Overall marketing ROI improved from RM2.60 per RM1 spent in January to RM8.40 in March — a 220% increase driven entirely by data-informed reallocation, not additional budget spend.</li>
           </ul>
         </div>
       </div>
@@ -202,5 +197,8 @@
     <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmarketing.github.io/nextmarketing</span>
   </div>
 </div>
+<script>
+function downloadDoc(){var t=document.querySelector('h1')?document.querySelector('h1').innerText:'Case Study';var b='<h1 style="font-size:22pt;color:#0A2540;font-family:Calibri,sans-serif">'+t+'</h1>';var sub=document.querySelector('.csub');if(sub)b+='<p style="font-size:11pt;color:#555;margin-bottom:14pt;font-style:italic">'+sub.innerText+'</p><hr>';var kpis=document.querySelectorAll('.kpi');if(kpis.length){b+='<table border="1" cellpadding="10" style="width:100%;border-collapse:collapse;margin:14pt 0"><tr>';kpis.forEach(function(k){var n=k.querySelector('.kn');var l=k.querySelector('.kl');b+='<td align="center" style="background:#EEF4FB"><b style="font-size:14pt;color:#0A2540">'+(n?n.innerText:'')+'</b><br><span style="font-size:9pt;color:#555">'+(l?l.innerText.replace(/\n/g,' '):'')+'</span></td>';});b+='</tr></table>';}document.querySelectorAll('.bx').forEach(function(bx){var h2=bx.querySelector('.bh');if(h2)b+='<h2 style="font-size:13pt;color:#0A2540;font-family:Calibri,sans-serif;border-bottom:2px solid #0A2540;padding-bottom:3pt;margin-top:18pt">'+h2.innerText.replace(/[^\w\s&.,':()/%+\-]/g,'').trim()+'</h2>';bx.querySelectorAll('table').forEach(function(tbl){b+='<table border="1" cellpadding="6" style="width:100%;border-collapse:collapse;font-size:10pt;margin:8pt 0">';tbl.querySelectorAll('tr').forEach(function(row){b+='<tr>';row.querySelectorAll('th').forEach(function(th){b+='<th style="background:#0A2540;color:#fff;padding:5pt">'+th.innerText+'</th>';});row.querySelectorAll('td').forEach(function(td){b+='<td style="padding:5pt;border:1px solid #ccc">'+td.innerText+'</td>';});b+='</tr>';});b+='</table><br>';});bx.querySelectorAll('ul.tlu').forEach(function(ul){b+='<ul style="font-size:10pt;margin-left:18pt">';ul.querySelectorAll('li').forEach(function(li){b+='<li style="margin-bottom:3pt">'+li.innerText+'</li>';});b+='</ul>';});bx.querySelectorAll('.tl-r').forEach(function(tl){var badge=tl.querySelector('.tlb');var strong=tl.querySelector('.tlh');var ul=tl.querySelector('.tlu');b+='<p style="font-size:10pt;margin:10pt 0 4pt"><b style="background:#0A2540;color:#fff;padding:2pt 5pt">'+(badge?badge.innerText:'')+'</b>&nbsp;&nbsp;<b>'+(strong?strong.innerText:'')+'</b></p>';if(ul){b+='<ul style="font-size:10pt;margin-left:18pt">';ul.querySelectorAll('li').forEach(function(li){b+='<li style="margin-bottom:3pt">'+li.innerText+'</li>';});b+='</ul>';}});var bab=bx.querySelector('.bab'),baa=bx.querySelector('.baa');if(bab&&baa){b+='<table border="1" cellpadding="8" style="width:100%;border-collapse:collapse;margin:8pt 0"><tr><td width="50%" style="background:#FFF5F5;vertical-align:top"><b>Before</b><br><br>'+[...bab.querySelectorAll('.bar')].map(function(r){return(r.querySelector('.bar-k')?r.querySelector('.bar-k').innerText:'')+': '+(r.querySelector('.bav')?r.querySelector('.bav').innerText:'');}).join('<br>')+'</td><td width="50%" style="background:#F0FFF4;vertical-align:top"><b>After</b><br><br>'+[...baa.querySelectorAll('.bar')].map(function(r){return(r.querySelector('.bar-k')?r.querySelector('.bar-k').innerText:'')+': '+(r.querySelector('.bav')?r.querySelector('.bav').innerText:'');}).join('<br>')+'</td></tr></table><br>';}var dels=bx.querySelectorAll('.di');if(dels.length&&!bx.querySelector('table')&&!bx.querySelector('.tl-r')&&!bx.querySelector('.bab')){b+='<ul style="font-size:10pt;margin-left:18pt">';dels.forEach(function(d){b+='<li style="margin-bottom:3pt">'+d.innerText+'</li>';});b+='</ul>';}var qt=bx.querySelector('.qt-t');if(qt)b+='<blockquote style="border-left:4px solid #00B4D8;background:#F0F9FF;padding:10pt 14pt;margin:8pt 0;font-style:italic;font-size:10pt">'+qt.innerText+'</blockquote>';if(!bx.querySelector('table')&&!bx.querySelector('ul')&&!bx.querySelector('.tl-r')&&!bx.querySelector('.bab')&&!bx.querySelector('.di')&&!bx.querySelector('.qt-t')){bx.querySelectorAll('p.n').forEach(function(p){if(p.innerText.trim())b+='<p style="font-size:10pt;color:#333">'+p.innerText+'</p>';});}});b+='<p style="margin-top:36pt;font-size:9pt;color:#aaa;border-top:1px solid #ddd;padding-top:6pt">NextMarketing — Professional Marketing Services by TechNext Asia | hello@technext.asia</p>';var html='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><meta name=ProgId content=Word.Document><style>body{font-family:Calibri,sans-serif}</style></head><body style="font-family:Calibri;margin:2.5cm 3cm">'+b+'</body></html>';var blob=new Blob(['﻿',html],{type:'application/msword'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='NextMarketing-Case-Study.doc';document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(a.href);},100);}
+</script>
 </body>
 </html>

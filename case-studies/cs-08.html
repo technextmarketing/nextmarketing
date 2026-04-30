@@ -69,7 +69,6 @@ tr:nth-child(even) td{background:#F8FAFC}
 .rev-box{background:linear-gradient(135deg,#F0FDF4,#DCFCE7);border:1px solid #BBF7D0;border-radius:10px;padding:1.25rem;text-align:center;margin-top:.75rem}
 .rev-num{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:700;color:#16A34A}
 .rev-label{font-size:.8rem;color:#15803D;margin-top:.25rem}
-@media print{.pb{display:none}body{background:#fff}.cov,.bx{break-inside:avoid}.cov,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 @media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}}
 </style>
 </head>
@@ -81,7 +80,7 @@ tr:nth-child(even) td{background:#F8FAFC}
     <span class="pill">Case Study #08</span>
   </div>
   <div style="display:flex;align-items:center;gap:1rem">
-    <button class="btn-save" onclick="window.print()">⬇ Save as PDF</button>
+    <button class="btn-save" onclick="downloadDoc()">⬇ Download Doc</button>
     <a class="btn-bk" href="../index.html">← Back to Services</a>
   </div>
 </div>
@@ -128,39 +127,33 @@ tr:nth-child(even) td{background:#F8FAFC}
       <div class="tl-r">
         <span class="tlb">Month 1 · Jan</span>
         <div>
-          <div class="tlh">Setup — Platform, Template &amp; Re-Engagement</div>
+          <div class="tlh">Setup — Platform, Infrastructure &amp; Re-Engagement</div>
           <ul class="tlu">
-            <li>Imported 4,200 contacts into Brevo — cleaned list: removed 187 hard bounces, 92 duplicates → clean list: 3,921</li>
-            <li>Built branded email template in Canva (600×200 header) + Brevo drag-and-drop: header / 2-column body / CTA button / social footer</li>
-            <li>Campaign 1 (re-engagement): Subject A/B test — "We miss you, [First Name]" vs. "Your ProSkill access is still waiting" — sent to 3,921 contacts</li>
-            <li>Used Brevo's 7-day re-engagement window — contacts who didn't open were suppressed from next campaign to protect sender score</li>
-            <li>Set up welcome automation sequence: 3-email drip for any new opt-ins from website form</li>
+            <li>Migrated the full 4,200-contact list to a professional email platform — cleaning to 3,921 active contacts by removing bounces and duplicates, establishing a clean foundation before any sends were made.</li>
+            <li>Built a fully branded email template and launched the first campaign to the list in 18 months — an A/B-tested re-engagement send designed to identify warm contacts while protecting sender reputation for future campaigns.</li>
+            <li>Set up a 3-email welcome automation for all new opt-ins — ensuring every future subscriber received a structured onboarding journey from their first touchpoint with ProSkill Academy.</li>
           </ul>
         </div>
       </div>
       <div class="tl-r">
         <span class="tlb">Month 2 · Feb</span>
         <div>
-          <div class="tlh">Revenue — Course Promotion Campaign</div>
+          <div class="tlh">Revenue — First Course Promotion Campaign</div>
           <ul class="tlu">
-            <li>Segmented re-engaged contacts (those who opened Month 1) into "warm" list: 2,840 contacts</li>
-            <li>Campaign 2: PMP Certification intake promotion with early-bird pricing — deadline-driven CTA ("Offer ends Friday")</li>
-            <li>Subject line winner from A/B test: "Get PMP certified in 3 weekends — early-bird closes Friday" (41% open rate)</li>
-            <li>Campaign generated 24 enrolment enquiries → 18 paid registrations at RM400 = <strong>RM7,200 attributed revenue</strong></li>
-            <li>Campaign 3 (newsletter): industry news + student spotlight — maintained relationship between promotions</li>
+            <li>Segmented the 2,840 re-engaged contacts from Month 1 and launched the first promotional campaign — a PMP Certification intake with early-bird pricing and a deadline-driven call to action, achieving a 41% open rate.</li>
+            <li>The PMP campaign generated 24 enrolment enquiries, converting 18 into paid registrations at RM400 each — <strong>RM7,200 in directly attributed revenue from a single email send.</strong></li>
+            <li>Sent a relationship-building newsletter between promotions — maintaining list warmth and establishing a sustainable sending cadence that kept the audience engaged without fatigue.</li>
           </ul>
         </div>
       </div>
       <div class="tl-r">
         <span class="tlb">Month 3 · Mar</span>
         <div>
-          <div class="tlh">Scale — Second Revenue Campaign + Click Optimisation</div>
+          <div class="tlh">Scale — Second Revenue Campaign &amp; Performance Results</div>
           <ul class="tlu">
-            <li>Campaign 4: Financial Modelling course promotion — targeting finance segment (tagged from contact import data)</li>
-            <li>Applied learnings from Feb: deadline CTA, single focused CTA button, personalised subject line</li>
-            <li>27 enquiries → 27 paid registrations at RM400 = <strong>RM10,800 attributed revenue</strong></li>
-            <li>Click rate rose to 12% — above education benchmark of 5–7%</li>
-            <li>Delivered email performance dashboard in Google Sheets: open rate, CTR, unsubs, revenue per campaign</li>
+            <li>Launched the second revenue campaign — a Financial Modelling course promotion targeted to the finance interest segment, applying all learnings from February to sharpen the copy, CTA, and delivery timing.</li>
+            <li>27 enquiries converted to 27 paid registrations — <strong>RM10,800 in attributed revenue.</strong> Click rate reached 12%, more than double the education industry benchmark of 5–7%.</li>
+            <li>Delivered a full email performance dashboard tracking open rates, CTR, unsubscribes, and revenue per campaign — giving the ProSkill team complete visibility for independent management going forward.</li>
           </ul>
         </div>
       </div>
@@ -294,5 +287,8 @@ tr:nth-child(even) td{background:#F8FAFC}
   </div>
 
 </div>
+<script>
+function downloadDoc(){var t=document.querySelector('h1')?document.querySelector('h1').innerText:'Case Study';var b='<h1 style="font-size:22pt;color:#0A2540;font-family:Calibri,sans-serif">'+t+'</h1>';var sub=document.querySelector('.csub');if(sub)b+='<p style="font-size:11pt;color:#555;margin-bottom:14pt;font-style:italic">'+sub.innerText+'</p><hr>';var kpis=document.querySelectorAll('.kpi');if(kpis.length){b+='<table border="1" cellpadding="10" style="width:100%;border-collapse:collapse;margin:14pt 0"><tr>';kpis.forEach(function(k){var n=k.querySelector('.kn');var l=k.querySelector('.kl');b+='<td align="center" style="background:#EEF4FB"><b style="font-size:14pt;color:#0A2540">'+(n?n.innerText:'')+'</b><br><span style="font-size:9pt;color:#555">'+(l?l.innerText.replace(/\n/g,' '):'')+'</span></td>';});b+='</tr></table>';}document.querySelectorAll('.bx').forEach(function(bx){var h2=bx.querySelector('.bh');if(h2)b+='<h2 style="font-size:13pt;color:#0A2540;font-family:Calibri,sans-serif;border-bottom:2px solid #0A2540;padding-bottom:3pt;margin-top:18pt">'+h2.innerText.replace(/[^\w\s&.,':()/%+\-]/g,'').trim()+'</h2>';bx.querySelectorAll('table').forEach(function(tbl){b+='<table border="1" cellpadding="6" style="width:100%;border-collapse:collapse;font-size:10pt;margin:8pt 0">';tbl.querySelectorAll('tr').forEach(function(row){b+='<tr>';row.querySelectorAll('th').forEach(function(th){b+='<th style="background:#0A2540;color:#fff;padding:5pt">'+th.innerText+'</th>';});row.querySelectorAll('td').forEach(function(td){b+='<td style="padding:5pt;border:1px solid #ccc">'+td.innerText+'</td>';});b+='</tr>';});b+='</table><br>';});bx.querySelectorAll('ul.tlu').forEach(function(ul){b+='<ul style="font-size:10pt;margin-left:18pt">';ul.querySelectorAll('li').forEach(function(li){b+='<li style="margin-bottom:3pt">'+li.innerText+'</li>';});b+='</ul>';});bx.querySelectorAll('.tl-r').forEach(function(tl){var badge=tl.querySelector('.tlb');var strong=tl.querySelector('.tlh');var ul=tl.querySelector('.tlu');b+='<p style="font-size:10pt;margin:10pt 0 4pt"><b style="background:#0A2540;color:#fff;padding:2pt 5pt">'+(badge?badge.innerText:'')+'</b>&nbsp;&nbsp;<b>'+(strong?strong.innerText:'')+'</b></p>';if(ul){b+='<ul style="font-size:10pt;margin-left:18pt">';ul.querySelectorAll('li').forEach(function(li){b+='<li style="margin-bottom:3pt">'+li.innerText+'</li>';});b+='</ul>';}});var bab=bx.querySelector('.bab'),baa=bx.querySelector('.baa');if(bab&&baa){b+='<table border="1" cellpadding="8" style="width:100%;border-collapse:collapse;margin:8pt 0"><tr><td width="50%" style="background:#FFF5F5;vertical-align:top"><b>Before</b><br><br>'+[...bab.querySelectorAll('.bar')].map(function(r){return(r.querySelector('.bar-k')?r.querySelector('.bar-k').innerText:'')+': '+(r.querySelector('.bav')?r.querySelector('.bav').innerText:'');}).join('<br>')+'</td><td width="50%" style="background:#F0FFF4;vertical-align:top"><b>After</b><br><br>'+[...baa.querySelectorAll('.bar')].map(function(r){return(r.querySelector('.bar-k')?r.querySelector('.bar-k').innerText:'')+': '+(r.querySelector('.bav')?r.querySelector('.bav').innerText:'');}).join('<br>')+'</td></tr></table><br>';}var dels=bx.querySelectorAll('.di');if(dels.length&&!bx.querySelector('table')&&!bx.querySelector('.tl-r')&&!bx.querySelector('.bab')){b+='<ul style="font-size:10pt;margin-left:18pt">';dels.forEach(function(d){b+='<li style="margin-bottom:3pt">'+d.innerText+'</li>';});b+='</ul>';}var qt=bx.querySelector('.qt-t');if(qt)b+='<blockquote style="border-left:4px solid #00B4D8;background:#F0F9FF;padding:10pt 14pt;margin:8pt 0;font-style:italic;font-size:10pt">'+qt.innerText+'</blockquote>';if(!bx.querySelector('table')&&!bx.querySelector('ul')&&!bx.querySelector('.tl-r')&&!bx.querySelector('.bab')&&!bx.querySelector('.di')&&!bx.querySelector('.qt-t')){bx.querySelectorAll('p.n').forEach(function(p){if(p.innerText.trim())b+='<p style="font-size:10pt;color:#333">'+p.innerText+'</p>';});}});b+='<p style="margin-top:36pt;font-size:9pt;color:#aaa;border-top:1px solid #ddd;padding-top:6pt">NextMarketing — Professional Marketing Services by TechNext Asia | hello@technext.asia</p>';var html='<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><meta name=ProgId content=Word.Document><style>body{font-family:Calibri,sans-serif}</style></head><body style="font-family:Calibri;margin:2.5cm 3cm">'+b+'</body></html>';var blob=new Blob(['﻿',html],{type:'application/msword'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='NextMarketing-Case-Study.doc';document.body.appendChild(a);a.click();setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(a.href);},100);}
+</script>
 </body>
 </html>
