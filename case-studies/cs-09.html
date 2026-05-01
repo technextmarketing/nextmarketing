@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study #09 — Email Marketing — Pro | NextMarketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCD34D;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#FCD34D;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #D97706;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#D97706;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#D97706;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}
+.dn{color:#DC2626;font-weight:700}
+.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#EFF6FF;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}
+.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}
+.bar-k{color:#64748B}
+.bav{font-weight:700}
+.bab .bav{color:#DC2626}
+.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FFFBEB;border:1px solid #FDE68A;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#92400E;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#D97706;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border:1px solid #FDE68A;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #D97706;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}
+.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}
+</style>
+</head>
+<body>
+
+<div class="pb">
+  <div class="pb-l">
+    <div class="logo"><span>Tech</span>Next <span style="color:#fff;font-weight:400">|</span> <span>NextMarketing</span></div>
+    <span class="pill">Case Study #09</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <a class="btn-bk" href="../index.html">← Back to Services</a>
+  </div>
+</div>
+
+<div class="w">
+
+  <div class="cov">
+    <div class="ey">Email · 🟡 Achievable Tier · NextMarketing Case Study</div>
+    <h1>Email Marketing — Pro</h1>
+    <div class="csub">How a beauty e-commerce brand turned a 22,000-contact list from 8% to 38% average open rate — and generated RM54,000 in email-attributed revenue in 3 months</div>
+    <div class="meta">
+      <span>🏢 Lumiere Beauty Co. · Skincare &amp; Beauty E-Commerce</span>
+      <span>📅 Jan – Mar 2026 · 3 months</span>
+      <span>📧 8 Campaigns/Month · Brevo · 22K Contacts</span>
+      <span>📍 Bangsar, Kuala Lumpur</span>
+    </div>
+    <div class="kpis"><div class="kpi"><div class="kn">38%</div><div class="kl">Average Email Open Rate</div></div><div class="kpi"><div class="kn">RM54k</div><div class="kl">Email-Attributed Revenue in 3 Months</div></div><div class="kpi"><div class="kn">+16%</div><div class="kl">List Growth Per Month</div></div></div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">🏢 Client Overview</span>
+    <p class="n">Lumiere Beauty Co. is a Malaysian direct-to-consumer skincare brand selling 18 SKUs across its own website and Shopee. Founded in 2022, the brand grew its contact list to 22,000 subscribers through promotions and giveaways — but had never moved beyond a monthly newsletter sent to the entire list without segmentation.</p>
+    <p class="n">The brand's email platform was Brevo, already set up but used only for basic broadcasts. There were no automations, no segmentation logic, and no revenue attribution — making it impossible to know whether email was contributing to sales at all. Open rates had declined from 18% to 8.4% over 6 months as audience fatigue set in from irrelevant mass sends.</p>
+    <p class="n">The goal of the Email Marketing Pro engagement was to turn a dormant, declining list into a high-performing revenue channel — through behavioural segmentation, automated trigger flows, and a structured 8-campaign monthly cadence with A/B testing.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚠️ The Challenge</span>
+    <ul class="tlu" style="margin-top:.25rem">
+      <li>22,000 contacts treated as a single list — promotional emails sent to every contact regardless of purchase history, interest, or engagement level</li>
+      <li>Average open rate had dropped to 8.4% over 6 months — well below Brevo industry benchmarks of 25–30% for beauty e-commerce</li>
+      <li>No automated welcome sequence: new subscribers received their first email 3–5 weeks after sign-up when the next broadcast happened to go out</li>
+      <li>Abandoned cart behaviour triggered no follow-up — estimated RM28,000 in recoverable revenue going uncaptured monthly</li>
+      <li>Zero A/B testing history: every campaign used the same subject line format ("Lumiere Monthly Update — [Month]") with no variation</li>
+      <li>Email revenue completely untracked: no UTM parameters, no GA4 e-commerce integration — impossible to attribute revenue to any campaign</li>
+      <li>Unsubscribe rate climbing: 2.3% per send — 3× the industry average — indicating audience mismatch between content and recipient</li>
+    </ul>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📋 Our Approach — Month by Month</span>
+    <div class="tl">
+      
+      <div class="tl-r">
+        <span class="tlb">Month 1</span>
+        <div>
+          <div class="tlh">List Audit, Segmentation &amp; Welcome Automation</div>
+          <ul class="tlu">
+            <li>Audited 22,000 contacts in Brevo: identified 8,400 with zero opens in 90 days, 6,200 customers (at least 1 purchase), 4,100 engaged non-buyers, 3,300 fresh opt-ins under 30 days</li>
+            <li>Created 4 master segments: Customers, Hot Leads (opened 3+ emails but never bought), Cold (90-day no-open), Newsletter Only — each receives only contextually relevant campaigns from this point forward</li>
+            <li>Suppressed the 8,400 cold contacts from all broadcasts for 60 days — open rate on first segmented send jumped from 8.4% to 26% immediately</li>
+            <li>Built a 3-email welcome sequence in Brevo Automations: Day 0 — personal welcome + brand story + 10% first-order code; Day 3 — bestseller showcase; Day 7 — skincare tips blog post + soft CTA</li>
+            <li>Welcome sequence achieved 58% open rate on Email 1 within first 2 weeks of activation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-r">
+        <span class="tlb">Month 2</span>
+        <div>
+          <div class="tlh">Revenue Triggers &amp; A/B Testing Programme</div>
+          <ul class="tlu">
+            <li>Built abandoned cart recovery flow: trigger = added to cart but no purchase after 2 hours → Email 1 (reminder, no discount) → wait 24h → Email 2 (5% off, 48-hour expiry); recovered RM14,200 in Month 2</li>
+            <li>Set up GA4 e-commerce integration and UTM parameters on every email link — first time Lumiere could see email-to-revenue data in real time</li>
+            <li>Launched A/B subject line testing programme: 2 campaigns per month tested with 5 subject line angles each — curiosity, urgency, benefit-led, personalised, and social proof</li>
+            <li>Best-performing subject line in Month 2: "Your skin is telling you something — are you listening?" (curiosity angle) → 44% open rate vs 19% for product-name variant</li>
+            <li>Sent 8 campaigns across 4 segments: 2 promotional (revenue), 3 educational (nurture), 2 new arrivals (engagement), 1 re-engagement (cold segment with win-back offer)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-r">
+        <span class="tlb">Month 3</span>
+        <div>
+          <div class="tlh">Revenue Scaling &amp; List Growth</div>
+          <ul class="tlu">
+            <li>Post-purchase follow-up sequence activated: 7 days after purchase → email requesting review → 14 days → cross-sell recommendation based on product purchased — generated RM8,400 in incremental repeat revenue</li>
+            <li>List growth accelerated: added embedded double opt-in form to website checkout page and blog sidebar → 3,520 new subscribers in Month 3 alone (+16% list growth)</li>
+            <li>Total email-attributed revenue for Month 3: RM22,800 — tracked via GA4 UTM parameters and Brevo conversion dashboard</li>
+            <li>Cold re-engagement campaign sent to suppressed 8,400 contacts: "We miss you" with 15% comeback offer → 14% reactivation rate, 1,176 contacts returned to active segments</li>
+            <li>Delivered 90-day email marketing report: segment performance, A/B test winners, revenue by campaign type, and Month 4–6 automation roadmap</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="bx">
+    <span class="bh">📊 Campaign Performance — Month 3 Detail</span>
+    <div class="ow"><table><thead><tr><th>Campaign</th><th>Segment</th><th>Sent</th><th>Open Rate</th><th>Click Rate</th><th>Revenue</th></tr></thead>
+    <tbody><tr><td>New Arrivals Launch</td><td>Hot Leads + Customers</td><td>9,200</td><td class="up">41%</td><td class="up">8.2%</td><td class="fw">RM6,400</td></tr><tr><td>Skincare Routine Tips</td><td>Newsletter Only</td><td>3,800</td><td class="up">34%</td><td>5.1%</td><td>RM0</td></tr><tr><td>Flash Sale — 24hrs</td><td>Customers</td><td>6,100</td><td class="up">52%</td><td class="up">14.3%</td><td class="fw">RM9,200</td></tr><tr><td>Win-Back Offer</td><td>Cold (reactivation)</td><td>8,400</td><td class="up">14%</td><td>4.8%</td><td class="fw">RM2,600</td></tr><tr><td>Post-Purchase Cross-sell</td><td>Recent Buyers</td><td>2,800</td><td class="up">48%</td><td class="up">11.6%</td><td class="fw">RM4,600</td></tr></tbody></table></div>
+  </div>
+  
+
+  <div class="bx">
+    <span class="bh">⚖️ Before vs. After — 3-Month Comparison</span>
+    <div class="ba">
+      <div class="bab">
+        <div class="bah">❌ Before — January 2026</div>
+        <div class="bar"><span class="bar-k">Average open rate</span><span class="bav">8.4%</span></div><div class="bar"><span class="bar-k">Monthly campaigns sent</span><span class="bav">1 (full list)</span></div><div class="bar"><span class="bar-k">Audience segments</span><span class="bav">None — 1 list</span></div><div class="bar"><span class="bar-k">Active automations</span><span class="bav">0</span></div><div class="bar"><span class="bar-k">Email-attributed revenue</span><span class="bav">Unknown (untracked)</span></div><div class="bar"><span class="bar-k">Monthly list growth</span><span class="bav">~120 subscribers</span></div>
+      </div>
+      <div class="baa">
+        <div class="bah">✅ After — April 2026</div>
+        <div class="bar"><span class="bar-k">Average open rate</span><span class="bav">38%</span></div><div class="bar"><span class="bar-k">Monthly campaigns sent</span><span class="bav">8 (segmented)</span></div><div class="bar"><span class="bar-k">Audience segments</span><span class="bav">4 active segments</span></div><div class="bar"><span class="bar-k">Active automations</span><span class="bav">4 (welcome, cart, post-purchase, win-back)</span></div><div class="bar"><span class="bar-k">Email-attributed revenue</span><span class="bav">RM22,800 / month</span></div><div class="bar"><span class="bar-k">Monthly list growth</span><span class="bav">3,520 subscribers (+16%)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📦 What We Delivered</span>
+    <div class="del">
+      <div class="di">4 behavioural contact segments built in Brevo (Customers, Hot Leads, Cold, Newsletter)</div>
+      <div class="di">3-email welcome sequence with Day 0 / Day 3 / Day 7 timing and brand voice copy</div>
+      <div class="di">2-email abandoned cart recovery flow with conditional discount logic</div>
+      <div class="di">Post-purchase follow-up sequence: review request + cross-sell recommendation</div>
+      <div class="di">Win-back re-engagement campaign for 90-day cold contacts</div>
+      <div class="di">GA4 e-commerce integration + UTM parameters on all email links</div>
+      <div class="di">A/B subject line testing programme — 2 tests/month, 5 angles per test</div>
+      <div class="di">8 segmented campaigns produced and sent in Month 3</div>
+      <div class="di">Lead scoring framework: Brevo automation points system (open/click/form fill)</div>
+      <div class="di">90-day performance report with revenue attribution, segment breakdown, and Month 4 roadmap</div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">💬 Client Testimonial</span>
+    <div class="qt">
+      <div class="qt-t">We'd been sitting on 22,000 contacts and treating them like a megaphone list. The moment we stopped sending one email to everyone and started sending the right email to the right person, everything changed. Our open rate went from 8% to 38% in 90 days. The abandoned cart flow alone paid for this entire engagement in the first month. I now know exactly how much revenue every campaign generates — that changed how I run the business.</div>
+      <div class="qt-n">Priscilla Tan</div>
+      <div class="qt-r">Founder &amp; CEO · Lumiere Beauty Co. · Bangsar, Kuala Lumpur</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <strong>NextMarketing by TechNext Asia</strong> · Email · Case Study #09<br>
+    <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmrkting.github.io/nextmarketing</span>
+  </div>
+
+</div>
+</body>
+</html>

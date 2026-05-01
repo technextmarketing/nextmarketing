@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study #13 — Short-Form Video | NextMarketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCD34D;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#FCD34D;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #D97706;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#D97706;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#D97706;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}
+.dn{color:#DC2626;font-weight:700}
+.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#EFF6FF;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}
+.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}
+.bar-k{color:#64748B}
+.bav{font-weight:700}
+.bab .bav{color:#DC2626}
+.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FFFBEB;border:1px solid #FDE68A;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#92400E;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#D97706;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border:1px solid #FDE68A;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #D97706;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}
+.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}
+</style>
+</head>
+<body>
+
+<div class="pb">
+  <div class="pb-l">
+    <div class="logo"><span>Tech</span>Next <span style="color:#fff;font-weight:400">|</span> <span>NextMarketing</span></div>
+    <span class="pill">Case Study #13</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <a class="btn-bk" href="../index.html">← Back to Services</a>
+  </div>
+</div>
+
+<div class="w">
+
+  <div class="cov">
+    <div class="ey">Content · 🟡 Achievable Tier · NextMarketing Case Study</div>
+    <h1>Short-Form Video</h1>
+    <div class="csub">How a boutique fitness studio with zero video presence went from 840 Instagram followers to 4,200 — and sold out its group class slots for 8 consecutive weeks</div>
+    <div class="meta">
+      <span>🏢 FitHouse KL · Boutique Fitness Studio</span>
+      <span>📅 Feb – Apr 2026 · 3 months</span>
+      <span>🎬 4 Reels/Month · Instagram + TikTok · CapCut</span>
+      <span>📍 Mont Kiara, Kuala Lumpur</span>
+    </div>
+    <div class="kpis"><div class="kpi"><div class="kn">+3,360</div><div class="kl">New Followers (Instagram + TikTok)</div></div><div class="kpi"><div class="kn">71%</div><div class="kl">Average Video View Rate</div></div><div class="kpi"><div class="kn">8 Weeks</div><div class="kl">Group Classes Sold Out from Video Leads</div></div></div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">🏢 Client Overview</span>
+    <p class="n">FitHouse KL is a boutique fitness studio in Mont Kiara offering reformer Pilates, HIIT, and yoga classes with a maximum of 12 participants per session. At RM80–RM120 per class, the studio targets the premium segment — young professionals and expatriates in the Mont Kiara, Damansara, and Sri Hartamas corridor.</p>
+    <p class="n">The studio had 840 Instagram followers and had never published a video. Content consisted of static Canva graphics posted 2–3 times per month, with an average of 12–18 likes per post and no measurable class bookings attributable to social media. The head trainer had a high-energy, camera-ready personality — a natural video asset that was going completely unused.</p>
+    <p class="n">The Short-Form Video engagement set out to establish a consistent 4-video monthly publishing cadence across Instagram Reels and TikTok — scripted, recorded by the trainer, edited in CapCut, and optimised for the algorithm with proper captions, hooks, and hashtags.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚠️ The Challenge</span>
+    <ul class="tlu" style="margin-top:.25rem">
+      <li>Zero video history — the head trainer had never recorded a Reel or TikTok and was anxious about being on camera despite being confident in a class environment</li>
+      <li>840 Instagram followers, mostly existing clients — no mechanism for organic discovery or reaching potential new customers who had never heard of FitHouse</li>
+      <li>Studio class slots (12 per session) frequently had 3–5 empty spots per day despite warm leads in DMs who had inquired but never booked</li>
+      <li>Static graphics performing poorly: average reach of 180 per post, engagement rate of 1.8% — well below the 5%+ threshold for algorithm promotion</li>
+      <li>No knowledge of video editing tools: CapCut, Canva Video, captions, and audio layering were completely unfamiliar to the studio team</li>
+      <li>No publishing schedule: content was posted reactively when someone "had time" — sometimes 3 times a week, sometimes nothing for 2 weeks</li>
+      <li>TikTok account existed but had 0 posts and 0 followers — a blank starting point on the highest-reach short-video platform in Malaysia</li>
+    </ul>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📋 Our Approach — Month by Month</span>
+    <div class="tl">
+      
+      <div class="tl-r">
+        <span class="tlb">Month 1</span>
+        <div>
+          <div class="tlh">Script System, Recording Comfort &amp; First 4 Videos</div>
+          <ul class="tlu">
+            <li>Built a 12-video script pipeline in Claude AI: 4 per month for 3 months — covering workout tips, "day in the life" content, myth-busting fitness claims, and class transformation hooks</li>
+            <li>Each script followed the proven format: 3-second hook ("You're doing planks wrong — here's why") → 5-second problem → 15-second solution (3 quick tips) → 7-second CTA ("Try a class — link in bio")</li>
+            <li>First recording session: trainer recorded 4 videos in 45 minutes using iPhone 13 Pro in portrait mode, ring light on, white studio wall as background — no extra equipment purchased</li>
+            <li>Edited all 4 in CapCut: imported footage → trimmed clips → added auto-captions (corrected 3 errors) → background music at 18% volume → exported at 1080p</li>
+            <li>Published on Instagram Reels and TikTok simultaneously — Video 1 (Pilates plank form correction) reached 4,200 views in 48 hours; TikTok version reached 8,900 views in 72 hours</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-r">
+        <span class="tlb">Month 2</span>
+        <div>
+          <div class="tlh">Momentum, Viral Video &amp; Class Bookings</div>
+          <ul class="tlu">
+            <li>Trainer now fully comfortable on camera — recording sessions dropped from 45 minutes to 22 minutes for 4 videos as she found her on-camera rhythm</li>
+            <li>Added Canva Video branded intros and outros (3 seconds each) with FitHouse logo and amber accent colour — brought visual consistency to all videos</li>
+            <li>Video 6 ("3 signs your core is weaker than you think") went semi-viral: 28,400 views on TikTok, 9,100 on Instagram Reels — gained 820 followers in a single day</li>
+            <li>First direct class bookings attributed to video: 6 people DM'd referencing the viral video within 48 hours of posting; 4 converted to booked classes within the week</li>
+            <li>Responded to every comment within 1 hour of posting — algorithm reward was visible: engagement rate jumped from 1.8% (static posts) to 8.4% on video content</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-r">
+        <span class="tlb">Month 3</span>
+        <div>
+          <div class="tlh">Consistency, Community &amp; Sold-Out Classes</div>
+          <ul class="tlu">
+            <li>Published 4 videos on consistent schedule: Monday and Thursday at 7pm — highest engagement window identified from Month 2 TikTok analytics</li>
+            <li>Introduced testimonial video format: existing client shot a 30-second "before I discovered reformer Pilates" script — 14,200 views, 62 comments, 3 new class bookings in 24 hours</li>
+            <li>TikTok account grew from 0 to 2,140 followers; Instagram grew from 840 to 2,060 — combined gain of 3,360 across both platforms</li>
+            <li>Group classes fully booked for 8 consecutive weeks by end of Month 3 — studio added a waitlist system for the first time in its 3-year history</li>
+            <li>Delivered 90-day video performance report: view rate by video type, follower growth breakdown, best-performing hooks, and Month 4 content calendar with 4 scripts ready to record</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="bx">
+    <span class="bh">📈 Follower Growth — Combined Instagram + TikTok</span>
+    <div class="ch">
+      <div class="ch-r">
+        <div class="ch-l">Baseline (Jan)</div>
+        <div class="ch-t"><div class="ch-f" style="width:20%;background:#94A3B8"><span class="ch-fv">840</span></div></div>
+        <div class="ch-n">840</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Month 1 (Feb)</div>
+        <div class="ch-t"><div class="ch-f" style="width:36%;background:#FCD34D"><span class="ch-fv">1,480</span></div></div>
+        <div class="ch-n">1,480</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Month 2 (Mar)</div>
+        <div class="ch-t"><div class="ch-f" style="width:63%;background:#F59E0B"><span class="ch-fv">2,640 (+viral)</span></div></div>
+        <div class="ch-n">2,640</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Month 3 (Apr)</div>
+        <div class="ch-t"><div class="ch-f" style="width:100%;background:#D97706"><span class="ch-fv">4,200 total</span></div></div>
+        <div class="ch-n" style="color:#D97706">4,200</div>
+      </div></div>
+    <p style="text-align:center;font-size:.77rem;color:#64748B;margin-top:.75rem;font-weight:600">Combined follower count across both platforms grew from 840 to 4,200 in 90 days.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚖️ Before vs. After — 3-Month Comparison</span>
+    <div class="ba">
+      <div class="bab">
+        <div class="bah">❌ Before — January 2026</div>
+        <div class="bar"><span class="bar-k">Videos published</span><span class="bav">0</span></div><div class="bar"><span class="bar-k">Combined followers (IG + TikTok)</span><span class="bav">840</span></div><div class="bar"><span class="bar-k">Avg post reach (static)</span><span class="bav">180 per post</span></div><div class="bar"><span class="bar-k">Avg engagement rate</span><span class="bav">1.8%</span></div><div class="bar"><span class="bar-k">Class bookings from social</span><span class="bav">0 / month (tracked)</span></div><div class="bar"><span class="bar-k">Class capacity utilisation</span><span class="bav">~60% (3–5 empty spots/session)</span></div>
+      </div>
+      <div class="baa">
+        <div class="bah">✅ After — April 2026</div>
+        <div class="bar"><span class="bar-k">Videos published</span><span class="bav">12 (4/month × 3 months)</span></div><div class="bar"><span class="bar-k">Combined followers (IG + TikTok)</span><span class="bav">4,200</span></div><div class="bar"><span class="bar-k">Avg video reach</span><span class="bav">6,800 per video</span></div><div class="bar"><span class="bar-k">Avg engagement rate</span><span class="bav">8.4%</span></div><div class="bar"><span class="bar-k">Class bookings from social</span><span class="bav">22 in Month 3 (tracked via DM)</span></div><div class="bar"><span class="bar-k">Class capacity utilisation</span><span class="bav">100% — waitlist active for 8 weeks</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📦 What We Delivered</span>
+    <div class="del">
+      <div class="di">12-video script library (3 months × 4 scripts) written with Claude AI in Hook/Problem/Solution/CTA format</div>
+      <div class="di">4 short-form videos produced and published monthly across Instagram Reels + TikTok</div>
+      <div class="di">CapCut editing workflow: trim, auto-captions, audio mixing, 1080p export — documented for in-house reuse</div>
+      <div class="di">Canva Video branded intro/outro (3 seconds each) for visual consistency across all videos</div>
+      <div class="di">Monthly content calendar: topic, script, recording date, publish date, platform — loaded 30 days ahead</div>
+      <div class="di">TikTok account setup and optimisation (bio, link, category) from zero to 2,140 followers</div>
+      <div class="di">Caption template system: hook line + value summary + question + 5 hashtags — Claude AI generated per video</div>
+      <div class="di">Comment response SOP: respond within 1 hour of publish with Claude AI drafted replies</div>
+      <div class="di">90-day performance report: view rate by format, follower growth timeline, top 3 hooks, Month 4 scripts</div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">💬 Client Testimonial</span>
+    <div class="qt">
+      <div class="qt-t">I was terrified of being on camera. I'm a trainer — I'm used to being in front of 12 people in a studio, not a phone. But the scripts made it so easy. I just read the lines, and the editing made me look professional. Within 2 months, strangers were messaging me saying they found me on TikTok and wanted to try a class. We now have a waitlist. A waitlist. Three months ago we had empty spots every single day. Short-form video is the single best marketing move we've ever made.</div>
+      <div class="qt-n">Suria Kamaruddin</div>
+      <div class="qt-r">Head Trainer &amp; Co-owner · FitHouse KL · Mont Kiara, Kuala Lumpur</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <strong>NextMarketing by TechNext Asia</strong> · Content · Case Study #13<br>
+    <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmrkting.github.io/nextmarketing</span>
+  </div>
+
+</div>
+</body>
+</html>

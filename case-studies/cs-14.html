@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study #14 — Landing Page CRO Audit | NextMarketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCD34D;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#FCD34D;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #D97706;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#D97706;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#D97706;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}
+.dn{color:#DC2626;font-weight:700}
+.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#EFF6FF;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}
+.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}
+.bar-k{color:#64748B}
+.bav{font-weight:700}
+.bab .bav{color:#DC2626}
+.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FFFBEB;border:1px solid #FDE68A;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#92400E;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#D97706;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border:1px solid #FDE68A;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #D97706;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}
+.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}
+</style>
+</head>
+<body>
+
+<div class="pb">
+  <div class="pb-l">
+    <div class="logo"><span>Tech</span>Next <span style="color:#fff;font-weight:400">|</span> <span>NextMarketing</span></div>
+    <span class="pill">Case Study #14</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <a class="btn-bk" href="../index.html">← Back to Services</a>
+  </div>
+</div>
+
+<div class="w">
+
+  <div class="cov">
+    <div class="ey">CRO &amp; Reporting · 🟡 Achievable Tier · NextMarketing Case Study</div>
+    <h1>Landing Page CRO Audit</h1>
+    <div class="csub">How an online education platform fixed 7 UX issues identified in a heatmap audit and increased course enrolment conversion rate from 1.9% to 5.8% in 60 days</div>
+    <div class="meta">
+      <span>🏢 LearnEdge Academy · Online Professional Education</span>
+      <span>📅 Feb – Mar 2026 · 60 days</span>
+      <span>🔍 Microsoft Clarity · Claude AI · GA4 · A/B Testing</span>
+      <span>📍 Petaling Jaya, Selangor</span>
+    </div>
+    <div class="kpis"><div class="kpi"><div class="kn">+205%</div><div class="kl">Course Enrolment Conversion Rate Lift</div></div><div class="kpi"><div class="kn">7</div><div class="kl">UX Issues Identified &amp; Fixed</div></div><div class="kpi"><div class="kn">−34%</div><div class="kl">Bounce Rate Reduction</div></div></div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">🏢 Client Overview</span>
+    <p class="n">LearnEdge Academy is an online professional education platform offering short-course certifications in project management, data analytics, and business finance — priced between RM490 and RM1,200 per course. The platform serves working professionals in Malaysia looking to upskill without committing to a full degree programme.</p>
+    <p class="n">The business was running Google Ads at RM6,800/month and achieving a steady 4,200 landing page visits per month. However, enrolment conversion rate sat at 1.9% — meaning 98.1% of paid traffic was leaving without purchasing. At 1.9%, the cost per enrolment was RM850. The target was RM300.</p>
+    <p class="n">LearnEdge's marketing team suspected the landing page was the bottleneck — but had no data to confirm where users were dropping off or why. The CRO Audit engagement was commissioned to diagnose the problem, prioritise fixes, and validate improvements through A/B testing.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚠️ The Challenge</span>
+    <ul class="tlu" style="margin-top:.25rem">
+      <li>Conversion rate of 1.9% on a page receiving 4,200 paid visits/month — costing RM850 per enrolment against a course price of RM490–RM1,200</li>
+      <li>No heatmap, session recording, or scroll depth data — all CRO decisions had been based on intuition rather than user behaviour evidence</li>
+      <li>Hero section headline was generic: "Advance Your Career with Online Certifications" — no mention of course names, delivery format, duration, or outcomes</li>
+      <li>Enrolment CTA button ("Enrol Now — RM490") appeared only at the bottom of the page — 74% of visitors never scrolled that far, according to Clarity data collected post-installation</li>
+      <li>Social proof section had 3 testimonials with stock photo avatars — immediately recognisable as generic and undermining trust in a high-intent purchase decision</li>
+      <li>Course details section used a small accordion with 8pt font — on mobile (62% of traffic), all course information was hidden behind an extra tap that most users never discovered</li>
+      <li>Page load time on mobile: 5.8 seconds — every second above 3 seconds reduces conversion by 7% (Google benchmark). LearnEdge was losing an estimated 20% of mobile users before the page fully loaded</li>
+    </ul>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📋 Our Approach — 60 Days</span>
+    <div class="tl">
+      
+      <div class="tl-r">
+        <span class="tlb">Week 1–2</span>
+        <div>
+          <div class="tlh">Clarity Installation &amp; Data Collection</div>
+          <ul class="tlu">
+            <li>Installed Microsoft Clarity tracking script on the landing page — zero development cost, free tool. Collected 14 days of heatmap and session recording data before touching a single element on the page</li>
+            <li>Analysed scroll depth: only 26% of visitors scrolled past the testimonials section; only 12% reached the CTA button — meaning the primary conversion element was invisible to 88% of traffic</li>
+            <li>Watched 28 session recordings: identified rage click pattern on the course module accordion (users tapping repeatedly because it wasn't visually obvious as interactive on mobile)</li>
+            <li>Documented 7 priority issues in Google Docs with Clarity screenshots: each given a severity rating (High/Medium/Low), fix recommendation, and estimated conversion impact</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-r">
+        <span class="tlb">Week 3–5</span>
+        <div>
+          <div class="tlh">Implementation — 7 UX Fixes</div>
+          <ul class="tlu">
+            <li>Fix 1 (Critical): Moved enrolment CTA button from bottom to directly below hero section — above the fold on both desktop and mobile. Immediate 3.2% uplift on first test day</li>
+            <li>Fix 2 (Critical): Rewrote hero headline using Claude AI — new version: "Get Certified in Data Analytics in 8 Weeks — Study Online, Weekends Only" — specific, outcome-driven, and time-framed</li>
+            <li>Fix 3 (High): Replaced 3 stock photo testimonials with real student photos provided by LearnEdge (4 students agreed to be featured) + LinkedIn profile links for verification</li>
+            <li>Fix 4 (High): Replaced accordion course details on mobile with an always-visible tabbed layout — course information now visible without any extra interaction required</li>
+            <li>Fix 5 (Medium): Added urgency element: "Next cohort starts 1 May 2026 — 8 spots remaining" — dynamic counter updated weekly by the LearnEdge team</li>
+            <li>Fix 6 (Medium): Compressed all images on the page using TinyPNG — mobile load time reduced from 5.8 to 2.4 seconds</li>
+            <li>Fix 7 (Medium): Added a sticky bottom CTA bar on mobile: always-visible "Enrol Now" button regardless of scroll position — eliminated the issue of users losing the CTA as they scroll</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-r">
+        <span class="tlb">Week 6–8</span>
+        <div>
+          <div class="tlh">A/B Testing &amp; Result Validation</div>
+          <ul class="tlu">
+            <li>Ran headline A/B test: original vs new Claude AI headline — alternated landing page URL weekly, tracked GA4 conversions separately. New headline: 4.1% conversion rate vs original 1.9% — 116% lift from headline change alone</li>
+            <li>Ran CTA button colour test: original blue (#0A2540) vs high-contrast amber (#D97706) — amber version achieved 18% higher click rate in GA4 event tracking</li>
+            <li>Final conversion rate with all 7 fixes and winning A/B variants active: 5.8% — a 205% improvement over the baseline 1.9%</li>
+            <li>Cost per enrolment dropped from RM850 to RM279 — below the RM300 target. The same RM6,800/month ad budget now generates 24 enrolments vs the previous 8</li>
+            <li>Delivered 60-day CRO audit report: Clarity screenshots, session recording insights, A/B test results, fix implementation log, and 5 next-priority experiments for Month 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="bx">
+    <span class="bh">📊 Before &amp; After — 7 UX Fixes Impact</span>
+    <div class="ow"><table><thead><tr><th>Fix</th><th>Issue</th><th>Solution</th><th>Impact</th></tr></thead>
+    <tbody><tr><td>1</td><td class="fw">CTA only at page bottom (88% never saw it)</td><td>Moved CTA above the fold</td><td class="up">+3.2% CR (immediate)</td></tr><tr><td>2</td><td class="fw">Generic hero headline — no specificity</td><td>Outcome-based headline with duration</td><td class="up">+116% CR (A/B tested)</td></tr><tr><td>3</td><td class="fw">Stock photo testimonials (trust gap)</td><td>Real student photos + LinkedIn links</td><td class="up">+22% time on page</td></tr><tr><td>4</td><td class="fw">Mobile accordion hid course info</td><td>Tabbed layout — always visible</td><td class="up">-41% rage clicks</td></tr><tr><td>5</td><td class="fw">No urgency — open-ended enrolment</td><td>Cohort date + spots remaining counter</td><td class="up">+8% CTA clicks</td></tr><tr><td>6</td><td class="fw">5.8s mobile load time</td><td>Image compression → 2.4s</td><td class="up">-34% bounce rate</td></tr><tr><td>7</td><td class="fw">CTA disappears on mobile scroll</td><td>Sticky bottom CTA bar</td><td class="up">+19% mobile conversion</td></tr></tbody></table></div>
+  </div>
+  
+
+  <div class="bx">
+    <span class="bh">⚖️ Before vs. After — 60-Day Comparison</span>
+    <div class="ba">
+      <div class="bab">
+        <div class="bah">❌ Before — February 2026</div>
+        <div class="bar"><span class="bar-k">Conversion rate</span><span class="bav">1.9%</span></div><div class="bar"><span class="bar-k">Monthly enrolments (4,200 visits)</span><span class="bav">8 / month</span></div><div class="bar"><span class="bar-k">Cost per enrolment</span><span class="bav">RM850</span></div><div class="bar"><span class="bar-k">Mobile load time</span><span class="bav">5.8 seconds</span></div><div class="bar"><span class="bar-k">Bounce rate</span><span class="bav">72%</span></div><div class="bar"><span class="bar-k">Users reaching CTA button</span><span class="bav">12%</span></div>
+      </div>
+      <div class="baa">
+        <div class="bah">✅ After — April 2026</div>
+        <div class="bar"><span class="bar-k">Conversion rate</span><span class="bav">5.8%</span></div><div class="bar"><span class="bar-k">Monthly enrolments (same 4,200 visits)</span><span class="bav">24 / month</span></div><div class="bar"><span class="bar-k">Cost per enrolment</span><span class="bav">RM279</span></div><div class="bar"><span class="bar-k">Mobile load time</span><span class="bav">2.4 seconds</span></div><div class="bar"><span class="bar-k">Bounce rate</span><span class="bav">48%</span></div><div class="bar"><span class="bar-k">Users reaching CTA button</span><span class="bav">68% (sticky bar)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📦 What We Delivered</span>
+    <div class="del">
+      <div class="di">Microsoft Clarity installation + 14-day data collection (heatmaps, session recordings, scroll depth)</div>
+      <div class="di">Full UX audit report in Google Docs: 7 prioritised issues with Clarity screenshots and fix recommendations</div>
+      <div class="di">Hero headline rewrite (Claude AI): outcome-based, specific, A/B tested — 116% conversion lift</div>
+      <div class="di">CTA repositioning: moved above fold + amber sticky bottom bar for mobile</div>
+      <div class="di">Testimonial upgrade: real student photos + LinkedIn verification links replacing stock avatars</div>
+      <div class="di">Mobile course detail layout redesign: accordion replaced with always-visible tabbed interface</div>
+      <div class="di">Urgency element: cohort date + dynamic spots-remaining counter implementation</div>
+      <div class="di">Image compression: mobile load time reduced from 5.8s to 2.4s via TinyPNG</div>
+      <div class="di">A/B test plan and execution: 2 tests run (headline + CTA colour), documented with GA4 data</div>
+      <div class="di">60-day CRO report: Clarity insights, A/B results, implementation log, 5 next-priority experiments</div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">💬 Client Testimonial</span>
+    <div class="qt">
+      <div class="qt-t">We were spending RM6,800 a month on Google Ads and converting at under 2%. We thought the problem was the ads — better targeting, better creatives. It wasn't. It was the page. Within 48 hours of moving the CTA button above the fold, our enrolments went up. Seven fixes later, we're converting at 5.8% with the same traffic budget. We tripled our enrolments without spending an extra ringgit on ads. That's the most impactful marketing work we've ever commissioned.</div>
+      <div class="qt-n">David Ng</div>
+      <div class="qt-r">Marketing Director · LearnEdge Academy · Petaling Jaya, Selangor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <strong>NextMarketing by TechNext Asia</strong> · CRO &amp; Reporting · Case Study #14<br>
+    <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmrkting.github.io/nextmarketing</span>
+  </div>
+
+</div>
+</body>
+</html>

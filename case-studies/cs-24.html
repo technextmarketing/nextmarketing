@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study #24 — Reputation Management | NextMarketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCD34D;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#FCD34D;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #D97706;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#D97706;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#D97706;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}
+.dn{color:#DC2626;font-weight:700}
+.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#EFF6FF;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}
+.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}
+.bar-k{color:#64748B}
+.bav{font-weight:700}
+.bab .bav{color:#DC2626}
+.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FFFBEB;border:1px solid #FDE68A;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#92400E;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#D97706;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border:1px solid #FDE68A;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #D97706;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}
+.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}
+</style>
+</head>
+<body>
+
+<div class="pb">
+  <div class="pb-l">
+    <div class="logo"><span>Tech</span>Next <span style="color:#fff;font-weight:400">|</span> <span>NextMarketing</span></div>
+    <span class="pill">Case Study #24</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <a class="btn-bk" href="../index.html">← Back to Services</a>
+  </div>
+</div>
+
+<div class="w">
+
+  <div class="cov">
+    <div class="ey">Influencer &amp; PR · 🟡 Achievable Tier · NextMarketing Case Study</div>
+    <h1>Reputation Management</h1>
+    <div class="csub">How a 3-location dental clinic improved its average Google rating from 3.9 to 4.8 stars — and more than doubled its monthly review volume — in 90 days</div>
+    <div class="meta">
+      <span>🏢 PearlDent Dental Group · Multi-Location Dental Clinic</span>
+      <span>📅 Feb – Apr 2026 · 90 days</span>
+      <span>⭐ Google Business Profile · Brevo · Claude AI · Google Alerts</span>
+      <span>📍 Petaling Jaya, Selangor (3 locations)</span>
+    </div>
+    <div class="kpis"><div class="kpi"><div class="kn">4.8★</div><div class="kl">Google Rating (was 3.9 avg across 3 locations)</div></div><div class="kpi"><div class="kn">2.4×</div><div class="kl">Monthly Review Volume Increase</div></div><div class="kpi"><div class="kn">100%</div><div class="kl">Reviews Responded to Within 24 Hours</div></div></div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">🏢 Client Overview</span>
+    <p class="n">PearlDent Dental Group operates three dental clinics in Petaling Jaya: SS2, Ara Damansara, and Bandar Utama. The group sees approximately 840 patient visits per month across all three locations and has been operating for 8 years. Services range from general dentistry and orthodontics to cosmetic procedures including veneers and teeth whitening.</p>
+    <p class="n">Despite 8 years of operation and a loyal patient base, PearlDent had accumulated only 43 Google reviews in total across all three locations. More critically, the Bandar Utama location had a 3.2-star rating due to two unanswered negative reviews from 2024 — both citing long waiting times — that sat publicly visible with no clinic response. The SS2 location had a 4.4-star rating; Ara Damansara had 4.2. Average across three locations: 3.9 stars.</p>
+    <p class="n">When new patients in Petaling Jaya searched "dentist near me" or "dental clinic SS2", PearlDent was appearing in results but losing click-throughs to competitor clinics with 4.8+ ratings and 150+ reviews. The Reputation Management engagement focused on closing this gap through review volume growth, consistent response management, and proactive monitoring.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚠️ The Challenge</span>
+    <ul class="tlu" style="margin-top:.25rem">
+      <li>Only 43 Google reviews after 8 years — an average of 5.3 reviews per year, suggesting the clinic had never actively requested reviews from its satisfied patient base</li>
+      <li>Bandar Utama location sitting at 3.2 stars due to 2 unanswered negative reviews — publicly visible for over 12 months with no clinic response, compounding the reputational damage</li>
+      <li>No monitoring system: staff were unaware of new reviews unless they happened to check the Google Business Profile dashboard — which happened rarely</li>
+      <li>No review solicitation process: happy patients left the clinic without any prompt to share their experience. The few reviews that existed were from patients who independently decided to leave them</li>
+      <li>All three Google Business Profiles (SS2, Ara Damansara, Bandar Utama) had incomplete information: missing service lists, outdated operating hours (two locations showed COVID-era reduced hours still active), and no photos updated since 2022</li>
+      <li>No staff awareness of online reputation: reception teams did not know the clinic's current Google rating, had never been asked to encourage reviews, and had no script or tool for doing so</li>
+      <li>Click-through rate from Google Search: PearlDent appearing in search results but estimated 40% click-through deficit vs competitors with 4.7+ ratings — patients choosing competitor clinics based on rating before even visiting the PearlDent website</li>
+    </ul>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📋 Our Approach — Month by Month</span>
+    <div class="tl">
+      
+      <div class="tl-r">
+        <span class="tlb">Month 1</span>
+        <div>
+          <div class="tlh">Audit, Crisis Response &amp; Google Profile Fixes</div>
+          <ul class="tlu">
+            <li>Set up Google Alerts: alerts for "PearlDent", "Pearl Dent", "PearlDent dental", and each location name — "As it happens" delivery to clinic Gmail. First alert fired within 4 hours: a new 2-star review had been left at Bandar Utama overnight</li>
+            <li>Exported all 43 existing reviews to Google Sheets: Rating / Date / Text / Platform / Response status. Found: 18 reviews with no response (including the 2 damaging Bandar Utama reviews from 2024)</li>
+            <li>Used Claude AI to draft professional responses to all 18 unanswered reviews: negative reviews acknowledged the issue sincerely, offered to resolve offline, and included direct contact email; positive reviews personalised by service mentioned</li>
+            <li>Published responses to all 18 reviews within 72 hours — including the 2 long-standing Bandar Utama negatives. Both reviewers were also contacted via the email address they had registered with the clinic. One updated their review from 1-star to 3-star after the clinic followed up personally</li>
+            <li>Completed all 3 Google Business Profiles: updated hours, added 24 new clinic photos (waiting area, treatment rooms, team), wrote service descriptions for 8 core treatments using Claude AI, added FAQ section to each profile</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-r">
+        <span class="tlb">Month 2</span>
+        <div>
+          <div class="tlh">Proactive Review Solicitation System</div>
+          <ul class="tlu">
+            <li>Wrote review request message using Claude AI: "Hi [Name], thank you for visiting PearlDent [Location] today. If you had a positive experience, we'd really appreciate a Google review — it takes about 30 seconds and helps other patients find us. [Direct Google review link]. Thank you! — Dr [Name]'s team"</li>
+            <li>Implemented review request via Brevo WhatsApp automation: trigger = appointment marked "completed" in clinic booking system → 24-hour delay → WhatsApp message sent automatically with direct Google review link</li>
+            <li>Manual fallback: receptionist SMS script for patients without WhatsApp — sent via clinic phone after each completed appointment session</li>
+            <li>Month 2 results: 28 new reviews received (vs historical average of 5–6 per month). All 28 responded to within 24 hours using Claude AI-drafted replies reviewed by the clinic manager</li>
+            <li>Google ratings by Month 2 end: SS2 (4.4 → 4.6), Ara Damansara (4.2 → 4.6), Bandar Utama (3.2 → 3.9) — all moving positively as fresh 5-star reviews diluted older negatives</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-r">
+        <span class="tlb">Month 3</span>
+        <div>
+          <div class="tlh">Volume Scaling &amp; Reputation Maintenance System</div>
+          <ul class="tlu">
+            <li>Added review request to post-treatment follow-up: patients who had orthodontic or cosmetic procedures (highest satisfaction cases) received a personalised WhatsApp from the treating dentist directly — not just from "the clinic" — achieving 38% review completion rate vs 22% from generic clinic messages</li>
+            <li>Month 3 reviews received: 37 new reviews — 33 five-star, 3 four-star, 1 three-star. All responded to within 24 hours</li>
+            <li>Total reviews at end of Month 3: 43 (baseline) + 28 (Month 2) + 37 (Month 3) = 108 reviews — more than doubling the total review count in 60 days</li>
+            <li>Google ratings at Month 3 end: SS2 (4.8), Ara Damansara (4.7), Bandar Utama (4.6). Weighted average across 3 locations: 4.7 stars</li>
+            <li>Delivered reputation management report + permanent SOP: review request messaging templates, response SOP (4 tone variants for positive/negative reviews), weekly Google Sheets tracking sheet, and Google Alerts configuration guide</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="bx">
+    <span class="bh">📈 Google Rating Progress — Weighted Average Across 3 Locations</span>
+    <div class="ch">
+      <div class="ch-r">
+        <div class="ch-l">Baseline (Jan)</div>
+        <div class="ch-t"><div class="ch-f" style="width:39%;background:#94A3B8"><span class="ch-fv">3.9★ avg</span></div></div>
+        <div class="ch-n">3.9★</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Month 1 (Feb)</div>
+        <div class="ch-t"><div class="ch-f" style="width:52%;background:#FCD34D"><span class="ch-fv">4.2★ avg</span></div></div>
+        <div class="ch-n">4.2★</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Month 2 (Mar)</div>
+        <div class="ch-t"><div class="ch-f" style="width:72%;background:#F59E0B"><span class="ch-fv">4.5★ avg</span></div></div>
+        <div class="ch-n">4.5★</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Month 3 (Apr)</div>
+        <div class="ch-t"><div class="ch-f" style="width:100%;background:#D97706"><span class="ch-fv">4.7★ avg ✓</span></div></div>
+        <div class="ch-n" style="color:#D97706">4.7★</div>
+      </div></div>
+    <p style="text-align:center;font-size:.77rem;color:#64748B;margin-top:.75rem;font-weight:600">Weighted average Google rating improved from 3.9 to 4.7 stars. Bandar Utama (problem location) improved from 3.2 to 4.6 stars.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚖️ Before vs. After — 90-Day Comparison</span>
+    <div class="ba">
+      <div class="bab">
+        <div class="bah">❌ Before — January 2026</div>
+        <div class="bar"><span class="bar-k">Avg Google rating (3 locations)</span><span class="bav">3.9★</span></div><div class="bar"><span class="bar-k">Total Google reviews</span><span class="bav">43 (8 years)</span></div><div class="bar"><span class="bar-k">Monthly new reviews</span><span class="bav">~5–6</span></div><div class="bar"><span class="bar-k">Reviews responded to within 24h</span><span class="bav">0% (no system)</span></div><div class="bar"><span class="bar-k">Unanswered negative reviews</span><span class="bav">2 (Bandar Utama, 12 months old)</span></div><div class="bar"><span class="bar-k">Google Business Profile status</span><span class="bav">Incomplete — outdated hours, no photos</span></div>
+      </div>
+      <div class="baa">
+        <div class="bah">✅ After — April 2026</div>
+        <div class="bar"><span class="bar-k">Avg Google rating (3 locations)</span><span class="bav">4.7★</span></div><div class="bar"><span class="bar-k">Total Google reviews</span><span class="bav">108 (+65 in 2 months)</span></div><div class="bar"><span class="bar-k">Monthly new reviews</span><span class="bav">37 (Month 3)</span></div><div class="bar"><span class="bar-k">Reviews responded to within 24h</span><span class="bav">100% — automated monitoring + SOP</span></div><div class="bar"><span class="bar-k">Unanswered negative reviews</span><span class="bav">0 — all responded, 1 reviewer updated rating</span></div><div class="bar"><span class="bar-k">Google Business Profile status</span><span class="bav">Complete — 24 photos, current hours, 8 service descriptions</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📦 What We Delivered</span>
+    <div class="del">
+      <div class="di">Google Alerts setup: brand name + location name alerts ("As it happens") for real-time review monitoring</div>
+      <div class="di">Google Sheets review log: all 43 baseline reviews exported, rated by response status and priority</div>
+      <div class="di">Claude AI response drafts for all 18 unanswered reviews (positive and negative tone variants)</div>
+      <div class="di">All 3 Google Business Profiles optimised: hours, services, photos (24 images), FAQ sections</div>
+      <div class="di">Review request message (WhatsApp and SMS): personalised by patient name, dentist name, and location</div>
+      <div class="di">Brevo WhatsApp automation: "appointment completed" trigger → 24-hour delay → auto-send review request</div>
+      <div class="di">Dentist-personalised review request for high-satisfaction procedure types (orthodontics, cosmetics)</div>
+      <div class="di">Permanent Reputation Management SOP: 4 response templates (5★ / 4★ / 3★ / 1–2★), response checklist, weekly tracking sheet</div>
+      <div class="di">Monthly review tracking dashboard in Google Sheets: location breakdown, response rate, rating trends</div>
+      <div class="di">90-day reputation report + all template deliverables for in-house ongoing management</div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">💬 Client Testimonial</span>
+    <div class="qt">
+      <div class="qt-t">We had a 3.2-star rating at Bandar Utama because of two reviews we'd ignored for a year. We didn't even know they were there — nobody was checking. Within a month of responding properly and building a review request system, we went from 43 reviews to over 100 and from 3.9 stars to 4.7 stars. New patients now tell us they chose PearlDent because we had the most reviews and the best rating in the area. Our reception team has gone from never mentioning reviews to confidently asking every patient — and it works.</div>
+      <div class="qt-n">Dr Hazwani Ismail</div>
+      <div class="qt-r">Group Director · PearlDent Dental Group · Petaling Jaya, Selangor</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <strong>NextMarketing by TechNext Asia</strong> · Influencer &amp; PR · Case Study #24<br>
+    <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmrkting.github.io/nextmarketing</span>
+  </div>
+
+</div>
+</body>
+</html>

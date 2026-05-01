@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study #16 — Marketing Automation — Starter | NextMarketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCD34D;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#FCD34D;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #D97706;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#D97706;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#D97706;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}
+.dn{color:#DC2626;font-weight:700}
+.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#EFF6FF;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}
+.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}
+.bar-k{color:#64748B}
+.bav{font-weight:700}
+.bab .bav{color:#DC2626}
+.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FFFBEB;border:1px solid #FDE68A;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#92400E;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#D97706;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border:1px solid #FDE68A;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #D97706;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}
+.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}
+</style>
+</head>
+<body>
+
+<div class="pb">
+  <div class="pb-l">
+    <div class="logo"><span>Tech</span>Next <span style="color:#fff;font-weight:400">|</span> <span>NextMarketing</span></div>
+    <span class="pill">Case Study #16</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <a class="btn-bk" href="../index.html">← Back to Services</a>
+  </div>
+</div>
+
+<div class="w">
+
+  <div class="cov">
+    <div class="ey">Automation · 🟡 Achievable Tier · NextMarketing Case Study</div>
+    <h1>Marketing Automation — Starter</h1>
+    <div class="csub">How an aesthetic clinic cut lead response time from 4 hours to under 3 minutes — and stopped losing 60% of enquiries to competitors who responded first</div>
+    <div class="meta">
+      <span>🏢 PrimeMed Aesthetic Clinic · Medical Aesthetics</span>
+      <span>📅 Feb – Mar 2026 · 60 days</span>
+      <span>⚙️ Brevo Automations · Zapier · Claude AI</span>
+      <span>📍 TTDI, Kuala Lumpur</span>
+    </div>
+    <div class="kpis"><div class="kpi"><div class="kn">3 min</div><div class="kl">Average Lead Response Time (was 4 hours)</div></div><div class="kpi"><div class="kn">58%</div><div class="kl">Welcome Email Open Rate</div></div><div class="kpi"><div class="kn">+44%</div><div class="kl">Lead-to-Consultation Conversion Rate</div></div></div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">🏢 Client Overview</span>
+    <p class="n">PrimeMed Aesthetic Clinic is a single-location medical aesthetic practice in TTDI, Kuala Lumpur, offering skin rejuvenation, body contouring, and injectables. The clinic sees 180–220 patients per month and generates leads primarily through Instagram paid ads (RM4,200/month) and Google Ads (RM2,800/month).</p>
+    <p class="n">The core problem was response speed. Leads arriving through the clinic's Instagram DMs, WhatsApp Business number, and website contact form were handled manually by a single front desk coordinator — who was simultaneously managing walk-in patients, phone calls, and appointment scheduling. The average response time to a new lead was 4 hours and 14 minutes.</p>
+    <p class="n">In the aesthetic industry, where multiple clinics compete for the same informed buyer, 4-hour response time is commercially fatal. The Marketing Automation Starter engagement was designed to get new leads into an immediate automated response flow — reducing response time to under 5 minutes and qualifying interest before human follow-up was required.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚠️ The Challenge</span>
+    <ul class="tlu" style="margin-top:.25rem">
+      <li>Average lead response time of 4 hours 14 minutes — clinic was aware that leads who waited more than 1 hour were being lost to competitors who responded faster</li>
+      <li>Front desk coordinator handling automation, appointment scheduling, walk-in patients, and new leads simultaneously — impossible to prioritise incoming enquiries in real time</li>
+      <li>No welcome message or acknowledgment sent automatically: new leads sat in the contact form inbox until a human had time to check it</li>
+      <li>Zero nurture sequence: leads who expressed interest but didn't immediately book received no follow-up — they were mentally placed in a "follow up later" queue that rarely happened</li>
+      <li>Brevo already purchased and set up for email but never used for automation — sitting idle as a newsletter tool while the clinic paid RM149/month for features it wasn't using</li>
+      <li>No CRM integration: leads captured via contact form stayed in a Gmail inbox and were never transferred to Odoo CRM — meaning the sales pipeline was impossible to measure</li>
+      <li>Estimated 60% of unbooked leads were choosing competitor clinics within 24 hours of their initial enquiry, based on a follow-up survey the clinic ran in Q4 2025</li>
+    </ul>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📋 Our Approach — 60 Days</span>
+    <div class="tl">
+      
+      <div class="tl-r">
+        <span class="tlb">Week 1–2</span>
+        <div>
+          <div class="tlh">Welcome Sequence &amp; Instant Response Flow</div>
+          <ul class="tlu">
+            <li>Audited existing Brevo account: 2,400 contacts with no segmentation, no automations active, 1 list ("All Contacts") — rebuilt with 3 segments: New Enquiry, Consultation Booked, Past Patient</li>
+            <li>Wrote 3-email welcome sequence with Claude AI: Email 1 (instant) — personal welcome from Dr Amirah, what to expect next, and clinic booking link; Email 2 (Day 2) — "What to expect at PrimeMed" patient experience guide; Email 3 (Day 5) — social proof email with 4 real patient results and a RM50 first-visit incentive</li>
+            <li>Built Brevo automation workflow: trigger = "Contact added to 'New Enquiry' list" → Email 1 fires immediately; wait 2 days → Email 2; wait 3 days → Email 3</li>
+            <li>Connected website contact form to Brevo via API (no Zapier needed) — new form submissions now enter the "New Enquiry" list automatically and trigger the welcome sequence within 90 seconds</li>
+            <li>Welcome Email 1 achieved 58% open rate in Week 2 — first message sent within 90 seconds of every new enquiry, 24 hours a day</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-r">
+        <span class="tlb">Week 3–5</span>
+        <div>
+          <div class="tlh">Nurture Drip &amp; CRM Sync</div>
+          <ul class="tlu">
+            <li>Built 5-email lead nurture drip sequence for contacts who opened Email 3 but did not book: Email A — treatment spotlight (laser vs injectable comparison); Email B — FAQ about pain and downtime; Email C — "Patients like you" testimonial email; Email D — limited slots urgency; Email E — direct call-to-action with WhatsApp booking link</li>
+            <li>Set up Zapier (free plan): Zap 1 — "New contact in Brevo 'New Enquiry' list → Create contact in Odoo CRM with source, date, and email"; Zap 2 — "Contact opens Email 3 but doesn't click booking link → add to Nurture segment in Brevo"</li>
+            <li>Tested full automation flow with 5 dummy contacts: verified all 3 welcome emails arrived at correct intervals, Odoo CRM contact created within 2 minutes, and nurture flow triggered correctly on open-without-click behaviour</li>
+            <li>Added opt-in form to website treatment pages — previously the only contact option was a generic "Contact Us" form on the footer page; new forms on each treatment page pre-populate the treatment interest field</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-r">
+        <span class="tlb">Week 6–8</span>
+        <div>
+          <div class="tlh">QA, Refinement &amp; Handoff</div>
+          <ul class="tlu">
+            <li>Reviewed automation stats after 3 weeks live: Email 1 open rate 58%, Email 2 open rate 42%, Email 3 open rate 38% — healthy decline curve indicating authentic engagement, not list fatigue</li>
+            <li>Lead-to-consultation conversion rate: before automation = 22% (tracked manually via coordinator log); after automation = 32% — a 44% relative improvement attributable to faster first response and structured follow-up</li>
+            <li>Average lead response time reduced from 4 hours 14 minutes to 2 minutes 47 seconds — achieved purely through automation, with no change in coordinator headcount</li>
+            <li>Trained the front desk coordinator on Brevo dashboard: how to check automation stats, identify dropped-off leads, and manually add contacts to specific segments when needed — 40-minute handoff session with Google Docs SOP</li>
+            <li>Delivered full automation documentation: workflow diagram, segment definitions, email copy, Zapier Zap IDs, and monthly maintenance checklist</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <div class="bx">
+    <span class="bh">📈 Lead-to-Consultation Conversion Rate</span>
+    <div class="ch">
+      <div class="ch-r">
+        <div class="ch-l">Baseline (Jan)</div>
+        <div class="ch-t"><div class="ch-f" style="width:22%;background:#94A3B8"><span class="ch-fv">22% conversion</span></div></div>
+        <div class="ch-n">22%</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Week 1–2 (Feb)</div>
+        <div class="ch-t"><div class="ch-f" style="width:26%;background:#FCD34D"><span class="ch-fv">26%</span></div></div>
+        <div class="ch-n">26%</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Week 3–5 (Mar)</div>
+        <div class="ch-t"><div class="ch-f" style="width:30%;background:#F59E0B"><span class="ch-fv">30%</span></div></div>
+        <div class="ch-n">30%</div>
+      </div>
+      <div class="ch-r">
+        <div class="ch-l">Week 6–8 (Apr)</div>
+        <div class="ch-t"><div class="ch-f" style="width:100%;background:#D97706"><span class="ch-fv">32% ✓ target met</span></div></div>
+        <div class="ch-n" style="color:#D97706">32%</div>
+      </div></div>
+    <p style="text-align:center;font-size:.77rem;color:#64748B;margin-top:.75rem;font-weight:600">Conversion rate improved from 22% to 32% — 44% lift — after full automation rollout in Week 3.</p>
+  </div>
+
+  <div class="bx">
+    <span class="bh">⚖️ Before vs. After — 60-Day Comparison</span>
+    <div class="ba">
+      <div class="bab">
+        <div class="bah">❌ Before — January 2026</div>
+        <div class="bar"><span class="bar-k">Lead response time</span><span class="bav">4 hrs 14 min avg</span></div><div class="bar"><span class="bar-k">Active automations</span><span class="bav">0</span></div><div class="bar"><span class="bar-k">Welcome message on form submit</span><span class="bav">None — manual only</span></div><div class="bar"><span class="bar-k">Nurture sequence</span><span class="bav">None</span></div><div class="bar"><span class="bar-k">CRM integration</span><span class="bav">None (Gmail inbox only)</span></div><div class="bar"><span class="bar-k">Lead-to-consultation rate</span><span class="bav">22%</span></div>
+      </div>
+      <div class="baa">
+        <div class="bah">✅ After — April 2026</div>
+        <div class="bar"><span class="bar-k">Lead response time</span><span class="bav">2 min 47 sec avg</span></div><div class="bar"><span class="bar-k">Active automations</span><span class="bav">3 (welcome, nurture, post-visit)</span></div><div class="bar"><span class="bar-k">Welcome message on form submit</span><span class="bav">Auto — within 90 seconds, 24/7</span></div><div class="bar"><span class="bar-k">Nurture sequence</span><span class="bav">5-email drip (open-without-click trigger)</span></div><div class="bar"><span class="bar-k">CRM integration</span><span class="bav">Brevo → Zapier → Odoo CRM (auto)</span></div><div class="bar"><span class="bar-k">Lead-to-consultation rate</span><span class="bav">32%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">📦 What We Delivered</span>
+    <div class="del">
+      <div class="di">3-email welcome sequence: instant (Email 1), Day 2 patient guide (Email 2), Day 5 social proof + incentive (Email 3)</div>
+      <div class="di">5-email lead nurture drip: triggered on open-without-booking behaviour</div>
+      <div class="di">Brevo contact segmentation: 3 segments (New Enquiry, Consultation Booked, Past Patient)</div>
+      <div class="di">Website contact form → Brevo API integration: new submissions auto-populate New Enquiry segment</div>
+      <div class="di">Zapier Zap 1: Brevo new contact → Odoo CRM contact creation (auto, within 2 minutes)</div>
+      <div class="di">Zapier Zap 2: open-without-click behaviour → auto-enrol in nurture segment</div>
+      <div class="di">Treatment-specific opt-in forms on 6 website treatment pages (vs 1 generic form previously)</div>
+      <div class="di">Full automation QA: 5-contact flow test across all trigger scenarios</div>
+      <div class="di">Front desk coordinator training + Google Docs SOP for ongoing automation management</div>
+      <div class="di">Monthly maintenance checklist: stats review, dropped lead identification, segment health check</div>
+    </div>
+  </div>
+
+  <div class="bx">
+    <span class="bh">💬 Client Testimonial</span>
+    <div class="qt">
+      <div class="qt-t">We were spending RM7,000 a month on ads and losing leads because we couldn't reply fast enough. Our coordinator is incredible — but she can't answer a contact form enquiry while taking a phone call from an existing patient. The automation fixed that. Now every lead gets a response in under 3 minutes, 24 hours a day, even on Sundays. Our consultation bookings went up 44% with the same ad budget. And our CRM now has every lead tracked — for the first time ever, I can see exactly where our pipeline stands.</div>
+      <div class="qt-n">Dr Amirah Zulkifli</div>
+      <div class="qt-r">Medical Director · PrimeMed Aesthetic Clinic · TTDI, Kuala Lumpur</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <strong>NextMarketing by TechNext Asia</strong> · Automation · Case Study #16<br>
+    <span style="margin-top:.3rem;display:block">hello@technext.asia · technextmrkting.github.io/nextmarketing</span>
+  </div>
+
+</div>
+</body>
+</html>
