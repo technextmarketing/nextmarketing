@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sales Funnel Strategy & Setup — Case Study | NextMarketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCA5A5;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#F87171;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #DC2626;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#DC2626;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#DC2626;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}.dn{color:#DC2626;font-weight:700}.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#FEF2F2;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}.bar-k{color:#64748B}.bav{font-weight:700}
+.bab .bav{color:#DC2626}.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#7F1D1D;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#DC2626;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FEF2F2,#FEE2E2);border:1px solid #FECACA;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #DC2626;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}</style></head>
+<body>
+<nav class="pb"><div class="pb-l"><span class="logo">Tech<span>Next</span></span><span class="pill">NextMarketing</span></div><a href="../index.html" class="btn-bk">← Back to Services</a></nav>
+<div class="w">
+  <div class="cov">
+    <p class="ey">HARD TIER — CASE STUDY</p>
+    <h1>Sales Funnel Strategy & Setup</h1><p class="csub">How a B2B consulting firm went from WhatsApp-managed deals to a live CRM pipeline with a 28% win rate improvement in 90 days</p>
+    <div class="meta"><span>🏢 DataBridge Analytics Sdn Bhd</span><span>📊 Data & Business Intelligence Consulting</span><span>📍 KLCC, Kuala Lumpur</span><span>📅 Feb – Apr 2026</span></div>
+    <div class="kpis"><div class="kpi"><div class="kn">9 days</div><div class="kl">Full CRM Pipeline Live (Target: 2 Weeks)</div></div><div class="kpi"><div class="kn">+28%</div><div class="kl">Win Rate Improvement in 90 Days</div></div><div class="kpi"><div class="kn">0</div><div class="kl">Deals Remaining in WhatsApp</div></div></div>
+  </div>
+  <div class="bx"><span class="bh">Client Overview</span><p class="n">DataBridge Analytics is a boutique data and business intelligence consulting firm based in KLCC, serving mid-market and enterprise clients across finance, logistics, and retail. With a team of 8 consultants and 3 account managers, the firm was closing RM1.2M in annual recurring contracts — but managing their entire sales pipeline across WhatsApp group chats, email threads, and a shared Google Sheet that was routinely out of date.</p><p class="n">The lack of a structured pipeline meant deals were falling through the cracks: follow-ups were missed, proposal timelines were unclear, and management had no visibility into the status of active opportunities without scheduling a team call. Win rate was around 22% — acceptable but below what the team felt was achievable with better process visibility.</p><p class="n">TechNext Asia designed and deployed a full sales funnel strategy: a buyer journey map, a 7-stage Odoo CRM pipeline, a BANT qualification framework, stage-specific email templates in Brevo, and Zapier automation that triggered follow-up communications the moment a deal moved between stages.</p></div>
+  <div class="bx"><span class="bh">The Challenge</span><ul class="tlu"><li>Entire pipeline managed in WhatsApp and a shared Google Sheet — no audit trail, version control, or stage visibility</li><li>No formal qualification criteria — reps varied widely in which leads they classified as 'qualified'</li><li>No stage-specific communication templates — proposal emails rewritten from scratch for every prospect</li><li>Management had zero real-time pipeline visibility — required manual check-ins with each rep to build forecasts</li><li>No automated follow-ups — reminders relied on reps' personal calendars and memory</li><li>Average sales cycle was 47 days with no clarity on which stage was causing the most deal stagnation</li><li>Win rate of 22% with no data on why deals were lost — no lost-deal tagging or analysis</li></ul></div>
+  <div class="bx"><span class="bh">Our 3-Phase Approach</span><div class="tl"><div class="tl-r"><span class="tlb">Week 1–2</span><div><p class="tlh">Buyer Journey Mapping & CRM Build</p><ul class="tlu"><li>Workshop with sales team: mapped full buyer journey — 7 stages from First Contact to Won/Lost with exit criteria per stage</li><li>Configured Odoo CRM: replaced default stages — New Lead → Contacted → Qualified → Demo Booked → Proposal Sent → Negotiation → Won/Lost</li><li>Created BANT qualification checklist: 6 yes/no criteria a rep must confirm before marking a lead Qualified — enforced as a required field</li><li>Imported all 84 existing deals from Google Sheets into Odoo CRM — mapped to correct stages, assigned to reps, added expected close dates</li></ul></div></div><div class="tl-r"><span class="tlb">Week 3–6</span><div><p class="tlh">Email Templates & Stage Automation</p><ul class="tlu"><li>Wrote 7 stage-specific email templates with Claude AI — one per pipeline stage: initial outreach, qualification confirmation, demo follow-up, proposal cover note, negotiation check-in, won onboarding, lost re-engagement</li><li>Loaded all 7 templates into Brevo template library — reps click-to-send from Odoo opportunity card</li><li>Built Zapier automation: Odoo stage changes → trigger correct Brevo template to contact within 30 minutes</li><li>Set up lost-deal tagging: 5 loss reasons (price, timing, competitor, no budget, no decision) — mandatory field on lost deals</li></ul></div></div><div class="tl-r"><span class="tlb">Week 7–12</span><div><p class="tlh">Pipeline Review Cadence & Coaching</p><ul class="tlu"><li>Weekly pipeline review introduced: every rep presents top 5 deals in Odoo — management reviews stage, expected close, and next action</li><li>Built pipeline velocity dashboard in Google Sheets: average days per stage, deal value per stage, rep win rate, loss reason breakdown</li><li>Identified bottleneck: 68% of deals stalling at 'Proposal Sent' — rewrote proposal email template with time-bounded CTA</li><li>Month 3 win rate: 28.2% vs 22% baseline — 64 new deals entered pipeline, 18 won in 90 days</li></ul></div></div></div></div>
+  <div class="bx"><span class="bh">Pipeline Stage Conversion Rates</span><div class="ow"><table><tr><th>Stage</th><th>Deals Entered</th><th>Converted to Next</th><th>Conversion Rate</th><th>Avg Days in Stage</th></tr><tr><td>New Lead → Contacted</td><td>64</td><td>58</td><td>91%</td><td>1.2 days</td></tr><tr><td>Contacted → Qualified</td><td>58</td><td>38</td><td>66%</td><td>4.8 days</td></tr><tr><td>Qualified → Demo Booked</td><td>38</td><td>34</td><td>89%</td><td>3.1 days</td></tr><tr><td>Demo Booked → Proposal Sent</td><td>34</td><td>28</td><td>82%</td><td>6.4 days</td></tr><tr><td>Proposal Sent → Won</td><td>28</td><td>18</td><td>64%</td><td>12.8 days</td></tr><tr><td>Total Pipeline Win Rate</td><td>64 deals</td><td>18 won</td><td>28.1%</td><td>28.3 days avg</td></tr></table></div></div>
+  <div class="bx"><span class="bh">Before vs After</span><div class="ba"><div class="bab"><p class="bah">Before</p><div class="bar"><span class="bar-k">Pipeline Tool</span><span class="bav">WhatsApp + Google Sheet</span></div><div class="bar"><span class="bar-k">Win Rate</span><span class="bav">22%</span></div><div class="bar"><span class="bar-k">Qualification Criteria</span><span class="bav">None (rep discretion)</span></div><div class="bar"><span class="bar-k">Stage-Specific Templates</span><span class="bav">None</span></div><div class="bar"><span class="bar-k">Management Visibility</span><span class="bav">Manual check-ins only</span></div><div class="bar"><span class="bar-k">Lost Deal Analysis</span><span class="bav">None</span></div></div><div class="baa"><p class="bah">After</p><div class="bar"><span class="bar-k">Pipeline Tool</span><span class="bav">Odoo CRM (7 stages)</span></div><div class="bar"><span class="bar-k">Win Rate</span><span class="bav">28.1%</span></div><div class="bar"><span class="bar-k">Qualification Criteria</span><span class="bav">6-point BANT checklist</span></div><div class="bar"><span class="bar-k">Stage-Specific Templates</span><span class="bav">7 templates in Brevo</span></div><div class="bar"><span class="bar-k">Management Visibility</span><span class="bav">Real-time Odoo dashboard</span></div><div class="bar"><span class="bar-k">Lost Deal Analysis</span><span class="bav">5 loss reasons tracked</span></div></div></div></div>
+  <div class="bx"><span class="bh">Deliverables Completed</span><div class="del"><div class="di">Buyer journey map (7 stages + exit criteria per stage)</div><div class="di">Odoo CRM pipeline configuration with custom stage names</div><div class="di">BANT qualification checklist (6-criteria mandatory field)</div><div class="di">Import of 84 existing deals with correct stage mapping</div><div class="di">7 stage-specific email templates in Brevo</div><div class="di">Zapier automation: stage change → Brevo email trigger</div><div class="di">Lost-deal tagging system (5 loss reasons)</div><div class="di">Pipeline velocity dashboard in Google Sheets</div><div class="di">Weekly pipeline review agenda and scoring template</div><div class="di">90-day win rate and stage conversion report</div></div></div>
+  <div class="bx"><span class="bh">Client Testimonial</span><div class="qt"><p class="qt-t">"We were running a RM1.2M pipeline through WhatsApp. It sounds embarrassing but it was just how things had grown. TechNext gave us a proper system in two weeks and within 90 days our win rate improved by six percentage points — which on our deal sizes is significant."</p><p class="qt-n">Farouk Ibrahim</p><p class="qt-r">CEO, DataBridge Analytics Sdn Bhd</p></div></div>
+</div>
+<footer class="foot"><strong>NextMarketing</strong> — Professional Marketing Services by TechNext Asia &nbsp;|&nbsp; hello@technext.asia</footer>
+</body></html>

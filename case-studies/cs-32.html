@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fractional Sales Manager — Case Study | NextMarketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCA5A5;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#F87171;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #DC2626;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#DC2626;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#DC2626;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}.dn{color:#DC2626;font-weight:700}.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#FEF2F2;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}.bar-k{color:#64748B}.bav{font-weight:700}
+.bab .bav{color:#DC2626}.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#7F1D1D;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#DC2626;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FEF2F2,#FEE2E2);border:1px solid #FECACA;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #DC2626;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}</style></head>
+<body>
+<nav class="pb"><div class="pb-l"><span class="logo">Tech<span>Next</span></span><span class="pill">NextMarketing</span></div><a href="../index.html" class="btn-bk">← Back to Services</a></nav>
+<div class="w">
+  <div class="cov">
+    <p class="ey">HARD TIER — CASE STUDY</p>
+    <h1>Fractional Sales Manager</h1><p class="csub">How a distribution company lifted team quota attainment from 61% to 87% with fractional sales management and weekly coaching</p>
+    <div class="meta"><span>🏢 PrimeLine Distribution Sdn Bhd</span><span>📦 Industrial Supplies Distribution</span><span>📍 Port Klang, Selangor</span><span>📅 Feb – Apr 2026</span></div>
+    <div class="kpis"><div class="kpi"><div class="kn">87%</div><div class="kl">Team Quota Attainment (vs 61% Before)</div></div><div class="kpi"><div class="kn">±4.2%</div><div class="kl">Monthly Forecast Accuracy</div></div><div class="kpi"><div class="kn">100%</div><div class="kl">Reps Coached Weekly (All 4)</div></div></div>
+  </div>
+  <div class="bx"><span class="bh">Client Overview</span><p class="n">PrimeLine Distribution is an industrial supplies distributor serving construction, manufacturing, and engineering companies across Peninsular Malaysia. With a 4-person sales team managing 200+ active accounts and a combined monthly revenue target of RM480,000, the company had been consistently hitting only 55–65% of quota for the preceding two quarters.</p><p class="n">The General Manager was handling both operational and sales leadership responsibilities — a split focus that left the sales team without structured coaching, no pipeline visibility beyond a weekly check-in meeting, and no formal process for deal reviews or forecast accuracy. Two of the four reps had been with the company under two years and had never received formal sales coaching.</p><p class="n">TechNext Asia provided a Fractional Sales Manager for 80 hours per month: running weekly 1:1 coaching sessions, building a KPI dashboard with pipeline health metrics, delivering monthly forecast review meetings, and creating a sales coaching playbook that the GM could use to continue the cadence independently after the engagement.</p></div>
+  <div class="bx"><span class="bh">The Challenge</span><ul class="tlu"><li>GM splitting time between operations and sales leadership — no consistent coaching structure for the team</li><li>4-rep team with no formal pipeline review process — deals were discussed verbally with no CRM or tracker</li><li>Two junior reps had never received structured coaching — win rates of 18% and 22% vs 34% for senior reps</li><li>Monthly forecasts were gut-feel estimates — variance of ±35% making inventory planning and cash flow management difficult</li><li>No post-deal review process — reps weren't learning systematically from won or lost deals</li><li>No KPI dashboard — individual rep performance was assessed informally based on revenue only</li><li>Quota of RM480k/month being hit at 61% average — RM187k/month gap that was eroding margin and team confidence</li></ul></div>
+  <div class="bx"><span class="bh">Our 3-Phase Approach</span><div class="tl"><div class="tl-r"><span class="tlb">Month 1</span><div><p class="tlh">Audit, Baseline & Coaching Architecture</p><ul class="tlu"><li>Pulled 3 months of pipeline and deal data from Google Sheets — calculated per-rep: leads, demos, proposals, closes, win rate, average deal size</li><li>Identified skill gaps by rep using Claude AI analysis — Rep 1: prospecting cadence, Rep 2: objection handling, Rep 3: negotiation, Rep 4: proposal quality</li><li>Built KPI dashboard in Google Sheets: pipeline value, calls, demos, proposals, closed deals, win rate, quota % — colour-coded green/amber/red</li><li>Set weekly 1:1 schedule: Tuesdays 30-min per rep, Fridays joint pipeline review — all in Google Calendar</li></ul></div></div><div class="tl-r"><span class="tlb">Month 2</span><div><p class="tlh">Coaching Execution & Playbook Build</p><ul class="tlu"><li>Delivered 8 individual 1:1 sessions across all 4 reps — each session: review 2 real deals, identify one skill to practise, set one action before next session</li><li>Built sales coaching playbook in Google Docs: 5 sections — prospecting, discovery, demo, proposal, objection handling — 3 exercises per section</li><li>Ran first monthly forecast review: each rep presented top 5 deals, TechNext challenged assumptions, calculated weighted forecast</li><li>Month 2 team quota attainment: 74% — 13-point improvement from 61% baseline; forecast accuracy: ±12%</li></ul></div></div><div class="tl-r"><span class="tlb">Month 3</span><div><p class="tlh">Momentum & Handoff Preparation</p><ul class="tlu"><li>All 4 reps hit personal quota targets in Month 3 — first time team collectively reached 87% of combined quota</li><li>Two junior reps improved win rates from 18–22% to 31–34% — primary driver: structured objection handling framework</li><li>Trained GM on coaching cadence: provided 12-week coaching calendar template, meeting agenda, and skill-tracking sheet</li><li>Delivered final forecast review presentation in Google Slides — team results vs quota, rep progress, forecast model accuracy, coaching continuity plan</li></ul></div></div></div></div>
+  <div class="bx"><span class="bh">Team KPI Dashboard (Month 3)</span><div class="ow"><table><tr><th>Rep</th><th>Quota (RM)</th><th>Achieved (RM)</th><th>Attainment</th><th>Win Rate</th><th>Coaching Focus</th></tr><tr><td>Rep 1 — Faizal</td><td>120,000</td><td>108,400</td><td>90%</td><td>36%</td><td>Prospecting cadence</td></tr><tr><td>Rep 2 — Wei Lin</td><td>120,000</td><td>102,800</td><td>86%</td><td>32%</td><td>Objection handling</td></tr><tr><td>Rep 3 — Nurul</td><td>120,000</td><td>110,600</td><td>92%</td><td>38%</td><td>Negotiation (graduated)</td></tr><tr><td>Rep 4 — Darren</td><td>120,000</td><td>96,200</td><td>80%</td><td>31%</td><td>Proposal quality</td></tr><tr><td>Team Total</td><td>480,000</td><td>418,000</td><td>87%</td><td>34% avg</td><td>—</td></tr></table></div></div>
+  <div class="bx"><span class="bh">Before vs After</span><div class="ba"><div class="bab"><p class="bah">Before</p><div class="bar"><span class="bar-k">Team Quota Attainment</span><span class="bav">61%</span></div><div class="bar"><span class="bar-k">Forecast Accuracy</span><span class="bav">±35%</span></div><div class="bar"><span class="bar-k">Weekly 1:1 Coaching</span><span class="bav">None</span></div><div class="bar"><span class="bar-k">KPI Dashboard</span><span class="bav">None</span></div><div class="bar"><span class="bar-k">Junior Rep Win Rate</span><span class="bav">18–22%</span></div><div class="bar"><span class="bar-k">Post-Deal Reviews</span><span class="bav">None</span></div></div><div class="baa"><p class="bah">After</p><div class="bar"><span class="bar-k">Team Quota Attainment</span><span class="bav">87%</span></div><div class="bar"><span class="bar-k">Forecast Accuracy</span><span class="bav">±4.2%</span></div><div class="bar"><span class="bar-k">Weekly 1:1 Coaching</span><span class="bav">4 reps, every Tuesday</span></div><div class="bar"><span class="bar-k">KPI Dashboard</span><span class="bav">Live (Google Sheets)</span></div><div class="bar"><span class="bar-k">Junior Rep Win Rate</span><span class="bav">31–34%</span></div><div class="bar"><span class="bar-k">Post-Deal Reviews</span><span class="bav">Monthly (every lost deal)</span></div></div></div></div>
+  <div class="bx"><span class="bh">Deliverables Completed</span><div class="del"><div class="di">3-month pipeline audit and per-rep KPI baseline</div><div class="di">Rep skill gap analysis and individual coaching plan</div><div class="di">KPI dashboard: pipeline, demos, closes, win rate, quota % per rep</div><div class="di">Weekly 1:1 coaching schedule (4 reps × 30 min, every Tuesday)</div><div class="di">Sales coaching playbook (5 skills × 3 exercises each)</div><div class="di">Monthly forecast review framework (weighted pipeline model)</div><div class="di">Post-deal review template (won and lost)</div><div class="di">GM coaching continuity kit (12-week calendar + agendas)</div><div class="di">Monthly performance report in Google Slides</div><div class="di">Final presentation: team results vs quota and coaching handoff plan</div></div></div>
+  <div class="bx"><span class="bh">Client Testimonial</span><div class="qt"><p class="qt-t">"We had four people doing their best without any structure or guidance. TechNext came in, audited the team, identified exactly where each person was losing deals, and coached them week by week. Going from 61% to 87% quota attainment in 90 days is something I wouldn't have thought possible."</p><p class="qt-n">Robert Lim</p><p class="qt-r">General Manager, PrimeLine Distribution Sdn Bhd</p></div></div>
+</div>
+<footer class="foot"><strong>NextMarketing</strong> — Professional Marketing Services by TechNext Asia &nbsp;|&nbsp; hello@technext.asia</footer>
+</body></html>

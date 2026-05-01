@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marketing Automation — Pro — Case Study | NextMarketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCA5A5;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#F87171;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #DC2626;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#DC2626;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#DC2626;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}.dn{color:#DC2626;font-weight:700}.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#FEF2F2;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}.bar-k{color:#64748B}.bav{font-weight:700}
+.bab .bav{color:#DC2626}.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#7F1D1D;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#DC2626;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FEF2F2,#FEE2E2);border:1px solid #FECACA;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #DC2626;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}</style></head>
+<body>
+<nav class="pb"><div class="pb-l"><span class="logo">Tech<span>Next</span></span><span class="pill">NextMarketing</span></div><a href="../index.html" class="btn-bk">← Back to Services</a></nav>
+<div class="w">
+  <div class="cov">
+    <p class="ey">HARD TIER — CASE STUDY</p>
+    <h1>Marketing Automation — Pro</h1><p class="csub">How a B2B SaaS company doubled MQL volume and cut sales handoff time to 38 minutes with full-funnel automation</p>
+    <div class="meta"><span>🏢 InvoiceNow SaaS Sdn Bhd</span><span>💳 Accounting & Billing SaaS</span><span>📍 Cyberjaya, Selangor</span><span>📅 Jan – Mar 2026</span></div>
+    <div class="kpis"><div class="kpi"><div class="kn">+122%</div><div class="kl">MQL Volume Growth</div></div><div class="kpi"><div class="kn">Day 18</div><div class="kl">Lead Scoring Model Went Live</div></div><div class="kpi"><div class="kn">38 min</div><div class="kl">Average Sales Handoff Time</div></div></div>
+  </div>
+  <div class="bx"><span class="bh">Client Overview</span><p class="n">InvoiceNow SaaS is a cloud-based invoicing and billing platform serving Malaysian SMEs and freelancers. The company had a growing free-trial user base but a poor conversion rate to paid plans — primarily because leads were treated uniformly regardless of engagement level, and no automation connected marketing activity to the sales team.</p><p class="n">Their Brevo account contained 18,000 contacts but no segmentation: every contact received the same 4-email nurture sequence regardless of whether they'd opened one email or clicked through to pricing three times. Sales reps were manually reviewing Brevo contact profiles daily to identify hot leads — an inefficient process that introduced 72-hour average handoff delays.</p><p class="n">TechNext Asia designed and built a full-funnel marketing automation architecture: a 10-signal lead scoring model, multi-step behavioural trigger workflows, an SMS + email multi-channel sequence for high-intent signals, and a Zapier-Odoo CRM bridge that auto-created tasks the moment a lead crossed the sales-ready threshold.</p></div>
+  <div class="bx"><span class="bh">The Challenge</span><ul class="tlu"><li>18,000 contacts in Brevo with zero segmentation — hot leads and cold subscribers receiving identical communication</li><li>No lead scoring — sales team manually reviewing contact activity with 72-hour average handoff lag</li><li>Single 4-email nurture sequence applied to all contacts regardless of product engagement behaviour</li><li>No sales alert system — reps only discovered hot leads when they happened to check Brevo manually</li><li>CRM (Odoo) and marketing (Brevo) operating in complete isolation — no data sync between systems</li><li>Pricing page visits and demo requests not triggering any automated follow-up or rep notification</li><li>Email-only nurture with no SMS channel — missing the highest open-rate touchpoint for Malaysian audiences</li></ul></div>
+  <div class="bx"><span class="bh">Our 3-Phase Approach</span><div class="tl"><div class="tl-r"><span class="tlb">Week 1–2</span><div><p class="tlh">Segmentation & Lead Scoring Architecture</p><ul class="tlu"><li>Audited all 18,000 contacts — created 4 core segments: Hot Leads, Trialists, Newsletter Only, Cold (no opens 90 days)</li><li>Built 10-signal lead scoring model in Brevo: email open +5pts, link click +10pts, pricing page +20pts, demo request +40pts, trial signup +30pts</li><li>Set three scoring thresholds: Cold (<20pts), Warm (20–59pts), Hot (60+pts) — mapped to rep action SLAs</li><li>Connected Brevo to Odoo CRM via Zapier: contact score ≥60 → auto-create Odoo task assigned to next available rep</li></ul></div></div><div class="tl-r"><span class="tlb">Week 3–6</span><div><p class="tlh">Multi-Channel Workflow Build</p><ul class="tlu"><li>Built 5-email nurture sequence: split by segment — Trialist track vs Lead track with different content and CTAs</li><li>Created pricing-page trigger: contact visits pricing 2+ times within 7 days → immediate SMS + email within 15 minutes</li><li>Added abandoned trial workflow: trialists who haven't logged in for 7 days → 3-email win-back sequence with feature highlight</li><li>Set up sales alert email: rep receives instant notification when contact crosses Hot threshold — includes contact name, company, score, and last 5 actions</li></ul></div></div><div class="tl-r"><span class="tlb">Week 7–12</span><div><p class="tlh">Optimisation & Scaling</p><ul class="tlu"><li>Analysed first 6 weeks of scoring data — recalibrated weights: trial login +15pts added (previously untracked event)</li><li>A/B tested nurture email subject lines on Warm segment — winner achieved 34% open rate vs 21% control</li><li>Expanded multi-channel: added LinkedIn retargeting trigger for Hot contacts — coordinated email + ads touchpoint</li><li>Month 3 results: MQL volume increased 122%, sales handoff time reduced from 72h to 38min</li></ul></div></div></div></div>
+  <div class="bx"><span class="bh">Workflow Performance (Month 3)</span><div class="ow"><table><tr><th>Workflow</th><th>Trigger</th><th>Contacts Enrolled</th><th>Open Rate</th><th>MQLs Generated</th></tr><tr><td>Trialist Nurture (5 emails)</td><td>Trial signup</td><td>1,840</td><td>38%</td><td>220</td></tr><tr><td>Pricing Page Trigger</td><td>2+ visits in 7 days</td><td>412</td><td>61%</td><td>198</td></tr><tr><td>Abandoned Trial Win-Back</td><td>No login 7 days</td><td>680</td><td>44%</td><td>86</td></tr><tr><td>Hot Lead Sales Alert</td><td>Score ≥60</td><td>310</td><td>N/A (rep alert)</td><td>310</td></tr></table></div></div>
+  <div class="bx"><span class="bh">Before vs After</span><div class="ba"><div class="bab"><p class="bah">Before</p><div class="bar"><span class="bar-k">Contact Segmentation</span><span class="bav">None (all same)</span></div><div class="bar"><span class="bar-k">MQLs per Month</span><span class="bav">142</span></div><div class="bar"><span class="bar-k">Sales Handoff Time</span><span class="bav">72 hours avg</span></div><div class="bar"><span class="bar-k">Lead Scoring</span><span class="bav">None</span></div><div class="bar"><span class="bar-k">Workflows Active</span><span class="bav">1 (generic nurture)</span></div><div class="bar"><span class="bar-k">CRM Sync</span><span class="bav">Manual</span></div></div><div class="baa"><p class="bah">After</p><div class="bar"><span class="bar-k">Contact Segmentation</span><span class="bav">4 segments active</span></div><div class="bar"><span class="bar-k">MQLs per Month</span><span class="bav">316</span></div><div class="bar"><span class="bar-k">Sales Handoff Time</span><span class="bav">38 minutes avg</span></div><div class="bar"><span class="bar-k">Lead Scoring</span><span class="bav">10-signal model live</span></div><div class="bar"><span class="bar-k">Workflows Active</span><span class="bav">6 workflows</span></div><div class="bar"><span class="bar-k">CRM Sync</span><span class="bav">Automated (Zapier)</span></div></div></div></div>
+  <div class="bx"><span class="bh">Deliverables Completed</span><div class="del"><div class="di">Full Brevo contact audit and 4-segment architecture</div><div class="di">10-signal lead scoring model with Hot/Warm/Cold thresholds</div><div class="di">5-email segmented nurture sequence (Trialist + Lead tracks)</div><div class="di">Pricing-page trigger workflow (SMS + email within 15 min)</div><div class="di">Abandoned trial win-back 3-email sequence</div><div class="di">Sales alert automation — instant rep notification at score ≥60</div><div class="di">Odoo CRM auto-task creation via Zapier when lead is Hot</div><div class="di">A/B testing framework for subject lines on Warm segment</div><div class="di">LinkedIn retargeting trigger for Hot contacts</div><div class="di">Monthly automation performance report (MQL, open rates, handoff time)</div></div></div>
+  <div class="bx"><span class="bh">Client Testimonial</span><div class="qt"><p class="qt-t">"We had thousands of leads and no idea which ones were ready to buy. TechNext built a scoring system that told our reps exactly who to call and when. Our sales handoff time went from three days to under an hour."</p><p class="qt-n">Priya Nair</p><p class="qt-r">Head of Growth, InvoiceNow SaaS Sdn Bhd</p></div></div>
+</div>
+<footer class="foot"><strong>NextMarketing</strong> — Professional Marketing Services by TechNext Asia &nbsp;|&nbsp; hello@technext.asia</footer>
+</body></html>

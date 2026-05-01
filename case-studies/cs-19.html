@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Ad Optimization — Case Study | NextMarketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCA5A5;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#F87171;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #DC2626;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#DC2626;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#DC2626;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}.dn{color:#DC2626;font-weight:700}.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#FEF2F2;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}.bar-k{color:#64748B}.bav{font-weight:700}
+.bab .bav{color:#DC2626}.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#7F1D1D;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#DC2626;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FEF2F2,#FEE2E2);border:1px solid #FECACA;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #DC2626;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}</style></head>
+<body>
+<nav class="pb"><div class="pb-l"><span class="logo">Tech<span>Next</span></span><span class="pill">NextMarketing</span></div><a href="../index.html" class="btn-bk">← Back to Services</a></nav>
+<div class="w">
+  <div class="cov">
+    <p class="ey">HARD TIER — CASE STUDY</p>
+    <h1>AI Ad Optimization</h1><p class="csub">How an activewear brand achieved 5.6× ROAS using Google Performance Max and Meta Advantage+ AI bidding</p>
+    <div class="meta"><span>🏢 TerraGear Sdn Bhd</span><span>🏃 Outdoor & Activewear E-Commerce</span><span>📍 Shah Alam, Selangor</span><span>📅 Jan – Mar 2026</span></div>
+    <div class="kpis"><div class="kpi"><div class="kn">5.6×</div><div class="kl">ROAS with AI Bidding (vs 2.4× manual)</div></div><div class="kpi"><div class="kn">-47%</div><div class="kl">Cost Per Acquisition vs Manual Campaigns</div></div><div class="kpi"><div class="kn">11 days</div><div class="kl">AI Learning Phase Completed</div></div></div>
+  </div>
+  <div class="bx"><span class="bh">Client Overview</span><p class="n">TerraGear is a Malaysian outdoor and activewear brand offering performance running gear, trail shoes, and gym apparel through their Shopify store and Lazada storefront. Their paid media was managed manually — a marketing coordinator adjusting bids weekly based on intuition, resulting in inconsistent performance and significant budget waste during off-peak hours.</p><p class="n">The brand had tried Google's Smart Bidding briefly in 2024 but abandoned it after two weeks when ROAS dipped during the learning phase — a common mistake that prevented the AI from completing its optimisation cycle. Meta Ads were running standard placements with manual bid caps, underutilising Meta's Advantage+ algorithm designed for exactly their product category.</p><p class="n">TechNext Asia led the full transition to AI-managed paid media: enabling Google Performance Max with a properly structured asset group, launching Meta Advantage+ Shopping Campaign, establishing clear rules for the learning phase, and implementing a 14-day review cycle that scaled budgets without disrupting the AI's learning curve.</p></div>
+  <div class="bx"><span class="bh">The Challenge</span><ul class="tlu"><li>Previous Smart Bidding attempt abandoned after 12 days — AI never completed learning phase before being paused</li><li>Manual bid adjustments 3–4 times per week were constantly resetting Google's algorithm learning cycle</li><li>Meta campaigns running manual bid caps that prevented Meta AI from optimising across placements and audiences</li><li>Creative assets in both platforms were 6+ months old — Performance Max requires fresh assets to test effectively</li><li>No exclusion lists in Google — branded searches and competitor queries mixing with product intent campaigns</li><li>ROAS targets set unrealistically high (8×) on day 1 — forcing algorithm to restrict delivery to meet an impossible target</li><li>No systematic 14-day review cycle — budget changes were reactive to daily fluctuations rather than trend-based</li></ul></div>
+  <div class="bx"><span class="bh">Our 12-Week AI Transition Approach</span><div class="tl"><div class="tl-r"><span class="tlb">Week 1–2</span><div><p class="tlh">Asset Preparation & Account Configuration</p><ul class="tlu"><li>Produced 5 new creative assets in Canva per platform: lifestyle imagery, product flat-lay, athlete-in-use, UGC-style video, brand story</li><li>Set realistic initial ROAS targets: Google 3.5× (vs previous manual 2.4×), Meta 4× — targets designed to allow learning phase completion</li><li>In Google Ads: disabled all Manual CPC campaigns — migrated budget to Performance Max with 15 assets loaded per asset group</li><li>In Meta: launched Advantage+ Shopping Campaign with RM150/day — strict instruction to zero adjustments for first 7 days</li></ul></div></div><div class="tl-r"><span class="tlb">Week 3–6</span><div><p class="tlh">Learning Phase Management</p><ul class="tlu"><li>Monitored Performance Max daily but made zero bid or budget changes — allowed full 14-day learning cycle to complete</li><li>Google Performance Max exited learning phase on day 11 — ROAS climbed from 1.8× (learning) to 3.8× in week 3</li><li>Meta Advantage+ exited learning phase at day 9 — cost per purchase dropped 28% within 48 hours of exit</li><li>Added brand campaign separately in Google Search to protect branded queries — prevented PMax from over-bidding on brand traffic</li></ul></div></div><div class="tl-r"><span class="tlb">Week 7–12</span><div><p class="tlh">Scale & Optimisation Cycles</p><ul class="tlu"><li>Increased Google PMax budget 20% on day 21 — ROAS held at 4.9× after 4-day stabilisation period</li><li>Increased Meta budget 20% on day 24 — CPP improved further to RM68 as lookalike modelling matured</li><li>Uploaded 3 new creative assets to PMax at week 8 — replaced 2 underperforming assets identified by asset reporting</li><li>Month 3: combined ROAS across both platforms reached 5.6× — 133% improvement vs pre-AI manual baseline of 2.4×</li></ul></div></div></div></div>
+  <div class="bx"><span class="bh">ROAS Progression (Manual vs AI)</span><div class="ch"><div class="ch-r"><div class="ch-l">Manual Baseline</div><div class="ch-t"><div class="ch-f" style="width:23%;background:#94A3B8"><span class="ch-fv">2.4× ROAS</span></div></div><div class="ch-n">2.4×</div></div><div class="ch-r"><div class="ch-l">AI Month 1 (Learning)</div><div class="ch-t"><div class="ch-f" style="width:28%;background:#FCA5A5"><span class="ch-fv">2.9× ROAS</span></div></div><div class="ch-n">2.9×</div></div><div class="ch-r"><div class="ch-l">AI Month 2</div><div class="ch-t"><div class="ch-f" style="width:72%;background:#F87171"><span class="ch-fv">4.8× ROAS</span></div></div><div class="ch-n">4.8×</div></div><div class="ch-r"><div class="ch-l">AI Month 3</div><div class="ch-t"><div class="ch-f" style="width:100%;background:#DC2626"><span class="ch-fv">5.6× ROAS</span></div></div><div class="ch-n up">5.6×</div></div></div></div>
+  <div class="bx"><span class="bh">Before vs After</span><div class="ba"><div class="bab"><p class="bah">Before</p><div class="bar"><span class="bar-k">Ad Management</span><span class="bav">Manual (3–4 adjustments/week)</span></div><div class="bar"><span class="bar-k">ROAS</span><span class="bav">2.4×</span></div><div class="bar"><span class="bar-k">Cost Per Acquisition</span><span class="bav">RM 188</span></div><div class="bar"><span class="bar-k">Learning Phase</span><span class="bav">Never completed</span></div><div class="bar"><span class="bar-k">Creative Assets</span><span class="bav">2 (6+ months old)</span></div><div class="bar"><span class="bar-k">Platform Coverage</span><span class="bav">Google only</span></div></div><div class="baa"><p class="bah">After</p><div class="bar"><span class="bar-k">Ad Management</span><span class="bav">AI-managed (Performance Max + Advantage+)</span></div><div class="bar"><span class="bar-k">ROAS</span><span class="bav">5.6×</span></div><div class="bar"><span class="bar-k">Cost Per Acquisition</span><span class="bav">RM 99</span></div><div class="bar"><span class="bar-k">Learning Phase</span><span class="bav">Completed day 11</span></div><div class="bar"><span class="bar-k">Creative Assets</span><span class="bav">15+ (refreshed monthly)</span></div><div class="bar"><span class="bar-k">Platform Coverage</span><span class="bav">Google + Meta AI</span></div></div></div></div>
+  <div class="bx"><span class="bh">Deliverables Completed</span><div class="del"><div class="di">15-asset Performance Max asset group setup</div><div class="di">Meta Advantage+ Shopping Campaign configuration</div><div class="di">5 fresh creative assets per platform (produced in Canva)</div><div class="di">ROAS target calibration for successful learning phase</div><div class="di">14-day learning phase management protocol</div><div class="di">Branded search campaign to protect brand queries</div><div class="di">20% incremental budget scaling framework</div><div class="di">Monthly creative asset refresh and performance swap</div><div class="di">14-day performance review cycle with scaling decisions</div><div class="di">Combined platform ROAS and CPA dashboard</div></div></div>
+  <div class="bx"><span class="bh">Client Testimonial</span><div class="qt"><p class="qt-t">"We made the mistake of stopping Smart Bidding too early once before. TechNext managed the learning phase for us, made sure we didn't touch anything for two weeks, and the results on the other side were beyond what we expected. 5.6× ROAS on both platforms combined."</p><p class="qt-n">Aaron Lim</p><p class="qt-r">Marketing Director, TerraGear Sdn Bhd</p></div></div>
+</div>
+<footer class="foot"><strong>NextMarketing</strong> — Professional Marketing Services by TechNext Asia &nbsp;|&nbsp; hello@technext.asia</footer>
+</body></html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Odoo CRM Setup & Lead Management — Case Study | NextMarketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCA5A5;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#F87171;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #DC2626;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#DC2626;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#DC2626;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}.dn{color:#DC2626;font-weight:700}.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#FEF2F2;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}.bar-k{color:#64748B}.bav{font-weight:700}
+.bab .bav{color:#DC2626}.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#7F1D1D;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#DC2626;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FEF2F2,#FEE2E2);border:1px solid #FECACA;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #DC2626;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}</style></head>
+<body>
+<nav class="pb"><div class="pb-l"><span class="logo">Tech<span>Next</span></span><span class="pill">NextMarketing</span></div><a href="../index.html" class="btn-bk">← Back to Services</a></nav>
+<div class="w">
+  <div class="cov">
+    <p class="ey">HARD TIER — CASE STUDY</p>
+    <h1>Odoo CRM Setup & Lead Management</h1><p class="csub">How a precision engineering firm put its entire pipeline into Odoo in 12 days and cut lead response time to 40 minutes</p>
+    <div class="meta"><span>🏢 MetalForm Precision Sdn Bhd</span><span>⚙️ Precision Engineering & Manufacturing</span><span>📍 Shah Alam, Selangor</span><span>📅 Mar – Apr 2026</span></div>
+    <div class="kpis"><div class="kpi"><div class="kn">12 days</div><div class="kl">CRM Pipeline Live (Target: 2 Weeks)</div></div><div class="kpi"><div class="kn">100%</div><div class="kl">All New Leads Tracked in Odoo</div></div><div class="kpi"><div class="kn"><40 min</div><div class="kl">Average Lead Response Time</div></div></div>
+  </div>
+  <div class="bx"><span class="bh">Client Overview</span><p class="n">MetalForm Precision is a Shah Alam-based precision engineering company producing custom metal components for the aerospace, automotive, and electronics manufacturing sectors. With 14 active key accounts and a steady stream of new RFQ enquiries, the company's sales tracking had grown entirely around a combination of email threads, a shared WhatsApp group called 'Leads', and an Excel file that only one admin could update.</p><p class="n">The operations manager had estimated they were losing 2–3 qualified enquiries per month simply because leads sat unanswered in the WhatsApp group for 4–6 hours — long enough for a competitor to respond first. There was no lead assignment system, no qualification criteria, and no visibility into which enquiries had been quoted and which were still pending.</p><p class="n">TechNext Asia configured Odoo CRM from scratch: custom pipeline stages aligned to MetalForm's specific quoting process, a lead auto-assignment rule based on enquiry source, an imported lead score model for prioritising hot RFQs, and a migration of all 67 existing leads and active accounts from the Excel file — all live within 12 working days.</p></div>
+  <div class="bx"><span class="bh">The Challenge</span><ul class="tlu"><li>All leads managed in a WhatsApp group — no assignment, no tracking, no visibility for management</li><li>Average lead response time of 4–6 hours — RFQ enquiries routinely beaten by faster-responding competitors</li><li>No qualification criteria — all enquiries were treated equally regardless of order value or urgency signals</li><li>67 existing active leads and accounts sitting in an Excel file with inconsistent field naming and duplicate entries</li><li>No email alias for inbound enquiries — all RFQs arrived in a personal Gmail inbox rather than a shared sales account</li><li>Zero integration between inbound website enquiries and the sales team — enquiries via web form required manual monitoring</li><li>No reporting capability — management had no visibility into monthly RFQ volume, win rate, or sales cycle length</li></ul></div>
+  <div class="bx"><span class="bh">Our 60-Day CRM Implementation</span><div class="tl"><div class="tl-r"><span class="tlb">Week 1</span><div><p class="tlh">Odoo Configuration & Stage Setup</p><ul class="tlu"><li>Logged into Odoo → CRM module → Configuration → Stages: created 7 custom stages: New RFQ → Contacted → Qualified → Quoted → Negotiation → Won / Lost</li><li>Set up sales email alias: rfq@metalform.my → auto-creates Odoo CRM lead for every inbound email — eliminates personal Gmail dependency</li><li>Created lead auto-assignment: RFQs from website form → Rep A, email alias → Rep B, trade show contacts → Rep C</li><li>Configured required fields: company, contact name, email, enquiry type (new part / repeat order / prototype) — mandatory before stage advance</li></ul></div></div><div class="tl-r"><span class="tlb">Week 2</span><div><p class="tlh">Lead Scoring & Data Migration</p><ul class="tlu"><li>Built lead scoring model with Claude AI: order value estimate, new vs repeat customer, urgency signal (deadline stated), industry (aerospace highest priority)</li><li>Added custom field 'Lead Score' to Odoo opportunity card — scoring guide published in Google Sheets for team reference</li><li>Cleaned Excel file: deduplicated 67 records, standardised field names, removed 12 inactive contacts</li><li>Imported all 55 clean leads into Odoo CRM → verified stage assignment, rep assignment, and expected close date for each record</li></ul></div></div><div class="tl-r"><span class="tlb">Week 3–8</span><div><p class="tlh">Testing, Training & Optimisation</p><ul class="tlu"><li>Full flow test: submitted web enquiry → confirmed Odoo lead created → auto-assigned to correct rep → confirmation email fired in 8 minutes</li><li>Trained all 3 sales reps and admin: 2-hour hands-on Odoo session with live walkthroughs of each pipeline stage</li><li>Built weekly reporting view in Odoo: RFQ volume, stage distribution, win rate, and average days in each stage</li><li>Week 8: all new leads entering CRM within 2 minutes of enquiry — response time averaged 38 minutes vs previous 4–6 hours</li></ul></div></div></div></div>
+  <div class="bx"><span class="bh">Lead Response Time Improvement</span><div class="ch"><div class="ch-r"><div class="ch-l">Pre-CRM (WhatsApp)</div><div class="ch-t"><div class="ch-f" style="width:100%;background:#FCA5A5"><span class="ch-fv">4–6 hours avg</span></div></div><div class="ch-n">5.2h avg</div></div><div class="ch-r"><div class="ch-l">Week 2 (Early CRM)</div><div class="ch-t"><div class="ch-f" style="width:48%;background:#DC2626"><span class="ch-fv">2.5 hours avg</span></div></div><div class="ch-n">2.5h</div></div><div class="ch-r"><div class="ch-l">Week 4</div><div class="ch-t"><div class="ch-f" style="width:22%;background:#DC2626"><span class="ch-fv">72 min avg</span></div></div><div class="ch-n">72 min</div></div><div class="ch-r"><div class="ch-l">Week 8</div><div class="ch-t"><div class="ch-f" style="width:12%;background:#DC2626"><span class="ch-fv">38 min avg</span></div></div><div class="ch-n up">38 min</div></div></div></div>
+  <div class="bx"><span class="bh">Before vs After</span><div class="ba"><div class="bab"><p class="bah">Before</p><div class="bar"><span class="bar-k">Lead Tracking</span><span class="bav">WhatsApp group + Excel</span></div><div class="bar"><span class="bar-k">Lead Response Time</span><span class="bav">4–6 hours avg</span></div><div class="bar"><span class="bar-k">Lead Assignment</span><span class="bav">Whoever saw it first</span></div><div class="bar"><span class="bar-k">Qualification Criteria</span><span class="bav">None</span></div><div class="bar"><span class="bar-k">Management Visibility</span><span class="bav">None (no reporting)</span></div><div class="bar"><span class="bar-k">Inbound Email Alias</span><span class="bav">Personal Gmail</span></div></div><div class="baa"><p class="bah">After</p><div class="bar"><span class="bar-k">Lead Tracking</span><span class="bav">Odoo CRM (7 stages)</span></div><div class="bar"><span class="bar-k">Lead Response Time</span><span class="bav"><40 min avg</span></div><div class="bar"><span class="bar-k">Lead Assignment</span><span class="bav">Automated by source</span></div><div class="bar"><span class="bar-k">Qualification Criteria</span><span class="bav">Lead score model + required fields</span></div><div class="bar"><span class="bar-k">Management Visibility</span><span class="bav">Weekly Odoo report</span></div><div class="bar"><span class="bar-k">Inbound Email Alias</span><span class="bav">rfq@metalform.my (auto-creates lead)</span></div></div></div></div>
+  <div class="bx"><span class="bh">Deliverables Completed</span><div class="del"><div class="di">Odoo CRM module setup + 7 custom pipeline stages</div><div class="di">Sales email alias (rfq@metalform.my) with auto-lead creation</div><div class="di">Lead auto-assignment rules by enquiry source (3 reps)</div><div class="di">Lead scoring model (value, type, urgency, industry)</div><div class="di">Required fields enforcement at each stage transition</div><div class="di">Data migration: 55 cleaned leads from Excel to Odoo</div><div class="di">2-hour team training session for 3 reps and admin</div><div class="di">Weekly Odoo CRM report: volume, win rate, stage distribution</div><div class="di">Google Sheets lead scoring reference guide</div><div class="di">Web enquiry form → Odoo CRM integration via Zapier</div></div></div>
+  <div class="bx"><span class="bh">Client Testimonial</span><div class="qt"><p class="qt-t">"We were losing deals because we were slow to respond. Once TechNext set up the CRM and email alias, every enquiry was in Odoo within minutes and assigned to a rep automatically. Our response time went from half a day to under 40 minutes and we've already won two projects we would have lost before."</p><p class="qt-n">Ahmad Fadzil</p><p class="qt-r">Operations Manager, MetalForm Precision Sdn Bhd</p></div></div>
+</div>
+<footer class="foot"><strong>NextMarketing</strong> — Professional Marketing Services by TechNext Asia &nbsp;|&nbsp; hello@technext.asia</footer>
+</body></html>

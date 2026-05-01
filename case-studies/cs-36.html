@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Full Sales Pipeline Suite — Case Study | NextMarketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCA5A5;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#F87171;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #DC2626;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#DC2626;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#DC2626;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}.dn{color:#DC2626;font-weight:700}.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#FEF2F2;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}.bar-k{color:#64748B}.bav{font-weight:700}
+.bab .bav{color:#DC2626}.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#7F1D1D;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#DC2626;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FEF2F2,#FEE2E2);border:1px solid #FECACA;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #DC2626;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}</style></head>
+<body>
+<nav class="pb"><div class="pb-l"><span class="logo">Tech<span>Next</span></span><span class="pill">NextMarketing</span></div><a href="../index.html" class="btn-bk">← Back to Services</a></nav>
+<div class="w">
+  <div class="cov">
+    <p class="ey">HARD TIER — CASE STUDY</p>
+    <h1>Full Sales Pipeline Suite</h1><p class="csub">How an industrial engineering company put all three departments on Odoo and eliminated manual data entry in 26 days</p>
+    <div class="meta"><span>🏢 OmniCraft Engineering Sdn Bhd</span><span>🔧 Industrial Equipment & Engineering Services</span><span>📍 Klang Valley, Selangor</span><span>📅 Feb – Apr 2026</span></div>
+    <div class="kpis"><div class="kpi"><div class="kn">3 depts</div><div class="kl">Sales, Finance & Ops Live on Odoo</div></div><div class="kpi"><div class="kn">Day 26</div><div class="kl">Zero Manual Pipeline Data Entry</div></div><div class="kpi"><div class="kn">100%</div><div class="kl">Leads-to-Cash Visibility on One Platform</div></div></div>
+  </div>
+  <div class="bx"><span class="bh">Client Overview</span><p class="n">OmniCraft Engineering is a Klang Valley industrial equipment supplier and service provider, offering sales, installation, and maintenance of industrial automation components to manufacturing clients across Malaysia. With 6 sales reps, a 4-person finance team, and an operations team managing 200+ active service contracts, the company had grown to RM8M annual revenue while still running entirely on a combination of Excel, email, and WhatsApp.</p><p class="n">The COO had mapped the problem precisely: a lead could sit in a sales rep's WhatsApp for 3 days without anyone else knowing about it. Once a deal was won, the handoff to finance for quoting and to operations for delivery scheduling required 4–6 separate email threads. Payment status was tracked in a personal Excel file maintained by one finance executive who was the single point of failure for all receivables visibility.</p><p class="n">TechNext Asia led the complete Odoo Full Sales Pipeline Suite implementation: CRM, Sales (quoting + e-sign), Appointments (delivery scheduling), and Accounting — all configured individually and then connected into a single leads-to-cash workflow with proper user access controls, a full data migration from existing systems, and a 2-week parallel operation period before the old systems were officially switched off.</p></div>
+  <div class="bx"><span class="bh">The Challenge</span><ul class="tlu"><li>Entire pipeline managed across WhatsApp, email, and 7 different Excel files with no single source of truth</li><li>Won deals handed off to finance and ops via email threads — an average of 4–6 emails per deal before work began</li><li>No real-time payment status — finance executive's personal Excel was the only receivables tracker</li><li>Sales reps had no visibility into delivery status — clients calling reps for delivery updates instead of ops</li><li>No centralised customer database — the same client company existed under 4 different names across different files</li><li>Zero automation between systems — every stage transition required manual data re-entry by multiple people</li><li>Management reporting was a monthly Excel exercise that took 2 days to compile and was outdated by the time it was reviewed</li></ul></div>
+  <div class="bx"><span class="bh">Our Full Odoo Suite Implementation</span><div class="tl"><div class="tl-r"><span class="tlb">Phase 1</span><div><p class="tlh">Foundation — CRM & Pipeline (Weeks 1–2)</p><ul class="tlu"><li>Mapped full business flow in Google Sheets: Lead → CRM Stage → Demo → Quote → E-Sign → Delivery → Invoice → Payment — identified the Odoo module responsible for each step</li><li>Installed and configured Odoo CRM first: 7 custom stages, email alias (sales@omnicraft.my), auto-assignment rules by rep territory, lead scoring model</li><li>Created unified customer database in Odoo Contacts — deduplicated 480 customer records from 7 Excel files into a single master list</li><li>Full data import: 94 active leads and 200+ service contracts migrated to Odoo CRM with verified stage and rep assignments</li></ul></div></div><div class="tl-r"><span class="tlb">Phase 2</span><div><p class="tlh">Sales, Appointments & Accounting (Weeks 3–6)</p><ul class="tlu"><li>Configured Odoo Sales: 4 quotation templates (equipment sale, installation, service retainer, spare parts), e-signature enabled, auto-invoice on order confirmation</li><li>Set up Odoo Appointments for delivery scheduling: ops team creates time slots, sales rep books from won opportunity — customer auto-receives confirmation email</li><li>Connected Odoo Accounting: chart of accounts, payment terms (30-day retainer, 50/50 project), Stripe payment link on all invoices</li><li>Set user access: Sales team — CRM + Sales modules only; Finance — Accounting only; Ops — Appointments + delivery view; Admin — full access</li></ul></div></div><div class="tl-r"><span class="tlb">Phase 3</span><div><p class="tlh">Integration, Migration & Go-Live (Weeks 7–12)</p><ul class="tlu"><li>Built cross-module automation: Won CRM opportunity → creates Sales Quote → signed quote → auto-creates Invoice → invoice paid → updates Accounting — zero manual re-entry</li><li>Ran 2-week parallel operation: team used both Odoo and old Excel/WhatsApp systems simultaneously — compared outputs daily for accuracy</li><li>Day 26: all pipeline data in Odoo matched Excel perfectly — old systems officially switched off; confirmed with COO</li><li>Odoo live reporting: COO can see full pipeline value, open invoices, delivery schedule, and rep performance in one dashboard — monthly report compilation reduced from 2 days to 20 minutes</li></ul></div></div></div></div>
+  <div class="bx"><span class="bh">Odoo Module Implementation Status</span><div class="ow"><table><tr><th>Odoo Module</th><th>Department</th><th>Go-Live Day</th><th>Key Automation Enabled</th></tr><tr><td>CRM</td><td>Sales</td><td>Day 8</td><td>Auto-lead assignment + scoring + email alias</td></tr><tr><td>Sales (Quotes + E-Sign)</td><td>Sales + Finance</td><td>Day 16</td><td>Quote → e-sign → auto-invoice in one click</td></tr><tr><td>Appointments</td><td>Operations</td><td>Day 20</td><td>Won deal → delivery slot booking → client confirmation</td></tr><tr><td>Accounting</td><td>Finance</td><td>Day 22</td><td>Auto-invoice + Stripe payment link + receivables dashboard</td></tr><tr><td>Full Integration</td><td>All Departments</td><td>Day 26</td><td>Lead-to-cash workflow, zero manual re-entry</td></tr></table></div></div>
+  <div class="bx"><span class="bh">Before vs After</span><div class="ba"><div class="bab"><p class="bah">Before</p><div class="bar"><span class="bar-k">System</span><span class="bav">7 Excel files + WhatsApp + email</span></div><div class="bar"><span class="bar-k">Cross-Dept Handoff</span><span class="bav">4–6 email threads per deal</span></div><div class="bar"><span class="bar-k">Customer Database</span><span class="bav">480 records, 4 duplicate versions</span></div><div class="bar"><span class="bar-k">Payment Visibility</span><span class="bav">1 person's personal Excel</span></div><div class="bar"><span class="bar-k">Management Report</span><span class="bav">2-day monthly exercise</span></div><div class="bar"><span class="bar-k">Manual Re-Entry</span><span class="bav">Every stage transition</span></div></div><div class="baa"><p class="bah">After</p><div class="bar"><span class="bar-k">System</span><span class="bav">Odoo (CRM + Sales + Appts + Accounting)</span></div><div class="bar"><span class="bar-k">Cross-Dept Handoff</span><span class="bav">Automated (won deal → auto-tasks all depts)</span></div><div class="bar"><span class="bar-k">Customer Database</span><span class="bav">1 master Odoo Contacts list</span></div><div class="bar"><span class="bar-k">Payment Visibility</span><span class="bav">Real-time Odoo Accounting dashboard</span></div><div class="bar"><span class="bar-k">Management Report</span><span class="bav">20-minute Odoo report pull</span></div><div class="bar"><span class="bar-k">Manual Re-Entry</span><span class="bav">Zero (fully automated)</span></div></div></div></div>
+  <div class="bx"><span class="bh">Deliverables Completed</span><div class="del"><div class="di">Business flow mapping: lead-to-cash across all 4 Odoo modules</div><div class="di">Odoo CRM: 7 stages, email alias, auto-assignment, lead scoring</div><div class="di">Customer database migration: 480 records deduplicated + imported</div><div class="di">Odoo Sales: 4 quotation templates, e-signature, auto-invoice</div><div class="di">Odoo Appointments: delivery scheduling + client confirmation emails</div><div class="di">Odoo Accounting: chart of accounts, payment terms, Stripe integration</div><div class="di">User access roles (Sales / Finance / Ops / Admin)</div><div class="di">Data migration: 94 leads + 200+ contracts to Odoo</div><div class="di">2-week parallel operation management and verification</div><div class="di">Full leads-to-cash workflow automation across all modules</div></div></div>
+  <div class="bx"><span class="bh">Client Testimonial</span><div class="qt"><p class="qt-t">"We were running an RM8M business on WhatsApp and Excel. TechNext didn't just set up software — they mapped every process, migrated all our data, and made sure everything worked together before we switched off the old systems. On day 26 we went fully live. It changed how the whole company operates."</p><p class="qt-n">Steven Chai</p><p class="qt-r">COO, OmniCraft Engineering Sdn Bhd</p></div></div>
+</div>
+<footer class="foot"><strong>NextMarketing</strong> — Professional Marketing Services by TechNext Asia &nbsp;|&nbsp; hello@technext.asia</footer>
+</body></html>

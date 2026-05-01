@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meta Ads Management — Case Study | NextMarketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6;font-size:15px}
+.pb{background:#0A2540;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;z-index:100}
+.pb-l{display:flex;align-items:center;gap:.875rem}
+.logo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
+.logo span{color:#00B4D8}
+.pill{background:rgba(0,180,216,.15);color:#00B4D8;border:1px solid rgba(0,180,216,.3);padding:.18rem .65rem;border-radius:9999px;font-size:.7rem;font-weight:600}
+.btn-bk{color:#94A3B8;font-size:.78rem;text-decoration:none}
+.w{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.cov{background:linear-gradient(135deg,#0A2540,#0f3460,#1a5276);color:#fff;padding:2.5rem;border-radius:16px;margin-bottom:1.75rem}
+.ey{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FCA5A5;margin-bottom:.75rem}
+.cov h1{font-family:'Montserrat',sans-serif;font-size:1.85rem;line-height:1.2;margin-bottom:.4rem}
+.csub{font-size:.85rem;color:#94A3B8;margin-bottom:1.4rem;line-height:1.6}
+.meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.79rem;color:#CBD5E1;padding-bottom:1.4rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.5rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem}
+.kpi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:.875rem;text-align:center}
+.kn{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:700;color:#F87171;line-height:1}
+.kl{font-size:.7rem;color:#94A3B8;margin-top:.35rem;line-height:1.35}
+.bx{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:1.4rem;margin-bottom:1.25rem}
+.bh{font-family:'Montserrat',sans-serif;font-size:.9rem;color:#0A2540;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid #DC2626;display:block}
+p.n{font-size:.83rem;color:#64748B;line-height:1.65;margin-bottom:.6rem}
+p.n:last-child{margin-bottom:0}
+.tl{display:flex;flex-direction:column;gap:.85rem}
+.tl-r{display:flex;gap:.875rem;align-items:flex-start}
+.tlb{background:#DC2626;color:#fff;font-size:.67rem;font-weight:700;padding:.28rem .6rem;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:.12rem}
+.tlh{font-weight:700;font-size:.88rem;color:#0A2540;margin-bottom:.28rem}
+.tlu{list-style:none;display:flex;flex-direction:column;gap:.18rem}
+.tlu li{font-size:.8rem;color:#64748B;padding-left:.9rem;position:relative;line-height:1.5}
+.tlu li::before{content:'›';color:#DC2626;position:absolute;left:0;font-weight:700}
+.ow{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.81rem}
+th{background:#0A2540;color:#fff;padding:.55rem .8rem;text-align:left;font-weight:600;font-size:.74rem;white-space:nowrap}
+td{padding:.5rem .8rem;border-bottom:1px solid #E2E8F0;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:#F8FAFC}
+.up{color:#16A34A;font-weight:700}.dn{color:#DC2626;font-weight:700}.fw{font-weight:700;color:#0A2540}
+.tg{background:#F0FDF4;color:#16A34A;border:1px solid #BBF7D0;padding:.1rem .4rem;border-radius:4px;font-size:.68rem;font-weight:600}
+.tg.y{background:#FFFBEB;color:#D97706;border:1px solid #FDE68A}
+.tg.b{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}
+.tg.r{background:#FEF2F2;color:#DC2626;border:1px solid #FECACA}
+.ch{display:flex;flex-direction:column;gap:.55rem;margin-top:.25rem}
+.ch-r{display:grid;grid-template-columns:130px 1fr 80px;gap:.55rem;align-items:center}
+.ch-l{font-size:.75rem;color:#64748B;text-align:right;line-height:1.25}
+.ch-t{background:#FEF2F2;border-radius:4px;height:22px;overflow:hidden}
+.ch-f{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:.5rem}
+.ch-fv{font-size:.66rem;font-weight:700;color:#fff;white-space:nowrap}
+.ch-n{font-size:.76rem;font-weight:700;color:#0A2540;text-align:right}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.25rem}
+.bab{background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:1rem}
+.baa{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:1rem}
+.bah{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.65rem}
+.bab .bah{color:#DC2626}.baa .bah{color:#16A34A}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:.28rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.8rem;gap:.5rem}
+.bar:last-child{border-bottom:none}.bar-k{color:#64748B}.bav{font-weight:700}
+.bab .bav{color:#DC2626}.baa .bav{color:#16A34A}
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:.45rem}
+.di{background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;padding:.45rem .7rem;font-size:.78rem;color:#7F1D1D;display:flex;gap:.35rem;align-items:flex-start;line-height:1.45}
+.di::before{content:'✓';color:#DC2626;flex-shrink:0;font-weight:700}
+.qt{background:linear-gradient(135deg,#FEF2F2,#FEE2E2);border:1px solid #FECACA;border-radius:12px;padding:1.5rem}
+.qt-t{font-size:.88rem;color:#1E293B;font-style:italic;line-height:1.8;padding-left:1rem;border-left:3px solid #DC2626;margin-bottom:.875rem}
+.qt-n{font-weight:700;font-size:.83rem;color:#0A2540}.qt-r{font-size:.75rem;color:#64748B}
+.foot{text-align:center;padding:1.5rem;color:#94A3B8;font-size:.77rem;border-top:1px solid #E2E8F0;margin-top:1rem}
+.foot strong{color:#0A2540}
+@media(max-width:580px){.kpis{grid-template-columns:1fr 1fr}.ba,.del{grid-template-columns:1fr}.cov h1{font-size:1.45rem}.w{padding:1.25rem 1rem 3rem}.ch-r{grid-template-columns:80px 1fr 55px}}</style></head>
+<body>
+<nav class="pb"><div class="pb-l"><span class="logo">Tech<span>Next</span></span><span class="pill">NextMarketing</span></div><a href="../index.html" class="btn-bk">← Back to Services</a></nav>
+<div class="w">
+  <div class="cov">
+    <p class="ey">HARD TIER — CASE STUDY</p>
+    <h1>Meta Ads Management</h1><p class="csub">How a premium skincare brand achieved 5.3× ROAS and slashed CPA by 38% through audience and creative strategy</p>
+    <div class="meta"><span>🏢 SkinRitual Sdn Bhd</span><span>💄 Premium Skincare & Beauty</span><span>📍 Bangsar, Kuala Lumpur</span><span>📅 Jan – Mar 2026</span></div>
+    <div class="kpis"><div class="kpi"><div class="kn">5.3×</div><div class="kl">ROAS Achieved (vs 2.1× before)</div></div><div class="kpi"><div class="kn">-38%</div><div class="kl">Cost Per Acquisition Reduction</div></div><div class="kpi"><div class="kn">2.9%</div><div class="kl">Retargeting Campaign CTR</div></div></div>
+  </div>
+  <div class="bx"><span class="bh">Client Overview</span><p class="n">SkinRitual is a premium skincare brand based in Bangsar offering dermatologist-formulated serums, moisturisers, and treatment kits sold primarily through their Shopify store and selected pharmacy chains. Their Meta Ads account was running two campaigns — a broad awareness campaign and a conversion campaign — both performing well below industry benchmarks.</p><p class="n">The brand had installed the Meta Pixel but event tracking was misconfigured: Purchase events were firing on the cart page rather than the order confirmation page, inflating reported ROAS and masking true campaign performance. Creative had not been refreshed in four months, leading to severe ad fatigue across retargeting audiences.</p><p class="n">TechNext Asia audited and rebuilt the Meta Ads setup — correcting Pixel events, creating structured audience tiers, producing three fresh creative variants, and implementing a retargeting funnel that recovered abandoned cart traffic at a fraction of the cost of new customer acquisition.</p></div>
+  <div class="bx"><span class="bh">The Challenge</span><ul class="tlu"><li>Meta Pixel misconfigured — Purchase event firing on cart page inflated ROAS by approximately 2.4×</li><li>Ad creative unchanged for 4+ months — frequency above 6.8 causing significant audience fatigue and rising CPM</li><li>No lookalike audiences built from buyer data — campaigns targeting only interest-based audiences</li><li>Retargeting was a single broad audience (all website visitors, 60 days) with no exclusions or sequential logic</li><li>No Advantage+ Shopping Campaign structure — missing Meta's AI-optimised buying mode for e-commerce</li><li>Ad copy led with product ingredients rather than transformation outcomes — low emotional resonance</li><li>No attribution window alignment between Meta reporting and Shopify analytics — teams disagreeing on performance</li></ul></div>
+  <div class="bx"><span class="bh">Our 3-Phase Approach</span><div class="tl"><div class="tl-r"><span class="tlb">Week 1–2</span><div><p class="tlh">Pixel Fix & Audience Architecture</p><ul class="tlu"><li>Corrected Pixel: moved Purchase event to order confirmation page — ROAS baseline immediately reset to true 2.1×</li><li>Uploaded 3,200-contact buyer list from Shopify to Meta — created Custom Audience + 1% Lookalike</li><li>Created 3-tier audience structure: Cold (Lookalike), Warm (Engagers 30 days), Hot (Cart abandoners 7 days)</li><li>Set up Conversions API alongside Pixel for cookieless tracking — improved attribution accuracy by ~30%</li></ul></div></div><div class="tl-r"><span class="tlb">Week 3–6</span><div><p class="tlh">Creative Production & Campaign Build</p><ul class="tlu"><li>Produced 3 creative variants in Canva: transformation before/after, ingredient science, customer review UGC-style</li><li>Built Advantage+ Shopping Campaign with all 3 creatives — let Meta AI test and optimise placements</li><li>Created retargeting campaign: cart abandoners (7 days) → urgency creative with limited-stock messaging</li><li>Launched warm retargeting: Instagram engagers (30 days) → social-proof testimonial creative</li></ul></div></div><div class="tl-r"><span class="tlb">Week 7–12</span><div><p class="tlh">Scale & Optimisation</p><ul class="tlu"><li>Paused lowest-performing creative after RM200 spend — scaled winner by 20% every 4 days</li><li>Expanded Lookalike from 1% to 2% after Advantage+ campaign exited learning phase with strong ROAS</li><li>Added prospecting campaign targeting Competitor Page engagers — 3.2× ROAS in month 3</li><li>Weekly creative refresh on retargeting — swapped headline every 2 weeks to prevent fatigue recurrence</li></ul></div></div></div></div>
+  <div class="bx"><span class="bh">Creative & Campaign Performance</span><div class="ow"><table><tr><th>Ad Set</th><th>Audience</th><th>Spend (RM)</th><th>CTR</th><th>ROAS</th><th>CPA (RM)</th></tr><tr><td>Advantage+ Prospecting</td><td>1% Lookalike (Buyers)</td><td>3,200</td><td>2.4%</td><td>5.1×</td><td>RM 88</td></tr><tr><td>Cart Abandoner Retargeting</td><td>Abandoned Cart 7 days</td><td>1,100</td><td>2.9%</td><td>7.8×</td><td>RM 44</td></tr><tr><td>Warm Retargeting</td><td>IG Engagers 30 days</td><td>900</td><td>2.6%</td><td>6.2×</td><td>RM 58</td></tr><tr><td>Competitor Audience</td><td>Page Engagers</td><td>800</td><td>2.1%</td><td>3.2×</td><td>RM 112</td></tr></table></div></div>
+  <div class="bx"><span class="bh">Before vs After</span><div class="ba"><div class="bab"><p class="bah">Before</p><div class="bar"><span class="bar-k">ROAS (true)</span><span class="bav">2.1×</span></div><div class="bar"><span class="bar-k">Cost Per Acquisition</span><span class="bav">RM 156</span></div><div class="bar"><span class="bar-k">Retargeting CTR</span><span class="bav">0.8%</span></div><div class="bar"><span class="bar-k">Ad Frequency</span><span class="bav">6.8</span></div><div class="bar"><span class="bar-k">Creative Variants Live</span><span class="bav">1</span></div><div class="bar"><span class="bar-k">Audience Tiers</span><span class="bav">1 (broad)</span></div></div><div class="baa"><p class="bah">After</p><div class="bar"><span class="bar-k">ROAS (true)</span><span class="bav">5.3×</span></div><div class="bar"><span class="bar-k">Cost Per Acquisition</span><span class="bav">RM 97</span></div><div class="bar"><span class="bar-k">Retargeting CTR</span><span class="bav">2.9%</span></div><div class="bar"><span class="bar-k">Ad Frequency</span><span class="bav">2.1</span></div><div class="bar"><span class="bar-k">Creative Variants Live</span><span class="bav">4</span></div><div class="bar"><span class="bar-k">Audience Tiers</span><span class="bav">3 (cold/warm/hot)</span></div></div></div></div>
+  <div class="bx"><span class="bh">Deliverables Completed</span><div class="del"><div class="di">Meta Pixel audit & Conversions API setup</div><div class="di">Purchase event correction on order confirmation page</div><div class="di">3-tier audience architecture (cold, warm, hot)</div><div class="di">1% Lookalike from 3,200-contact buyer list</div><div class="di">Advantage+ Shopping Campaign setup</div><div class="di">3 creative variants (transformation, science, UGC-style)</div><div class="di">Cart abandoner retargeting campaign</div><div class="di">Warm retargeting — Instagram engager sequence</div><div class="di">Competitor audience prospecting campaign</div><div class="di">Monthly creative performance report with fatigue alerts</div></div></div>
+  <div class="bx"><span class="bh">Client Testimonial</span><div class="qt"><p class="qt-t">"We thought our ads were working because the dashboard showed 4× ROAS. TechNext showed us the Pixel was broken and our real number was 2.1×. Three months later it's a genuine 5.3× and we actually trust the data now."</p><p class="qt-n">Natasha Yap</p><p class="qt-r">Founder, SkinRitual Sdn Bhd</p></div></div>
+</div>
+<footer class="foot"><strong>NextMarketing</strong> — Professional Marketing Services by TechNext Asia &nbsp;|&nbsp; hello@technext.asia</footer>
+</body></html>
